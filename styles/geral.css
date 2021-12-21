@@ -1,8 +1,8 @@
 /*Elementos que entram em todas as páginda 
 ex.: fonte usada, footer, menu*/
 
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 .castanho-background {
@@ -22,5 +22,3 @@ ex.: fonte usada, footer, menu*/
   background-color: #0f0701;
   color: #f6ecd1;
 }
-
-
