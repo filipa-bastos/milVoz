@@ -1,0 +1,17 @@
+.castanho-background {
+  background-color: #0f0701;
+}
+
+.cor-primaria {
+  color: #f6ecd1;
+}
+
+.botao {
+  border: 2px solid #f6ecd1;
+  border-radius: 30px;
+  padding: 4px 18px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #0f0701;
+  color: #f6ecd1;
+}
