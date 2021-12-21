@@ -1,1 +1,14 @@
 /*Estilo na Homepage*/
+
+.separador {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.m-esq-neg {
+  margin-left: -300px;
+}
+
+.m-dir-neg {
+    margin-right: -200px;
+  }
