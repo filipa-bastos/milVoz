@@ -1,1 +1,168 @@
 /*Estilo na Homepage*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /*NAVBAR
+  pode se colocar o efeito ease in out para quando se retira o rato de cima, para isto mete-se a transição antes e depois?//////////*/ 
+.navbar-brand:hover, .facebook:hover, .youtube:hover, .instagram:hover, .apadrinhar:hover, .apoiar:hover{
+    opacity: 30%;
+    transition: all .5s ease-in-out;
+    transform: translateY(2px);
+}
+
+.apadrinhar, .apoiar{
+    font-family: 'Poppins'; 
+    color: #F6ECD1; 
+    border-radius: 15px; 
+    padding: 1.5px 15px; 
+    border-style: solid; 
+    border-width: 2px; 
+    text-decoration: none
+}
+
+/* tornar a navbarra fixa*/
+
+  /*MENU HAMBURGER//////////*/
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border: 3px solid #fff; */
+  }
+  .menu-btn__burger {
+    width: 40px;
+    height: 4px;
+    background: #F6ECD1;
+    border-radius: 15px;
+    transition: all .5s ease-in-out;
+  }
+
+  .menu-btn__burger:hover{
+      opacity: 30%;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background: #F6ECD1;
+    border-radius: 15px;
+    transition: all .5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-10px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(10px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+
+  .parallax2{
+      background-color: #9F7D5A;
+  }
+ 
+.keyart, .keyart_layer {
+	height: 1000px;
+}
+
+#parallax {
+	display: block;
+}
+
+.keyart {
+	position: relative;
+	z-index:5;
+}
+
+.keyart_layer {
+	background-position: bottom center;
+	background-size: 100%;
+	background-repeat:none;
+	width: 101%;
+	position: absolute;
+}
+.keyart_layer.parallax {
+	position: fixed;
+}
+
+  
+#keyart-0 {
+    background-image:url("/recursos/images/bk0.jpg");
+}
+#keyart-1 {
+    background-image: url("/recursos/images/bk1.png");
+}
+#keyart-2 {
+    background-image:url("/recursos/images/bk2.png");
+}
+#keyart-3 {
+    background-image:url("/recursos/images/bk3.png");
+}
+#keyart-4 {
+    background-image:url("/recursos/images/bk4.png");
+}
+#keyart-5 {
+    background-image:url("/recursos/images/bk5.png");
+}
+#keyart-6 {
+    background-image: url("/recursos/images/bk6.png");
+}
+#keyart-7 {
+    background-image: url("/recursos/images/bk7.png");
+}
+#keyart-8 {
+    background-image: url("/recursos/images/bk8.png");
+}
+
+	
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
+    #keyart-0 {
+		background-image:url("/recursos/images/bk0.jpg");
+	}
+	#keyart-1 {
+		background-image: url("/recursos/images/bk1.png");
+	}
+	#keyart-2 {
+		background-image:url("/recursos/images/bk2.png");
+	}
+	#keyart-3 {
+		background-image:url("/recursos/images/bk3.png");
+	}
+	#keyart-4 {
+		background-image:url("/recursos/images/bk4.png");
+	}
+	#keyart-5 {
+		background-image:url("/recursos/images/bk5.png");
+	}
+	#keyart-6 {
+		background-image: url("/recursos/images/bk6.png");
+	}
+	#keyart-7 {
+		background-image: url("/recursos/images/bk7.png");
+	}
+	#keyart-8 {
+		background-image: url("/recursos/images/bk8.png");
+	}
+}
