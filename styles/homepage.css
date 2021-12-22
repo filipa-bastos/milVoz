@@ -1,8 +1,72 @@
 /*Estilo na Homepage*/
 
+  /*NAVBAR
+  pode se colocar o efeito ease in out para quando se retira o rato de cima, para isto mete-se a transição antes e depois?//////////*/ 
+  .navbar-brand:hover, .facebook:hover, .youtube:hover, .instagram:hover,.apadrinhar:hover, .apoiar:hover{
+    opacity: 30%;
+    transition: all .5s ease-in-out;
+    transform: translateY(2px);
+}
+
+
+/*MENU HAMBURGER//////////*/
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  /* border: 3px solid #fff; */
+}
+.menu-btn__burger {
+  width: 40px;
+  height: 4px;
+  background: #F6ECD1;
+  border-radius: 15px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger:hover{
+    opacity: 30%;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #F6ECD1;
+  border-radius: 15px;
+  transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
 .separador {
   padding-top: 100px;
   padding-bottom: 101px;
+  z-index: 10;
+  position: absolute;
 }
 
 .m-esq-neg {
@@ -12,3 +76,100 @@
 .m-dir-neg {
     margin-right: -200px;
   }
+
+
+  .parallax2{
+    background-color: #9F7D5A;
+}
+
+.keyart, .keyart_layer {
+height: 1000px;
+}
+
+#parallax {
+display: block;
+}
+
+.keyart {
+position: relative;
+z-index:5;
+}
+
+.keyart_layer {
+/*background-position: bottom center;*/
+background-size: auto 1038px;
+background-repeat: repeat-x;
+background-size: 100%;
+width: 100%;
+position: absolute;
+}
+.keyart_layer.parallax {
+position: fixed;
+}
+
+
+#keyart-0 {
+  background-image:url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/bk0.jpg?raw=true");
+  background-color: #3a2b11;
+}
+#keyart-1 {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk1.png?raw=true");
+}
+#keyart-2 {
+  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk2.png?raw=true");
+}
+#keyart-3 {
+  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk3.png?raw=true");
+}
+#keyart-4 {
+  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk4.png?raw=true");
+}
+#keyart-5 {
+  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk5.png?raw=true");
+}
+#keyart-6 {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk6.png?raw=true");
+}
+#keyart-7 {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk7.png?raw=true");
+}
+#keyart-8 {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk8.png?raw=true");
+}
+
+#keyart-scrim {
+  background-color: #3a2b11;
+  opacity: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
+  #keyart-0 {
+    background-image:url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/bk0.jpg?raw=true");
+    background-color: #3a2b11;
+  }
+  #keyart-1 {
+    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk1.png?raw=true");
+  }
+  #keyart-2 {
+    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk2.png?raw=true");
+  }
+  #keyart-3 {
+    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk3.png?raw=true");
+  }
+  #keyart-4 {
+    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk4.png?raw=true");
+  }
+  #keyart-5 {
+    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk5.png?raw=true");
+  }
+  #keyart-6 {
+    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk6.png?raw=true");
+  }
+  #keyart-7 {
+    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk7.png?raw=true");
+  }
+  #keyart-8 {
+    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk8.png?raw=true");
+  }
+}
+
