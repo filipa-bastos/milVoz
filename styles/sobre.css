@@ -1,0 +1,49 @@
+span {
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+#sublinhado {
+  width: 40px;
+  height: 0.2px;
+  padding: 20px;
+  background-color: #f6ecd1;
+  opacity: 100%;
+  padding: 5px;
+  margin-top: -5px;
+  margin-left: calc(8rem + 2vw);
+  position: relative;
+}
+
+/*
+  h1::after {
+    content: "";
+    background: #f6ecd1;
+    width: 50px;
+    height: 10px;
+    margin-left: 120px;
+    position: absolute;
+  }
+  */
+
+.quemSomos{
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/fundoTritao.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+
+#intro {
+  background-image: url("https://mdbootstrap.com/img/new/fluid/city/018.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+  #intro {
+    margin-top: -58.59px;
+  }
+}

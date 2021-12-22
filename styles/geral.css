@@ -1,6 +1,13 @@
-*{
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
+  color: #f6ecd1;
 }
+
+h1 {
+  font-family: "Allerta Stencil", sans-serif;
+  font-size: calc(1.8rem + 1.5vw) !important;
+}
+
 
 .castanho-background {
   background-color: #0f0701;
@@ -18,4 +25,8 @@
   cursor: pointer;
   background-color: #0f0701;
   color: #f6ecd1;
+}
+
+.texto-justificado {
+  text-align: justify;
 }
