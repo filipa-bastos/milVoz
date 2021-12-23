@@ -6,8 +6,7 @@
 }
 
 
-  /*NAVBAR
-  pode se colocar o efeito ease in out para quando se retira o rato de cima, para isto mete-se a transição antes e depois?//////////*/ 
+  /*NAVBAR */
   .navbar-brand:hover, .facebook:hover, .youtube:hover, .instagram:hover,.apadrinhar:hover, .apoiar:hover{
     opacity: 30%;
     transition: all .5s ease-in-out;
@@ -15,7 +14,7 @@
 }
 
 
-/*MENU HAMBURGER//////////*/
+/*MENU HAMBURGER*/
 .menu-btn {
   position: relative;
   display: flex;
@@ -54,7 +53,7 @@
 .menu-btn__burger::after {
   transform: translateY(10px);
 }
-/* ANIMATION */
+/* ANIMAÇÃO MENU*/
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
@@ -68,116 +67,7 @@
 }
 
 
-.separador {
-  padding-top: 120px;
-  padding-bottom: 101px;
-  z-index: 10;
-  position: absolute;
-}
-
-.m-esq-neg {
-  margin-left: -300px;
-}
-
-.m-dir-neg {
-    margin-right: -200px;
-  }
-
-
-  /*
-  
-.keyart, .keyart_layer {
-height: 1000px;
-}
-
-#parallax {
-display: block;
-}
-
-.keyart {
-position: relative;
-z-index:5;
-}
-
-.keyart_layer {
-/*background-position: bottom center;
-background-size: auto 1038px;
-background-repeat: repeat-x;
-background-size: 100%;
-width: 100%;
-position: absolute;
-}
-.keyart_layer.parallax {
-position: fixed;
-}
-
-
-#keyart-0 {
-  background-image:url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/bk0.jpg?raw=true");
-  background-color: #3a2b11;
-}
-#keyart-1 {
-  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk1.png?raw=true");
-}
-#keyart-2 {
-  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk2.png?raw=true");
-}
-#keyart-3 {
-  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk3.png?raw=true");
-}
-#keyart-4 {
-  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk4.png?raw=true");
-}
-#keyart-5 {
-  background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk5.png?raw=true");
-}
-#keyart-6 {
-  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk6.png?raw=true");
-}
-#keyart-7 {
-  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk7.png?raw=true");
-}
-#keyart-8 {
-  background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk8.png?raw=true");
-}
-
-#keyart-scrim {
-  background-color: #3a2b11;
-  opacity: 0;
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
-  #keyart-0 {
-    background-image:url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/bk0.jpg?raw=true");
-    background-color: #3a2b11;
-  }
-  #keyart-1 {
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk1.png?raw=true");
-  }
-  #keyart-2 {
-    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk2.png?raw=true");
-  }
-  #keyart-3 {
-    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk3.png?raw=true");
-  }
-  #keyart-4 {
-    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk4.png?raw=true");
-  }
-  #keyart-5 {
-    background-image:url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk5.png?raw=true");
-  }
-  #keyart-6 {
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk6.png?raw=true");
-  }
-  #keyart-7 {
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk7.png?raw=true");
-  }
-  #keyart-8 {
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/05990651d56f36fe3881ecc9429fe039ed283147/recursos/images/bk8.png?raw=true");
-  }
-}
-
-*/
+/*PARALLAX */
 
 section{
   position: relative;
@@ -197,7 +87,7 @@ section:before{
   width: 100%;
   height: 100px;
 
-  z-index: 100000;
+  z-index: 10;
 }
 
 section:after{
@@ -207,9 +97,7 @@ section:after{
   left: 0;
     width: 100%;
   height: 100%;
-
   z-index: 100000;
-  mix-blend-mode: color;
 }
 
 section img{
@@ -222,4 +110,39 @@ section img{
   pointer-events: none;
 }
 
+
+/*SECÇÃO DA MILVOZ*/
+
+.separador {
+  padding-top: 120px;
+  padding-bottom: 101px;
+  position: absolute;
+  width: 100vw;
+  height: 414px;
+}
+
+.criado{
+  padding-top: 1rem;
+}
+
+
+
+/* SECÇÃO DAS ATIVIDADES*/
+
+.atividadeshome {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/sacaRabos.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:1443px;
+  height:1000px;
+  overflow: hidden;
+  margin-top: 25rem;
+}
+
+.atividade{
+  margin-top: 12rem;
+}
+
+/*adicionar animação nos icons quando hover*/
 
