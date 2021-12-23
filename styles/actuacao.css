@@ -1,0 +1,35 @@
+.pad-areas {
+  padding: 10% 10% 25% 10%;
+}
+
+.pad-top {
+  padding-top: 300px;
+}
+
+#listaAreas > li {
+  padding: 15px;
+}
+
+#listaAreas > li:hover {
+  opacity: 80%;
+  cursor: pointer;
+  
+}
+
+.rodar:hover {
+  transform: rotate(-60deg);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+@media only screen and (max-width: 768px) {
+  .pad-areas {
+    padding-left: 100px !important;
+    padding-right: 0;
+    padding-top: 10%;
+    padding-bottom: 0;
+  }
+
+  #listaAreas > li > img {
+    height: 30px;
+  }
+}

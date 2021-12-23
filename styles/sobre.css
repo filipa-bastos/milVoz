@@ -1,4 +1,4 @@
-/*caixar castanhas*/
+/*gradiente castanho amarelado*/
 
 .gradiente {
   background: linear-gradient(
@@ -100,12 +100,10 @@ span {
     font-size: 14px;
     text-align: left;
   }
-
-
 }
 
 @media only screen and (max-width: 996px) {
-  /*recordar que formatação de historia pq existe a imagem do milhlafre que vai até à margem*/
+  /*formatação de historia é diferente pq existe a imagem do milhafre que vai até à margem*/
   .historia {
     padding: 0px;
   }
