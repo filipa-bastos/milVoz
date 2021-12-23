@@ -1,13 +1,15 @@
 * {
   font-family: "Poppins", sans-serif;
   color: #f6ecd1;
+  text-align: justify;
 }
+
+
 
 h1 {
   font-family: "Allerta Stencil", sans-serif;
   /*font-size: calc(1.8rem + 1.5vw) !important;*/
 }
-
 
 .castanho-background {
   background-color: #0f0701;
@@ -27,6 +29,14 @@ h1 {
   color: #f6ecd1;
 }
 
-.texto-justificado {
-  text-align: justify;
+/*PADING UTIL*/
+
+/*pading div historia no sobre*/
+.pad-10-0-10-10 {
+  padding: 10% 0 10% 10%; 
+}
+
+/*pading geral de sobre*/
+.pad-10 {
+  padding: 10% 10% 10% 10%; 
 }

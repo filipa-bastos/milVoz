@@ -1,31 +1,6 @@
-span {
-  font-family: "Allerta Stencil", sans-serif;
-}
+/*caixar castanhas*/
 
-.quemSomos {
-  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/fundoTritao.jpg?raw=true");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.quemSomosTexto {
-  margin-left: 30%;
-}
-
-@media only screen and (max-width: 600px) {
-  .quemSomosTexto {
-    margin-left: 100px;
-    margin-right: 100px;
-    text-align: left;
-  }
-  #tritao {
-    height: 400px;
-  }
-}
-
-.historia {
+.gradiente {
   background: linear-gradient(
     180deg,
     #0e0600 32.35%,
@@ -35,3 +10,114 @@ span {
     #a3815e 262.46%
   );
 }
+
+/*span usado para aplicar a linha inferior por baixo dos titulos*/
+span {
+  font-family: "Allerta Stencil", sans-serif;
+}
+
+/*imagem azul de background*/
+.quemSomos {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/fundoTritao.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+/*margem esquerda usada no quem somos 1ª caixa de texto - QUEM SOMOS*/
+.quemSomosTexto {
+  margin-left: 30%;
+}
+
+/*efeito parallax*/
+#parallaxImage1 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/veadoPequenos.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#parallaxImage2 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/ouricoCacheiro.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#parallaxImage3 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/piscoPeitoAzul.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#imgEstatutos {
+  background-color: aqua;
+  color: #3e361d;
+  height: 400px;
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/esquiloCastanho.jpg?raw=true);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#imgActividades {
+  background-color: aqua;
+  color: #3e361d;
+  height: 400px;
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/corco.jpg?raw=true);
+  background-size: cover;
+  background-position: 600px 300px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
+/*ajustar a movel a ecrã menor*/
+@media only screen and (max-width: 750px) {
+  .quemSomosTexto {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+    padding: 0px;
+  }
+  #tritao {
+    height: 400px;
+  }
+  #logoHitoria {
+    height: 20px;
+  }
+  p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+
+}
+
+@media only screen and (max-width: 996px) {
+  /*recordar que formatação de historia pq existe a imagem do milhlafre que vai até à margem*/
+  .historia {
+    padding: 0px;
+  }
+  .pad-m-100 {
+    padding: 100px;
+  }
+  #imgActividades{
+    background-position: center;
+   }
+   #imgEstatutos{
+   background-position: center;
+  }
+
+}
+
