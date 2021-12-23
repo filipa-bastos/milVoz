@@ -25,16 +25,64 @@ span {
   padding-bottom: 10rem;
 }
 
-/*margem esquerda usada no quem somos 1ª caixa de texto*/
+/*margem esquerda usada no quem somos 1ª caixa de texto - QUEM SOMOS*/
 .quemSomosTexto {
   margin-left: 30%;
 }
 
-/*sepradores*/
-.separador {
-  height: 100px;
+/*efeito parallax*/
+#parallaxImage1 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/veadoPequenos.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+#parallaxImage2 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/ouricoCacheiro.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#parallaxImage3 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/piscoPeitoAzul.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#imgEstatutos {
+  background-color: aqua;
+  color: #3e361d;
+  height: 400px;
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/esquiloCastanho.jpg?raw=true);
+  background-size: cover;
+  background-position: left;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#imgActividades {
+  background-color: aqua;
+  color: #3e361d;
+  height: 400px;
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/corco.jpg?raw=true);
+  background-size: cover;
+  background-position: 600px 300px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+
+
+/*ajustar a movel a ecrã menor*/
 @media only screen and (max-width: 750px) {
   .quemSomosTexto {
     margin-left: 50px;
@@ -50,16 +98,26 @@ span {
   }
   p {
     font-size: 14px;
+    text-align: left;
   }
+
+
 }
 
 @media only screen and (max-width: 996px) {
+  /*recordar que formatação de historia pq existe a imagem do milhlafre que vai até à margem*/
   .historia {
     padding: 0px;
   }
-
-  .linhaHistoria {
-    text-align: left;
-    padding: 50px;
+  .pad-m-100 {
+    padding: 100px;
   }
+  #imgActividades{
+    background-position: center;
+   }
+   #imgEstatutos{
+   background-position: center;
+  }
+
 }
+
