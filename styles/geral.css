@@ -3,11 +3,12 @@
   color: #f6ecd1;
 }
 
+
+
 h1 {
   font-family: "Allerta Stencil", sans-serif;
   /*font-size: calc(1.8rem + 1.5vw) !important;*/
 }
-
 
 .castanho-background {
   background-color: #0f0701;
@@ -29,4 +30,9 @@ h1 {
 
 .texto-justificado {
   text-align: justify;
+}
+
+/*pading util*/
+.pad-10 {
+  padding: 10% 0 10% 10%; 
 }
