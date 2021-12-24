@@ -1,0 +1,8 @@
+.bioreservasIntro {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/corco.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  height: 100vh;
+}

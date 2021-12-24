@@ -1,15 +1,4 @@
-/*gradiente castanho amarelado*/
 
-.gradiente {
-  background: linear-gradient(
-    180deg,
-    #0e0600 32.35%,
-    #3e361d 129.39%,
-    #665d3a 208.06%,
-    #9e7e5b 262.44%,
-    #a3815e 262.46%
-  );
-}
 
 /*span usado para aplicar a linha inferior por baixo dos titulos*/
 span {
