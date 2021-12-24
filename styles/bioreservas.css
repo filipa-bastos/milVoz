@@ -6,3 +6,36 @@
   padding-bottom: 10rem;
   height: 100vh;
 }
+
+/*efeito parallax*/
+#setasTrilhos {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/setasTrilhos.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#serraPescaria {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*tamanho de iframe de google maps*/
+.maps {
+  width: 90%;
+  height: 200px;
+}
+
+/*ajustar texto a telemovel*/
+
+@media only screen and (max-width: 450px) {
+  p {
+    font-size: 12px;
+  }
+}
