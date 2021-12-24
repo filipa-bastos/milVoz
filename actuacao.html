@@ -29,7 +29,7 @@
 <body>
 
     <div class="row position-relative">
-        <img class="img-fluid w-100" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/lepiotaGogumeloCorteAlternativo.jpg?raw=true" alt="">
+        <img class="img-fluid w-100" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/lepiotaGogumeloCorteAlternativo.jpg?raw=true" alt="cogumelo">
         <div class="row position-absolute">
             <div class="col-md-6 d-flex 
             justify-content-start 
@@ -50,19 +50,102 @@
             "
             >
                <ul id="listaAreas">
-                    <li> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/gestaoEcologica.svg" alt="logo de gestão ecológica" height="70px">
+                    <li id="myBtn1"> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/gestaoEcologica.svg" alt="logo de gestão ecológica" height="70px">
                         GESTÃO ECOLÓGICA
                     </li>
-                    <li> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/educacaoAmbiental.svg" alt="logo de educação ambiental" height="70px">
+                    <li id="myBtn2"> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/educacaoAmbiental.svg" alt="logo de educação ambiental" height="70px">
                         EDUCAÇÃO AMBIENTAL
                     </li>
-                    <li> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/partilhaExperiencias.svg" alt="logo de partilha de experiências" height="70px">
+                    <li id="myBtn3"> <img class="rodar" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/51b22b781662a1f40aee116ae7dbf16335f65cf3/recursos/icons/partilhaExperiencias.svg" alt="logo de partilha de experiências" height="70px">
                         PARTILHAS DE EXPERIÊNCIAS
                     </li>
                </ul>
             </div>
+        </div>
 
+    <!-- GESTÃO ECOLÓGICA Trigger/Open The Modal -->
+    <!-- The Modal  -->
+    <div id="myModal1" class="modal">
+    <!--  Modal content -->  
+        <div class="modal-content">
+            <span class="close1">&times;</span>
+            <h1 class="">
+                Gestão Ecológica
+            </h1>
+            <p class="mr-5">
+                De forma a aumentar o potencial ecológico da Bio-Reserva Senhora da Alegria para a biodiversidade e permitir uma exploração segura e cómoda do espaço a todos os visitantes, levamos a cabo uma gestão cuidada do mesmo. Estes são alguns dos exemplos que ajudam a tornar a nossa primeira Bio-Reserva num ecossistema rico e funcional:
+                
+                Plantação e aproveitamento da regeneração natural de espécies autóctones da flora portuguesa
+                
+                Controlo de espécies vegetais invasoras
+                
+                Construção de charcos
+                
+                Construção e colocação de caixas-ninho para a avifauna
+                
+                Criação e manutenção de trilhos integrados na paisagem
+                
+                Elaboração de material interpretativo 
+            </p>
         </div>
     </div>
+
+    
+    <!-- EDUCAÇÃO AMBIENTAL Trigger/Open The Modal -->
+    <!-- The Modal  -->
+    <div id="myModal2" class="modal">
+
+    <!--  Modal content -->
+   
+        <div class="modal-content">
+            <span class="close2">&times;</span>
+            <h1 class="">
+                EDUCAÇÃO AMBIENTAL
+            </h1>
+            <p class="mr-5">
+                O envolvimento da comunidade local é essencial para que a transmissão dos valores MilVoz surtam efeito. Todos juntos, conseguimos fazer soar mais alto a voz que nos comprometemos dar à natureza.
+
+                Promovendo trocas de ideias e discussões construtivas, afinamos este projeto das seguintes formas:
+
+                Organização de visitas guiadas às Bio-Reservas Milvoz
+
+                Divulgação da biodiversidade ocorrente e da importância das florestas e habitats nativos
+
+                Demonstração dos efeitos visíveis da dispersão de espécies invasoras e dos modos de controlo
+
+                Dinamização da comunidade MilVoz nas redes sociais
+            </p>
+        </div>
+    </div>
+
+<!-- ACONSELHAMENTO E PARTILHA DE EXPERIÊNCIAS Trigger/Open The Modal -->
+<!-- The Modal  -->
+    <div id="myModal3" class="modal">
+    <!--  Modal content -->
+        <div class="modal-content">
+            <span class="close3">&times;</span>
+            <h1 class="">
+                ACONSELHAMENTO E PARTILHA DE EXPERIÊNCIAS
+            </h1>
+            <p class="mr-5">
+                Na MilVoz, acreditamos que o futuro passa pela implementação generalizada de práticas focadas no desenvolvimento sustentável e na preservação da biodiversidade.
+    
+                Por esta razão, oferecemos aconselhamento a projetos locais que procurem respeitar e potenciar o património natural.
+
+                Recomendações referentes à plantação de espécies vegetais autóctones
+
+                Substituição de técnicas tradicionais de espantamento de animais por métodos que não ponham em causa a sua integridade
+
+                Identificação de locais de elevado potencial ecológico e prioritários para a conservação 
+
+                Delineamento de medidas de mitigação e compensação face a impactos ambientais negativos
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <script src="./javascript/actuacao.js"></script>
 </body>
 </html>

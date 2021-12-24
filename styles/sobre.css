@@ -80,8 +80,6 @@ span {
   background-repeat: no-repeat;
 }
 
-
-
 /*ajustar a movel a ecrã menor*/
 @media only screen and (max-width: 750px) {
   .quemSomosTexto {
@@ -110,12 +108,10 @@ span {
   .pad-m-100 {
     padding: 100px;
   }
-  #imgActividades{
+  #imgActividades {
     background-position: center;
-   }
-   #imgEstatutos{
-   background-position: center;
   }
-
+  #imgEstatutos {
+    background-position: center;
+  }
 }
-
