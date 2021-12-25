@@ -100,7 +100,8 @@ section {
 section::-webkit-scrollbar {
   display: none;
 }
-section .product {
+section .product,
+.anfibio {
   min-width: 320px;
   height: 80%;
   background: whitesmoke;
@@ -125,7 +126,7 @@ section .product {
     font-size: 30px;
   }
   section .product {
-    min-width: 49%;
+    min-width: 85%;
     margin: 0 10px 0 0;
   }
   .detail,
@@ -143,7 +144,7 @@ section .product {
 
 .card-body {
   font-size: 10px;
-  background-color: #1B1309;
+  background-color: #1b1309;
 }
 
 .card-body p {
@@ -153,7 +154,7 @@ section .product {
 .card-img-top {
   border-top-right-radius: 15px !important;
   border-top-left-radius: 15px !important;
-  background-color: #1B1309;
+  background-color: #1b1309;
 }
 
 .card-title {
@@ -161,6 +162,7 @@ section .product {
   padding: 18px 24px 12px 28px;
   border-radius: 5px;
   margin-top: -25px;
+  text-align: center;
 }
 
 .card-title,
