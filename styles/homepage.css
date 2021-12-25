@@ -87,7 +87,6 @@ section:before{
   bottom:0;
   width: 100%;
   height: 100px;
-
   z-index: 10;
 }
 
@@ -96,7 +95,7 @@ section:after{
   position: absolute;
   top:0;
   left: 0;
-    width: 100%;
+  width: 100%;
   height: 100%;
   z-index: 100000;
 }
@@ -157,7 +156,6 @@ section img{
 }
 
 
-
 .atividade{
   padding-top: 12rem;
   padding-left: 55rem;
@@ -165,3 +163,12 @@ section img{
 
 /*adicionar animação nos icons quando hover*/
 
+.rodar a:hover {
+  transform: rotate(-30deg);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.rodar h4:hover{
+  font-size: 2rem;
+  transition: all 0.2s ease-in-out 0s;
+}
