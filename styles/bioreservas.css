@@ -4,7 +4,7 @@
   background-size: cover;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /*efeito parallax*/
@@ -32,10 +32,4 @@
   height: 200px;
 }
 
-/*ajustar texto a telemovel*/
 
-@media only screen and (max-width: 450px) {
-  p {
-    font-size: 12px;
-  }
-}

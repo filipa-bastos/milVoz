@@ -1,5 +1,3 @@
-
-
 /*span usado para aplicar a linha inferior por baixo dos titulos*/
 span {
   font-family: "Allerta Stencil", sans-serif;
@@ -84,7 +82,6 @@ span {
     height: 20px;
   }
   p {
-    font-size: 14px;
     text-align: left;
   }
 }
@@ -104,5 +101,3 @@ span {
     background-position: center;
   }
 }
-
-

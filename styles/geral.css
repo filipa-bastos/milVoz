@@ -3,7 +3,6 @@
   color: #f6ecd1;
   text-align: justify;
   list-style: none;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 h1 {
@@ -57,4 +56,12 @@ h1 {
 /*pading geral de sobre*/
 .pad-10 {
   padding: 10% 10% 10% 10%;
+}
+
+/*ajustar texto a telemovel*/
+
+@media only screen and (max-width: 450px) {
+  p {
+    font-size: 12px;
+  }
 }
