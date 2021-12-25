@@ -150,12 +150,21 @@ section img{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: absolute;
+  position: relative;
   width:100vh;
   height:1114px;
 }
 
-
+.atividadebox:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+}
+.atividadebox:after{
+  content:'';
+  position: absolute;
+ 
+}
 .atividade{
   padding-top: 12rem;
   padding-left: 55rem;
@@ -171,4 +180,9 @@ section img{
 .rodar h4:hover{
   font-size: 2rem;
   transition: all 0.2s ease-in-out 0s;
+}
+
+.bioreservas{
+  position:absolute;
+  height: 40rem;
 }
