@@ -3,6 +3,7 @@
 *{
   margin: 0;
   padding:0;
+  right: 0;
 }
 
 
@@ -114,34 +115,52 @@ section img{
 /*SECÇÃO DA MILVOZ*/
 
 .separador {
-  padding-top: 120px;
-  padding-bottom: 101px;
-  position: absolute;
+  position: relative;
   width: 100vw;
-  height: 414px;
+  height: 30vh;
+  background-position: center;
+  overflow: hidden;
 }
-
+.separador:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+}
+.separador:after{
+  content:'';
+  position: absolute;
+ 
+}
+.logobox{
+  padding-top: 1rem;
+}
 .criado{
   padding-top: 1rem;
 }
 
-
+@media only screen and (max-width: 800px){
+  .separador{
+    height: 20vh;
+  }
+}
 
 /* SECÇÃO DAS ATIVIDADES*/
 
-.atividadeshome {
+.atividadebox {
   background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/sacaRabos.jpg?raw=true");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width:1443px;
-  height:1000px;
-  overflow: hidden;
-  margin-top: 25rem;
+  position: absolute;
+  width:100vh;
+  height:1114px;
 }
 
+
+
 .atividade{
-  margin-top: 12rem;
+  padding-top: 12rem;
+  padding-left: 55rem;
 }
 
 /*adicionar animação nos icons quando hover*/
