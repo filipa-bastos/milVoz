@@ -185,7 +185,7 @@ section img{
 
 .bioreservas{
   position:relative;
-  height: 40rem;
+  height: 100vh;
 }
 .bioreservas:before{
   content:'';
@@ -204,9 +204,7 @@ section img{
   .bioreservas h4, h3{
     font-size: 20px;
   }
-  .bioreservas{
-    height: 40%;
-  }
+ 
   .bioreservas img{
     width: 50%;
   }
@@ -229,3 +227,39 @@ section img{
     font-size:12px;
   }
 }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+}
+
+body.modal-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.modal-row {
+  height: 100vh;  
+}
+
+.fotoalegria{
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/nossasenhoraAlegria.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.fotoserra{
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
