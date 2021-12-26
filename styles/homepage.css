@@ -229,3 +229,10 @@ section img{
     font-size:12px;
   }
 }
+
+.fotoalegria{
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/nossasenhoraAlegria.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

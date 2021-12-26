@@ -40,6 +40,7 @@ window.addEventListener ('scroll', function(){
 	arbusto.style.top = value * 0.05 + 'px';
 })
 
+
 var modal1 = document.getElementById("myModal1");
 var modal2 = document.getElementById("myModal2");
 
