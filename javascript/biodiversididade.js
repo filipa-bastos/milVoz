@@ -6,7 +6,7 @@ let l = 0;
 let movePer = 25.34;
 //tamanho máximo que a linha dos cartoes pode percorrer
 let maxMoveMamiferos = 50;
-let maxMoveAnfibios = 153;
+let maxMoveAnfibios = 150;
 
 
 
@@ -63,13 +63,13 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 
 
 
+//atenção se acrescentarmos spans temos de ter consciencia que são estes elementos que fazem o tabuleiro andar
 
+	span[2].onclick = ()=>{right_mover_mamiferos();}
+	span[1].onclick = ()=>{left_mover_mamiferos();}
 
-	span[1].onclick = ()=>{right_mover_mamiferos();}
-	span[0].onclick = ()=>{left_mover_mamiferos();}
-
-	span[3].onclick = ()=>{right_mover_anfibios();}
-	span[2].onclick = ()=>{left_mover_anfibios();}
+	span[4].onclick = ()=>{right_mover_anfibios();}
+	span[3].onclick = ()=>{left_mover_anfibios();}
 
 
 

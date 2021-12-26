@@ -61,6 +61,15 @@ picture img {
   color: #444;
 }*/
 
+.biodiversidadeIntro {
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/milhafrePreto.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  min-height: 100vh;
+}
+
 main header {
   width: 98%;
   height: 60px;
@@ -70,13 +79,13 @@ main header {
   align-items: center;
   padding: 20px;
   justify-content: space-between;
-  border-bottom: 2px solid #ddd;
+  /*border-bottom: 2px solid #ddd;*/
 }
 header p span {
   font-size: 40px;
   margin: 0 5px;
   cursor: pointer;
-  color: #555;
+  color: #f6ecd1;
   width: 30px;
   height: 30px;
   display: inline-block;
@@ -85,8 +94,8 @@ header p span {
   border-radius: 3px;
 }
 header p span:hover {
-  background: #222;
-  color: white;
+  background: #f6ecd1;
+  color: #0f0701;
 }
 
 section {
@@ -104,7 +113,7 @@ section .product,
 .anfibio {
   min-width: 320px;
   height: 80%;
-  background: whitesmoke;
+  /*background: whitesmoke;*/
   margin: 0 20px 0 0;
   border-radius: 30px;
   position: relative;
@@ -136,6 +145,10 @@ section .product,
 }
 
 /*cartao bootstrap*/
+.card {
+  background-color: transparent !important;
+}
+
 .tamanhoCartao {
   width: 100%;
   height: 100%;

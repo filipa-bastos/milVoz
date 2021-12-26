@@ -24,6 +24,16 @@ h1 {
   );
 }
 
+.gradienteInverso {
+  background: linear-gradient(
+    179.86deg,
+    #2b2312 -4.39%,
+    #1e160a 44.2%,
+    #0f0701 105.16%,
+    #0f0701 165.24%
+  );
+}
+
 .castanho-background {
   background-color: #0f0701;
 }
