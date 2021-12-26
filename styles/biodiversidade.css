@@ -110,7 +110,7 @@ section::-webkit-scrollbar {
   display: none;
 }
 section .product,
-.anfibio {
+.anfibio, .mamifero {
   min-width: 320px;
   height: 80%;
   /*background: whitesmoke;*/

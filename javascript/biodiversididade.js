@@ -1,12 +1,16 @@
 let span = document.getElementsByTagName('span');
+// a variavel let product será definida como let mamiferos ainda não o foi porque queria  implementar o codigo do carrousel (que tem como referencia o nome produt )
 let product = document.getElementsByClassName('product');
-let anfibios = document.getElementsByClassName('anfibio')
+let anfibios = document.getElementsByClassName('anfibio');
 let product_page = Math.ceil(product.length/4);
+let anfibios_page = Math.ceil(anfibios.length/4);
 let l = 0;
+//para anfibios
+let m = 0;
 let movePer = 25.34;
 //tamanho máximo que a linha dos cartoes pode percorrer
 let maxMoveMamiferos = 50;
-let maxMoveAnfibios = 150;
+let maxMoveAnfibios = 125;
 
 
 
@@ -18,7 +22,7 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 	 	maxMove = 504;
 	 }
 
-	 //funçoes que movem a linda dos MAMIFEROS
+	 //funçoes que movem a linda dos MAMIFEROS (nao esquecer que estao nomeados como product)
 
 	let right_mover_mamiferos = ()=>{
 		l = l + movePer;
@@ -39,24 +43,26 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 			}
 		}
 	}
+
+
 	//funçoes que movem a linda dos ANFIBIOS
 
 	let right_mover_anfibios = ()=>{
-		l = l + movePer;
-		if (anfibios == 1){l = 0; }
+		m = m + movePer;
+		if (anfibios == 1){m = 0; }
 		for(const j of anfibios)
 		{
-			if (l > maxMoveAnfibios){l = l - movePer;}
-			j.style.left = '-' + l + '%';
+			if (m > maxMoveAnfibios){m = lm - movePer;}
+			j.style.left = '-' + m + '%';
 		}
 
 	}
 	let left_mover_anfibios = ()=>{
-		l = l - movePer;
-		if (l<=0){l = 0;}
+		m = m - movePer;
+		if (m<=0){m = 0;}
 		for(const j of anfibios){
-			if (product_page>1){
-				j.style.left = '-' + l + '%';
+			if (anfibios_page>1){
+				j.style.left = '-' + m + '%';
 			}
 		}
 	}
@@ -71,6 +77,10 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 	span[4].onclick = ()=>{right_mover_anfibios();}
 	span[3].onclick = ()=>{left_mover_anfibios();}
 
+	//console.log(anfibios[0].offsetWidth);
+
+	console.log(product_page)
 
 
-	
+
+	// LALALALALLALALAL
