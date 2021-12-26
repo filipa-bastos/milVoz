@@ -50,12 +50,12 @@ var btn2 = document.getElementById("pescaria");
 var span1 = document.getElementsByClassName("close1")[0];
 var span2 = document.getElementsByClassName("close2")[0];
 	
-btn1.onclick = function() {
+btn1.onmouseover = function() {
 	modal1.style.display = "block";
   }
   
-  btn2.onclick = function() {
-	modal2.style.display = "block";
+  btn2.onmouseover = function() {
+	modal2.style.position = "block";
   }
 
   span1.onclick = function() {
