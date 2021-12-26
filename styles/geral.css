@@ -56,6 +56,51 @@ h1 {
   color: #f6ecd1;
 }
 
+/*footer*/
+.logotipoFooter {
+  height: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .logotipoFooter {
+    height: 40px;
+  }
+}
+
+
+/*padding e margens para o footer*/
+.mDir {
+  margin-right: 70px !important;
+}
+
+/*em ecrãs pequenos footer fica invisivel*/
+.dNoneTel {
+  display: block;
+}
+
+@media only screen and (max-width: 499px) {
+  .dNoneTel {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mDir {
+    margin-right: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 750) {
+  .margemLateralSd {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+  }
+}
+
+.pEsq {
+  padding-left: 40px !important;
+}
+
 /*PADING UTIL*/
 
 /*pading div historia no sobre*/
