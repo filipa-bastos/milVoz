@@ -1,3 +1,11 @@
+// IMPORTAR ANIMAÇÕES 
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
+import { Input as CustomInput } from 'mdb-ui-kit'; // module with custom name
+
+
+
+
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 
