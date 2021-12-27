@@ -115,70 +115,69 @@
             <div class="container-fluid p-5"> 
                 <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/2peopleIcon.svg" alt="icone de duas pessoas">
                 <h1>SER SÓCIO</h1>
-                <div class="row gx-5">
-                    <div class="col-12 col-md-6">                        
-                        <p>Cada novo sócio MilVoz permite à associação crescer, levar a cabo novos projetos, trazendo a consciência ambiental para a ordem do dia. Para se tornar sócio basta pagar o valor de quota anual  e preencher o formullário ao lado (mín. 20€ associado individual / 60€ associado coletivo / crianças até aos 12 anos são isentas do pagamento de quota) </p>
-                        <hr class="linhaApoiar">
-                        <p><img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/mbIcon.svg" alt="icone MBWay"> <span> MBWAY	&#8594; </span>   9120 123 123</p>
-                        <p><img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/bankIcon.svg" alt="icone transferência bancária"> <span> IBAN MilVoz	&#8594; </span>   PT50-0033-0000-45568966521-05</p>
+                    <div class="row gx-5">
+                        <div class="col-12 col-lg-6">                        
+                            <p>Cada novo sócio MilVoz permite à associação crescer, levar a cabo novos projetos, trazendo a consciência ambiental para a ordem do dia. Para se tornar sócio basta pagar o valor de quota anual  e preencher o formullário ao lado (mín. 20€ associado individual / 60€ associado coletivo / crianças até aos 12 anos são isentas do pagamento de quota) </p>
+                            <hr class="linhaApoiar">
+                            <p><img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/mbIcon.svg" alt="icone MBWay"> <span> MBWAY	&#8594; </span>   9120 123 123</p>
+                            <p><img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/bankIcon.svg" alt="icone transferência bancária"> <span> IBAN MilVoz	&#8594; </span>   PT50-0033-0000-45568966521-05</p>
 
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="row">
-                        <div class="col-sm-6 col-12 ">
-                            <div class="d-flex flex flex-column justify-content-end mb-3">
-                                <label for="nome">Nome Completo:</label>
-                                <input type="text" id="nome" name="usuario_nome" />
-                            </div>
-                            <div class="d-flex flex flex-column mb-3">
-                                <label for="nome">Nome para o seu cartão de sócio:</label>
-                                <input type="text" id="nome" name="usuario_nome" />
-                            </div>
-                            <div class="d-flex flex flex-column mb-3">
-                                <label for="nome">Morada:</label>
-                                <input type="text" id="nome" name="usuario_nome" />
-                            </div>
-                            <div class="d-flex flex flex-column mb-3">
-                                <label for="nome">Telefone:</label>
-                                <input type="text" id="nome" name="usuario_nome" />
-                            </div>
-                            <div class="d-flex flex flex-column mb-3">
-                                <label for="nome">Número CC/BI:</label>
-                                <input type="text" id="nome" name="usuario_nome" />
-                            </div>
-                            <div class="d-flex ">
-                                <p class="mt-3" style="font-size: 13px;">>anexar comprovativo de pagamento <img height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download"></p>   
-                            </div>
                         </div>
-                            <div class="col-sm-6 col-12">
-                                <div class="d-flex flex flex-column mb-3">
-                                    <label for="nome">Sexo:</label>
-                                    <input type="text" id="nome" name="usuario_nome" />
-                                </div>
-                                <div class="d-flex flex flex-column mb-3">
-                                    <label for="nome">Data de Nascimento:</label>
-                                    <input type="text" id="nome" name="usuario_nome" />
-                                </div>
-                                <div class="d-flex flex flex-column mb-3">
-                                    <label for="nome">Código Postal:</label>
-                                    <input type="text" id="nome" name="usuario_nome" />
-                                </div>
-                                <div class="d-flex flex flex-column mb-3">
-                                    <label for="nome">E-mail:</label>
-                                    <input type="text" id="nome" name="usuario_nome" />
-                                </div>
-                                <div class="d-flex flex flex-column mb-5">
-                                    <label for="nome">NIF:</label>
-                                    <input type="text" id="nome" name="usuario_nome" />
-                                </div>
-                                <div class="d-flex justify-content-end ">
-                                    <button  class="botao d-inline-block" type="submit">Enviar sua mensagem</button>
-                                </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                            <div class="col-sm-6 col-12 ">
+                                <!--formulario de ser socio-->
+                                <form>
+                                    <div class="d-flex flex flex-column justify-content-end mb-3">
+                                        <!--nome completo-->
+                                        <label for="nome">Nome Completo:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--nome no cartao de socio-->
+                                        <label class="mt-3" for="nome">Nome para o seu cartão de sócio:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--morada-->
+                                        <label class="mt-3" for="nome">Morada:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--telefone-->
+                                        <label class="mt-3" for="nome">Telefone:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--numero de cc BI-->
+                                        <label class="mt-3" for="nome">Número CC/BI:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--comprovativo-->
+                                        <p class="mt-3" style="font-size: 13px;"><img class="mr-4" height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download">&nbsp; anexar comprovativo de pagamento </p>   
+                                    </div>
+                                </form>
                             </div>
+                                <div class="col-sm-6 col-12">
+                                    <div class="d-flex flex flex-column mb-3">
+                                        <!--sexo-->
+                                        <label for="nome">Sexo:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--data de nascimento-->
+                                        <label class="mt-3" for="nome">Data de Nascimento:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--codigo postal-->
+                                        <label class="mt-3" for="nome">Código Postal:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--email-->
+                                        <label class="mt-3" for="nome">E-mail:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <!--nif-->
+                                        <label class="mt-3" for="nome">NIF:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                    </div>
+                                    <!--botão enviar-->
+                                    <div class="d-flex justify-content-end ">
+                                        <button  class="botao d-inline-block" type="submit">Enviar </button>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
             </div>
         </div>
+
+        
 </body>
 </html>

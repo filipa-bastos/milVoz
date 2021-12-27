@@ -56,9 +56,19 @@ h1 {
   padding: 4px 18px;
   font-size: 12px;
   cursor: pointer;
-  background-color: #0f0701;
+  background-color: transparent;
   color: #f6ecd1;
+  font-weight: 500;
 }
+
+.botao:hover{
+  border: 2px solid #f6ecd1;
+  background-color: #f6ecd1;
+  color: #0f0701;
+  font-weight: 500;
+  transition: all 0.1s 0s ease;
+}
+
 
 /*formulario*/
 input[type="text"],
