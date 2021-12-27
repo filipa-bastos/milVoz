@@ -1,17 +1,22 @@
 .apoiarIntro {
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/texugo.jpg?raw=true");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    height: 100vh;
-  }
-  
-  #separadorApoiar {
-    background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/chapimMascarilha.jpg?raw=true);
-    background-size: cover;
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/texugo.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  height: 100vh;
+}
+
+#separadorApoiar {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/chapimMascarilha.jpg?raw=true);
+  background-size: cover;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.linhaApoiar {
+  border: 1px solid #f6ecd1;
+  opacity: 100%;
+}
