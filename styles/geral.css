@@ -15,6 +15,8 @@ h1 {
   text-shadow: 2px 2px 4px #000000;
 }
 
+
+
 /*gradiente castanho amarelado*/
 
 .gradiente {
@@ -58,7 +60,19 @@ h1 {
   cursor: pointer;
   background-color: #0f0701;
   color: #f6ecd1;
+ 
 }
+
+/*formulario*/
+input[type=text],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-bottom: 2px solid #f6ecd1;
+  resize: vertical;
+  background-color: transparent;
+}
+
 
 /*footer*/
 .logotipoFooter {

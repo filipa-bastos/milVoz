@@ -110,33 +110,66 @@
 
     <!--FORMULANIO DE CONTACTO-->
     <div class=" gradiente py-5">
-        <div class=" gradiente py-5">
+        
             <div class="container py-5">
                 <div class="row py-5 m-sm-0 m-5">
-                        <div class="col-12 col-md-8">
-                            <h1>Sua mensagem</h1>
-                            <p class="mt-4">
-                                A Bio-Reserva Senhora da Alegria foi o primeiro e
-                            </p>
+                        <!--formulario-->
+                        <div class="col-12 col-md-8 px-5">
+                            <h1 class="mb-4">Sua mensagem</h1>
+                            <form action="/pagina-processa-dados-do-form" method="post">
+                                <div class="d-flex mb-5">
+                                    <div class="d-flex flex flex-column">
+                                        <label for="nome">Nome:</label>
+                                        <input type="text" id="nome" name="usuario_nome" />
+                                    </div>
+                                    <div class="d-flex flex flex-column px-5">
+                                        <label for="email">E-mail:</label>
+                                        <input type="email" id="email" name="usuario_email" />
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex flex-column">
+                                    <label for="msg">Mensagem:</label>
+                                    <textarea id="msg" name="usuario_msg"></textarea>
+                                </div>
+                            
+                                <div class="d-flex justify-content-end mt-5">
+                                    <button  class="botao d-inline-block" type="submit">Enviar sua mensagem</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col-12 col-md-4 d-flex flex-column justify-content-end align-items-start">
-                            <a class="p-2" href="https://www.facebook.com/MilVozNatureza" target="_blank">
-                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
-                                <span>/MilVozNatureza</span>
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start">
+                            <!--facebook-->
+                            <a class="py-3" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                                <img  height="30px"  src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                                <span class="px-2">/MilVozNatureza</span>
                             </a>
-
-                            <a  class="p-2"href="https://www.instagram.com/milvoznatureza/" target="_blank">
-                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
-                                <span>@milvoznatureza</span>
+                            <!--instagram-->
+                            <a  class="py-3"href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                                <img height="30px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                                <span class="px-2">@milvoznatureza</span>
                             </a>
-                            <a class="p-2" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
-                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
-                                <span>MilVoz Conservação da Natureza</span>
+                            <!--youtube-->
+                            <a class="py-3" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                                <img height="30px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                                <span class="px-2">MilVoz Conservação da Natureza</span>
+                            </a>
+                           <!--email-->
+                            <a class="py-3" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/4dc30e3d3aa7860d1b3d52c39356b4bd60874fbb/recursos/icons/arrobaIcon.svg" alt="youtube logo">
+                                <span class="px-2">geral@milvoz.pt</span>
+                            </a>
+                            <!--maps-->
+                            <a class="py-3" href="#" target="_blank">
+                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/4dc30e3d3aa7860d1b3d52c39356b4bd60874fbb/recursos/icons/mapIcon.svg" alt="youtube logo">
+                                <span class="px-2">Rua da Calçada Antiga, nº1 <br>
+                                    <span class="px-3"></span>  Assafarge, 3040-657 Coimbra </span>
+                                    
                             </a>
                         </div>
                 </div>
             </div>
-        </div>
+        
     </div>
 
     <div id="separadorContactos"></div>
