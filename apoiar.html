@@ -1,12 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Milvoz - ONGA</title>
+        
+        <!--Styles-->
+        <link rel="stylesheet" href="./styles/geral.css">
+        <link rel="stylesheet" href="./styles/apoiar.css">
+        
+        <!--STYLE BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!--STYLE FONT AWESOME-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        
+        <!--FONTE POPPINS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
+        <!--FONTE AXIA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
+    
+    </head>
 </head>
 <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #283A3F;" >
+            <!-- Container wrapper  -->
+            <div class="container-fluid mt-2 mb-2" style="background-color: #283A3F; " >
+            <!-- Navbar brand -->
+            <a class="navbar-brand ms-5" href="index.html">
+                <img 
+                src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+                height="24px"
+                width="94px"
+                alt="Milvoz Logotipo"
+                loading="lazy">
+            </a>
+        
+            <!-- Toggle button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarButtonsExample" 
+                aria-controls="navbarButtonsExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars cor-primaria"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                
+                <!-- Left links .-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item me-2 ms-3 facebook">
+                    <a class="nav-link" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                    <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                    </a>
+                </li>
+                <li class="nav-item me-2 ">
+                    <a class="nav-link instagram" href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                    <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                    <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                    </a>
+                </li>
+                
+                </ul>
+                <!-- Right links -->
+                <div class="d-flex align-items-center ">
+                    <button type="button" class="botao me-3 apadrinhar">
+                        APADRINHAR
+                    </button>
+                    <button type="button" class="botao me-3 apoiar">
+                    APOIAR
+                    </button>
+                
+                    <!-- ABRIR A CLASSE MODAL -->
+                    <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper --> 
+        </nav>
     
+        <!--INTRO FULL BOOTSTRAP com, background image -->
+        <div class="apoiarIntro d-flex justify-content-center align-items-sm-end align-items-start">
+            <div class="container" >
+                    <div class="col-md-6 m-sm-0 m-5 mx-5 introMargem">
+                        <h1 style="text-shadow: 1px 1px 3px #000000;">SÊ MAIS UMA VO<span style='border-bottom:9px #f6ecd1 solid; margin-top: -50rem;box-shadow: 0px 2px rgba(0, 0, 0, 0.1)'>Z &nbsp</span></h1>
+                        <p class="mt-4 amareloEscuro">Estamos profundamente agradecidos a toda comunidade que quer fazer parte deste projeto e com a qual trabalhamos para que cada semente caia em terreno fértil.
+                        <p>
+                        <p>SAIBA COMO FAZER PARTE <span style="font-size:30px">&#x21b4;</span></p>
+                    </div>
+                    <div class="col-md-6">
+                    </div> 
+            </div>  
+        </div>
+
+        
 </body>
 </html>
