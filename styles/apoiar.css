@@ -7,14 +7,32 @@
   height: 100vh;
 }
 
-#separadorApoiar {
-  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/chapimMascarilha.jpg?raw=true);
+#separadorApoiar1 {
+  background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/gineta1.jpg?raw=true);
   background-size: cover;
   height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#separadorApoiar2 {
+    background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/ginetta2.jpg?raw=true);
+    background-size: cover;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #separadorApoiar3 {
+    background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/ginetta3.jpg?raw=true);
+    background-size: cover;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
 .linhaApoiar {
   border: 1px solid #f6ecd1;
