@@ -57,14 +57,14 @@ span {
 }
 
 #imgActividades {
-  background-color: aqua;
   color: #3e361d;
-  height: 400px;
+  height: 800px;
   background-image: url(https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/corco.jpg?raw=true);
   background-size: cover;
   background-position: 600px 300px;
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  
 }
 
 /*ajustar a movel a ecrã menor*/
