@@ -30,9 +30,13 @@
   padding: 20px;
 }
 
+.modalFormApadrinhar-content p {
+  font-size: 12px;
+}
+
 /* The Close Button */
 .close {
-color: #f6ecd1;
+  color: #f6ecd1;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -43,7 +47,7 @@ color: #f6ecd1;
 .close:hover,
 .close:focus {
   color: #000;
-  background-color: #f6ecd1;;
+  background-color: #f6ecd1;
   text-decoration: none;
   cursor: pointer;
   padding-left: 10px;
