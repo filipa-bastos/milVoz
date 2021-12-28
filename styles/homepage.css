@@ -228,6 +228,13 @@ section img{
   }
 }
 
+.close1, .close2{
+  font-size: 2rem;
+  padding-left: 1rem;
+  cursor:pointer;
+}
+
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -262,4 +269,15 @@ body.modal-open {
   background-size: cover;
   background-position: center;
 }
+
+.doninha{
+  position: relative;
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/doninha.jpg?raw=true");
+  background-size: cover;
+  height: 600px;
+  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
