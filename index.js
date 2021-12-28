@@ -55,7 +55,7 @@ btn1.onmouseover = function() {
   }
   
   btn2.onmouseover = function() {
-	modal2.style.position = "block";
+	modal2.style.display = "block";
   }
 
   span1.onclick = function() {
