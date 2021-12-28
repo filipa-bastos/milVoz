@@ -5,10 +5,13 @@
   margin: 0;
   padding:0;
   right: 0;
+  left:0;
 }
 
 
-  /*NAVBAR */
+  /*//////////////////////////////////NAVBAR ////////////////////////////////*/
+
+
   .navbar-brand:hover, .facebook:hover, .youtube:hover, .instagram:hover,.apadrinhar:hover, .apoiar:hover{
     opacity: 30%;
     transition: all .5s ease-in-out;
@@ -28,6 +31,7 @@
   transition: all .5s ease-in-out;
   /* border: 3px solid #fff; */
 }
+
 .menu-btn__burger {
   width: 40px;
   height: 4px;
@@ -36,9 +40,9 @@
   transition: all .5s ease-in-out;
 }
 
-.menu-btn__burger:hover{
-    opacity: 30%;
-}
+
+
+/*MENU HAMBURGER BEFORE // AFTER */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   content: '';
@@ -55,7 +59,13 @@
 .menu-btn__burger::after {
   transform: translateY(10px);
 }
-/* ANIMAÇÃO MENU*/
+
+/* MENU HAMBURGER hamburger*/
+
+.menu-btn__burger:hover{
+  opacity: 30%;
+}
+
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
@@ -69,7 +79,7 @@
 }
 
 
-/*PARALLAX */
+/*//////////////////////PARALLAX ///////////////////////////*/
 
 section{
   position: relative;
@@ -82,13 +92,15 @@ section{
 
 }
 
+/*PARALLAX BEFORE // AFTER */
+
 section:before{
   content:'';
   position: absolute;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   height: 100px;
-  z-index: 10;
+  z-index: 1000;
 }
 
 section:after{
@@ -112,7 +124,7 @@ section img{
 }
 
 
-/*SECÇÃO DA MILVOZ*/
+/*////////////////MILVOZ////////////////*/
 
 .separador {
   position: relative;
@@ -121,16 +133,6 @@ section img{
   background-position: center;
   overflow: hidden;
 }
-.separador:before{
-  content:'';
-  position: absolute;
-  bottom:0;
-}
-.separador:after{
-  content:'';
-  position: absolute;
- 
-}
 .logobox{
   padding-top: 1rem;
 }
@@ -138,13 +140,32 @@ section img{
   padding-top: 1rem;
 }
 
+
+/*MILVOZ BEFORE // AFTER */
+
+.separador:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+  right: 0;
+  
+}
+.separador:after{
+  content:'';
+  position: absolute;
+  left:0;
+  right:0;
+}
+
+/*MILVOZ RESPONSIVIDADE */
+
 @media only screen and (max-width: 800px){
   .separador{
     height: 20vh;
   }
 }
 
-/* SECÇÃO DAS ATIVIDADES*/
+/* ///////////////////////// SECÇÃO DAS ATIVIDADES////////////////////////////*/
 
 .atividadebox {
   background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/sacaRabos.jpg?raw=true");
@@ -156,22 +177,37 @@ section img{
   height:1114px;
 }
 
-.atividadebox:before{
-  content:'';
-  position: absolute;
-  bottom:0;
-}
-.atividadebox:after{
-  content:'';
-  position: absolute;
- 
-}
 .atividade{
   padding-top: 12rem;
   padding-left: 55rem;
 }
 
-/*adicionar animação nos icons quando hover*/
+
+/* SECÇÃO DAS ATIVIDADES - BEFORA // AFTER */
+.atividadebox:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0E0600, transparent);
+  z-index: 10;
+}
+
+.atividadebox:after{
+  content:'';
+  position: absolute;
+  background: linear-gradient(to bottom, #0E0600, transparent);
+  left:0;
+  right:0;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+}
+
+
+/*SECÇÃO DAS ATIVIDADES - ANIMAÇÃO */
 
 .rodar a:hover {
   transform: rotate(-60deg);
@@ -183,28 +219,37 @@ section img{
   transition: all 0.2s ease-in-out 0s;
 }
 
+
+/* ////////////////// BIORESERVAS ////////////////////////*/ 
+
 .bioreservas{
   position:relative;
-  height: 100vh;
+  height: 60vh;
 }
+
+/* BIORESERVAS BEFORE // AFTER */ 
+
 .bioreservas:before{
   content:'';
   position: absolute;
   bottom:0;
+  right: 0;
+  left: 0;
 }
 .bioreservas:after{
   content:'';
-  position: absolute;
- 
+  position: absolute; 
+  bottom:0;
+  right: 0;
+  left: 0;
 }
 
-
+/* Bioreservas responsividade */ 
 
 @media only screen and (max-width: 650px){
   .bioreservas h4, h3{
     font-size: 20px;
   }
- 
   .bioreservas img{
     width: 50%;
   }
@@ -228,12 +273,14 @@ section img{
   }
 }
 
+
+/* Bioreservas MODAL */ 
 .close1, .close2{
   font-size: 2rem;
   padding-left: 1rem;
   cursor:pointer;
+  z-index: 1000000000;
 }
-
 
 .modal {
   display: none; /* Hidden by default */
@@ -248,12 +295,12 @@ section img{
 }
 
 body.modal-open {
-  height: 100vh;
+  height: 60vh;
   overflow-y: hidden;
 }
 
 .modal-row {
-  height: 100vh;  
+  height: 60vh;  
 }
 
 .fotoalegria{
@@ -270,14 +317,251 @@ body.modal-open {
   background-position: center;
 }
 
+
+/* Bioreservas MODAL - RESPONSIVE */
+
+@media only screen and (max-width: 650px){
+  
+}
+
+@media only screen and (max-width: 360px){
+  .modal-row{
+  font-size: 0.5rem;
+}
+}
+
+
+
+/* ////////////////////// SÊ MAIS UMA VOZ ////////// */ 
+
 .doninha{
   position: relative;
   background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/doninha.jpg?raw=true");
   background-size: cover;
   height: 600px;
-  background-size: 120%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.txtdoninha{
+  z-index: 15;
+}
+
+/*sÊ MAIS UMA VOZ BEFORE/ AFTER */ 
+
+.doninha:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0E0600, transparent);
+  z-index: 10;
+}
+
+.doninha:after{
+  content:'';
+  position: absolute;
+  left:0;
+  right:0;
+  background-color: #0E0600;
+  opacity: 0.5;
+  width: 100%;
+  height: 600px;
+  z-index: 10;
+}
+
+/* ///////// BIODIVERSIDADE LOCAL ///////////////////////*/ 
+
+/* BOTÕES*/ 
+
+main header {
+  width: 98%;
+  height: 60px;
+  margin: 0 auto;
+  /*background: gray;*/
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  /*border-bottom: 2px solid #ddd;*/
+}
+
+header p span {
+  font-size: 40px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #f6ecd1;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  line-height: 19px;
+  text-align: center;
+  border-radius: 3px;
+}
+header p span:hover {
+  background: #f6ecd1;
+  color: #0f0701;
+}
+
+/* CARTÕES */ 
+
+
+
+.contentor {
+  width: 98%;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.biodiversidade:-webkit-scrollbar {
+  display: none;
+}
+
+.biodiversidade .product, .mamifero {
+  min-width: 320px;
+  height: 80%;
+  /*background: whitesmoke;*/
+  margin: 0 20px 0 0;
+  border-radius: 30px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .text h1 {
+    font-size: 35px;
+  }
+  .text p {
+    width: 90%;
+  }
+  header h1 {
+    font-size: 25px;
+  }
+  header p span {
+    font-size: 30px;
+  }
+  .biodiversidade .product {
+    min-width: 85%;
+    margin: 0 10px 0 0;
+  }
+  .detail,
+  .button {
+    font-size: 16px;
+  }
+}
+
+/*cartao bootstrap*/
+.card {
+  background-color: transparent !important;
+}
+
+.tamanhoCartao {
+  width: 100%;
+  height: 100%;
+  border: 0px !important;
+}
+
+.card-body {
+  font-size: 10px;
+  background-color: #1b1309;
+}
+
+.card-body p {
+  color: #9e9f9b;
+}
+
+.card-img-top {
+  border-top-right-radius: 15px !important;
+  border-top-left-radius: 15px !important;
+  background-color: #1b1309;
+}
+
+.card-title {
+  background-color: #93785f;
+  padding: 18px 24px 12px 28px;
+  border-radius: 5px;
+  margin-top: -25px;
+  text-align: center;
+}
+
+.card-title,
+h5 {
+  color: white;
+  text-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.footerTop {
+  background-color: #79634d !important;
+  padding: 0 !important;
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
+small {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.footerBottom {
+  background-color: #3a2c20 !important;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  border-bottom-right-radius: 15px !important;
+  border-bottom-left-radius: 15px !important;
+}
+
+.iconeBioreserva {
+  top: 10px;
+  right: 10px;
+}
+
+
+
+
+
+
+/* //////////// NEWSLETTER ///////// */
+
+.andorinha{
+  position: relative;
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/andorinhas.jpg?raw=true");
+  background-size: cover;
+  height: 600px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.andorinha:before{
+  content:'';
+  position: absolute;
+  bottom:0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0E0600, transparent);
+  z-index: 10;
+}
+
+.andorinha:after{
+  content:'';
+  position: absolute;
+  left:0;
+  right:0;
+  background-color: #0E0600;
+  opacity: 0.5;
+  width: 100%;
+  height: 600px;
+  z-index: 10;
+}
 
