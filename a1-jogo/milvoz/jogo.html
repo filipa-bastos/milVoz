@@ -51,7 +51,36 @@
 
         </div>
         <script>
-            
+
+            //variaveis
+            var tela;
+            var contexto;
+
+            var racioX;
+            var racioY;
+
+            var ratoX;
+            var ratoY;
+
+            var fundo;
+
+            //funcao iniciar - declarar valor variaveis / passar vars para arrays / textos / primeira funcao
+
+            function inicia(){
+                tela = new Tela(document.getElementById("tela"));
+                contexto = tela.contexto;
+                fundo = new Rectangulo(0, 0, tela.largura, tela.altura, "lightblue");
+
+
+
+            }
+
+            //arrancar inicio jogo
+            window.onload = function () {
+                inicia();
+                
+            };
+
         </script>
  
     </body>
