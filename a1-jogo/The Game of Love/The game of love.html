@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Daft Punk
+        </title>
+        <style>
+            body{
+                background-color: #111111;
+            }
+
+            #recursos {
+                display: none;
+            }
+    
+            #tela {
+                display: block;
+                background-color: aquamarine;
+                /*background-color: #111111;*/
+                position: fixed;
+                top: calc(50vh - 400px);
+                right: calc(50vw - 700px);
+                /*width: 100vw;
+                height: 100vh;*/
+            }
+        </style>
+        <script src="ElementosJogo.js"></script>
+    </head>
+    <body>
+        <canvas id="tela" width="1400" height="800">O seu <em>browser</em> não suporta o elemento
+            <code>canvas</code>!</canvas>
+
+
+        <div id="recursos">
+            <img id="fundo" src="recursos/fundo.png">
+            <img id="logoimg" src="recursos/logo.png">
+            <img id="playimg" src="recursos/play1.png">
+            <img id="playimgover" src="recursos/play2.png">
+            <img id="personagemimg" src="recursos/personagem1.png">
+            <img id="personagemimgover" src="recursos/personagem2.png">
+            <img id="helpimg" src="recursos/help1.png">
+            <img id="helpimgover" src="recursos/help2.png">
+            <img id="muteico" src="recursos/muteicon.png">
+            <img id="avaum" class="jogador" src="recursos/ava1.png">
+            <img id="avadois" class="jogador" src="recursos/ava2.png">
+            <img id="avatres" class="jogador" src="recursos/ava3.png">
+            <img id="avaquatro" class="jogador" src="recursos/ava4.png">
+            <img id="avacinco" class="jogador" src="recursos/ava5.png">
+            <img id="avaseis" class="jogador" src="recursos/ava6.png">
+            <audio id="musicafundo" src="recursos/daft-punk-the-game-of-love-official-audio.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!
+            </audio>
+            <img id="textohelp" src="recursos/texto_help.png">
+            <img id="setaesq" src="recursos/setaesq.png">
+            <img id="setadir" src="recursos/setadir.png">
+            <img id="rocha" src="recursos/rocha.png">
+            <audio id="disparo" src="recursos/shot.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
+            <audio id="explosao" src="recursos/bomb.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
+            <img id="tiro" src="recursos/shot.png">
+            <img id="coracao" src="recursos/coracao.png">
+            <img id="coracaovida" src="recursos/coracaovida.png">
+            <audio id="disparo" src="recursos/shot.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
+            <audio id="somvida" src="recursos/vida.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
+            <img id="segundoelemento" src="recursos/enimigo2.png">
+            <img id="nivelum" src="recursos/nivel1.png">
+            <img id="niveldois" src="recursos/nivel2.png">
+            <img id="niveltres" src="recursos/nivel3.png">
+            <img id="nivelquatro" src="recursos/nivel4.png">
+            <img id="nivelcinco" src="recursos/nivel5.png">
+            <img id="nivelseis" src="recursos/nivel6.png">
+            <img id="nivelsete" src="recursos/nivel7.png">
+            <img id="niveloito" src="recursos/nivel8.png">
+            <img id="finalimg" src="recursos/fim.png">
+            <img id="creditos" src="recursos/creditos.png">
+            <img id="txtcreditos" src="recursos/txtcreditos.png">
+        </div>
+        <script>
+            var tela;
+            var contexto;
+            var contador;
+            var contadora;
+
+            var racioX;
+            var racioY;
+
+            var ratoX;
+            var ratoY;
+
+            var fundo;
+            var logoimg;
+            var playimg;
+            var playimgover;
+            var helpimg;
+            var helpimgover;
+            var personagemimg;
+            var personagemimgover;
+            var muteico;
+            var textohelp;
+            var setaesq;
+            var setadir;
+            var continua;
+            var rocha;
+            var dificuldade;
+            var segundoelemento;
+            var malvado;
+
+            var avaum;
+            var avadois;
+            var avatres;
+            var avaquatro;
+            var avacinco;
+            var avaseis;
+            var selava;
+            var selectedava;
+            var numper = 1;
+
+            var tiros;
+            var disparo;
+            var explosao;
+            var pontos;
+            var pontuacao;
+            var vidas;
+            var somvida;
+
+            var musicafundo;
+            var volume;
+            var somvol;
+
+            var nivelum;
+            var niveldois;
+            var niveltres;
+            var nivelquatro;
+            var nivelcinco;
+            var nivelseis;
+            var nivelsete;
+            var niveloito;
+
+            var paginaatual;
+            var retanguloesq;
+
+            var fim;
+            var finalimg;
+            var textofinal;
+
+            var creditos;
+            var txtcreditos;
+
+
+
+            function inicia(){
+                tela = new Tela(document.getElementById("tela"));
+                contexto = tela.contexto;
+                fundo = new Rectangulo(0, 0, tela.largura, tela.altura, "lightblue");
+
+                fundo = document.getElementById("fundo");
+                logoimg = document.getElementById("logoimg");
+                playimg = document.getElementById("playimg");
+                playimgover = document.getElementById("playimgover");
+                helpimg = document.getElementById("helpimg");
+                helpimgover = document.getElementById("helpimgover");
+                personagemimg = document.getElementById("personagemimg");
+                personagemimgover = document.getElementById("personagemimgover");
+                muteico = document.getElementById("muteico");
+                avaum = document.getElementById("avaum");
+                avadois = document.getElementById("avadois");
+                avatres = document.getElementById("avatres");
+                avaquatro = document.getElementById("avaquatro");
+                avacinco = document.getElementById("avacinco");
+                avaseis = document.getElementById("avaseis");
+                selava = [avaum, avadois, avatres, avaquatro, avacinco, avaseis];
+                creditos = document.getElementById("creditos");
+                txtcreditos = document.getElementById("txtcreditos");
+
+                musicafundo = new Som(document.getElementById("musicafundo"));
+                somvol = false;
+                textohelp = document.getElementById("textohelp");
+                setaesq = document.getElementById("setaesq");
+                setadir = document.getElementById("setadir");
+
+                continua = true;
+                jogador = new Imagem(10, tela.altura * 0.5, selectedava);
+
+                retanguloesq = new Rectangulo(0, 0, 1, 800, "black");
+                malvado = document.getElementById("segundoelemento");
+
+               
+                rochaaaa = document.getElementById("rocha");
+                dificuldade = 15;
+
+                inimigos = new Array();
+                for (var i = 0; i < dificuldade; i++) {
+                    var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                    rocha.x = Math.random() * tela.largura + tela.largura;
+                    rocha.y = Math.random() * (tela.altura - rocha.altura);
+                    rocha.deltaX = -2;
+                    inimigos.push(rocha);
+                }
+
+                quant = 1;
+                segundoelementos = new Array();
+                for (var i = 0; i < quant; i++) {
+                    var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                    segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                    segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                    segundoelemento.deltaX = -2;
+                    segundoelementos.push(segundoelemento);
+                }
+
+                facilidade = 1;
+                coracoesvidas = new Array();
+                for (var i = 0; i < facilidade; i++) {
+                    var coracaovida = new Imagem(0, 0, document.getElementById("coracaovida"));
+                    coracaovida.x = Math.random() * tela.largura + tela.largura;
+                    coracaovida.y = Math.random() * (tela.altura - coracaovida.altura);
+                    coracaovida.deltaX = -2;
+                    coracoesvidas.push(coracaovida);
+                }
+
+
+                finalimg = document.getElementById("finalimg");
+
+
+                nivelum = document.getElementById("nivelum");
+                niveldois = document.getElementById("niveldois");
+                niveltres = document.getElementById("niveltres");
+                nivelquatro = document.getElementById("nivelquatro");
+                nivelcinco = document.getElementById("nivelcinco");
+                nivelseis = document.getElementById("nivelseis");
+                nivelsete = document.getElementById("nivelsete");
+                niveloito = document.getElementById("niveloito");
+
+                contador = 0;
+                vidas = 5;
+                coracao = document.getElementById("coracao");
+                coracaovida = document.getElementById("coracaovida");
+
+                ratoX = 0;
+                ratoY = 0;
+
+                racioX = tela.largura / tela.larguraFinal;
+                racioY = tela.altura / tela.alturaFinal;
+
+                selectedava = selava[numper];
+                joggg = new Imagem(0, tela.altura * 0.5-75, selectedava);
+
+
+                tiros = new Array();
+                disparo = new Som(document.getElementById("disparo"));
+                explosao = new Som(document.getElementById("explosao"));
+                pontos = 0;
+                pontuacao = new Texto(1000, 15, "Pontos: " + pontos, "white", "black", 2);
+                pontuacao.tamanho = 32;
+
+                contadora = new Texto(250, 25, "contador: " + contador, "white", "black", 2);
+                contadora.tamanho = 32;
+                somvida = new Som(document.getElementById("somvida"));
+            
+                paginaatual = "inicia";
+                menuprincipal();
+            }
+                
+            function final(){
+                textofinal = "O seu score foi de " + pontos;
+                fim = new Texto(tela.largura * 0.5, 600, textofinal, "red", "black", 4);
+                fim.tamanho = 64;
+                fim.alinhamento = "center";
+                contexto.drawImage(finalimg, 500, 200, 400, 400);
+                fim.desenha(tela);
+                setTimeout(refrescar, 4000);
+            }
+
+            function refrescar(){
+                location.reload();
+            }
+
+            function selecionaravatar(){
+                joggg = new Imagem(0, tela.altura * 0.5-75, selectedava);
+                continua = true;
+                playjogo();
+            }
+
+            function arrayrocha(){
+                if(contador == 700){ //nivel 2
+                    inimigos.length = 0;
+                    dificuldade = 30;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                    
+
+                    segundoelementos.length = 0;
+                    quant = 2;
+                    segundoelementos = new Array();
+                    for (var i = 0; i < quant; i++) {
+                        var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                        segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                        segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                        segundoelemento.deltaX = -2;
+                        segundoelementos.push(segundoelemento);
+                    }
+                }
+                if(contador == 2000){ //nivel 3
+                    inimigos.length = 0;
+                    dificuldade = 50;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                }
+                if(contador == 3500){ //nivel 4
+                    //alert("nivel 4");
+                    inimigos.length = 0;
+                    dificuldade = 70;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                    
+
+                    segundoelementos.length = 0;
+                    quant = 3;
+                    segundoelementos = new Array();
+                    for (var i = 0; i < quant; i++) {
+                        var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                        segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                        segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                        segundoelemento.deltaX = -2;
+                        segundoelementos.push(segundoelemento);
+                    }
+                }
+                if(contador == 6000){ //nivel 5
+                    //alert("nivel 5 ");
+                    inimigos.length = 0;
+                    dificuldade = 80;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                    coracoesvidas.length = 0;
+                    facilidade = 2;
+                    coracoesvidas = new Array();
+                    for (var i = 0; i < facilidade; i++) {
+                        var coracaovida = new Imagem(0, 0, document.getElementById("coracaovida"));
+                        coracaovida.x = Math.random() * tela.largura + tela.largura;
+                        coracaovida.y = Math.random() * (tela.altura - coracaovida.altura);
+                        coracaovida.deltaX = -2;
+                        coracoesvidas.push(coracaovida);
+                    }
+                }
+                if(contador == 7500){ //nivel 6
+                    //alert("nivel 6");
+                    inimigos.length = 0;
+                    dificuldade = 90;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                    
+
+                    segundoelementos.length = 0;
+                    quant = 4;
+                    segundoelementos = new Array();
+                    for (var i = 0; i < quant; i++) {
+                        var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                        segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                        segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                        segundoelemento.deltaX = -2;
+                        segundoelementos.push(segundoelemento);
+                    }
+                }
+                if(contador == 9000){ //nivel 7
+                   // alert("nivel 7");
+                    inimigos.length = 0;
+                    dificuldade = 100;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+                    coracoesvidas.length = 0;
+                    facilidade = 3;
+                    coracoesvidas = new Array();
+                    for (var i = 0; i < facilidade; i++) {
+                        var coracaovida = new Imagem(0, 0, document.getElementById("coracaovida"));
+                        coracaovida.x = Math.random() * tela.largura + tela.largura;
+                        coracaovida.y = Math.random() * (tela.altura - coracaovida.altura);
+                        coracaovida.deltaX = -2;
+                        coracoesvidas.push(coracaovida);
+                    }
+                    
+
+                    segundoelementos.length = 0;
+                    quant = 5;
+                    segundoelementos = new Array();
+                    for (var i = 0; i < quant; i++) {
+                        var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                        segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                        segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                        segundoelemento.deltaX = -2;
+                        segundoelementos.push(segundoelemento);
+                    }
+                }
+                if(contador == 10000){ //nivel 8
+                    inimigos.length = 0;
+                    dificuldade = 120;
+                    inimigos = new Array();
+                    for (var i = 0; i < dificuldade; i++) {
+                        var rocha = new Imagem(0, 0, document.getElementById("rocha"));
+                        rocha.x = Math.random() * tela.largura + tela.largura;
+                        rocha.y = Math.random() * (tela.altura - rocha.altura);
+                        rocha.deltaX = -2;
+                        inimigos.push(rocha);
+                    }
+
+                    segundoelementos.length = 0;
+                    quant = 6;
+                    segundoelementos = new Array();
+                    for (var i = 0; i < quant; i++) {
+                        var segundoelemento = new Imagem(0, 0, document.getElementById("segundoelemento"));
+                        segundoelemento.x = Math.random() * tela.largura + tela.largura;
+                        segundoelemento.y = Math.random() * (tela.altura - segundoelemento.altura);
+                        segundoelemento.deltaX = -2;
+                        segundoelementos.push(segundoelemento);
+                    }
+                }
+
+                
+            }
+
+            function desenha(){
+                contexto.clearRect(0, 0, tela.largura, tela.altura);
+                jogador.desenha(tela);
+
+            }
+
+
+
+
+            /*--------------------menu principal---------------------*/
+            function menuprincipal(){
+                paginaatual = "menuprincipal";
+                var d = document.getElementById("tela");
+                contexto.clearRect(0, 0, d.width, d.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(logoimg, 450, 90, 500, 90);
+                contexto.drawImage(playimg, 600, 550, 200, 99);
+                contexto.drawImage(personagemimg, 467, 620, 466, 112);
+                contexto.drawImage(helpimg, 2, 2, 100, 50);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(selectedava, 477, 210, 446, 319);
+                contexto.drawImage(creditos, tela.largura-102, tela.altura-26, 100, 24);
+            };
+
+            function menucreditos(){
+                paginaatual = "menucreditos";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(logoimg, 50, 90, 500, 90);
+                contexto.drawImage(creditos, tela.largura-450, 90, 436, 90);
+                contexto.drawImage(txtcreditos, 350, 180, 700, 700);
+            }
+
+
+            
+            /*--------------------menu pescolher personagem---------------------*/
+            function menupersonagem(){
+                paginaatual = "menutpersonagem";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(logoimg, 50, 90, 500, 90);
+                contexto.drawImage(selectedava, 477, 280, 446, 319);
+                contexto.drawImage(setaesq, 400, 375, 50, 50);
+                contexto.drawImage(setadir, 930, 375, 50, 50);
+            }
+
+            function bonecoanterior(){
+                if(numper > 0){
+                    numper--
+                    selectedava = selava[numper];
+                    menupersonagem()
+                }
+            }
+
+            function bonecoseguinte(){
+                if(selava.length-1 > numper){
+                    numper++
+                    selectedava = selava[numper];
+                    menupersonagem()
+                }
+            }
+
+
+
+            
+            /*--------------------menu ajuda---------------------*/
+            function menuhelp(){
+                paginaatual = "menuhelp";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(logoimg, 50, 90, 500, 90);
+                contexto.drawImage(helpimg, 1160, 90, 200, 100);
+                contexto.drawImage(textohelp, 450, 180, 700, 700);
+            }
+
+
+
+            
+            /*--------------------jogo---------------------*/
+            function playjogo(){
+                paginaatual = "jogo";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(logoimg, 5, 5, 180, 32);
+                retanguloesq.desenha(tela);
+                arrayrocha();
+
+                if(contador >0 && contador <100){//nivel 1
+                    contexto.drawImage(nivelum, 450, 269, 500, 284);
+                }
+
+                if(contador >700 && contador <800){//nivel 2
+                    contexto.drawImage(niveldois, 450, 269, 500, 284);
+                }
+
+                if(contador >2000 && contador <2100){//nivel 3
+                    contexto.drawImage(niveltres, 450, 269, 500, 284);
+                }
+
+                if(contador >3500 && contador <3600){//nivel 4
+                    contexto.drawImage(nivelquatro, 450, 269, 500, 284);
+                }
+
+                if(contador >6000 && contador <6100){//nivel 5
+                    contexto.drawImage(nivelcinco, 450, 269, 500, 284);
+                }
+
+                if(contador >7500 && contador <7600){//nivel 6
+                    contexto.drawImage(nivelseis, 450, 269, 500, 284);
+                }
+
+                if(contador >9000 && contador <9100){//nivel 7
+                    contexto.drawImage(nivelsete, 450, 269, 500, 284);
+                }
+
+                if(contador >10000 && contador <10100){//nivel 8
+                    contexto.drawImage(niveloito, 450, 269, 500, 284);
+                }
+
+                
+
+                for (var i = 0; i < inimigos.length; i++) {
+                    inimigos[i].desenha(tela);
+                    if (inimigos[i].x + inimigos[i].largura < 0) {
+                        inimigos[i].x = tela.largura;
+                        inimigos[i].y = Math.random() * (tela.altura - inimigos[i].altura);
+
+                        inimigos[i].visivel = true;
+                        inimigos[i].activo = true;
+                    }
+                    if (inimigos[i].colide(joggg)) {
+                        vidas--
+                        vidas--
+                        inimigos[i].visivel = false;
+                        inimigos[i].activo = false  ;
+                    }
+                    if (inimigos[i].colide(retanguloesq)) {
+                        vidas--
+                        inimigos[i].visivel = false;
+                        inimigos[i].activo = false  ;
+                    }
+                }
+
+                
+
+                for (var i = 0; i < segundoelementos.length; i++) {
+                    segundoelementos[i].desenha(tela);
+                    if (segundoelementos[i].x + segundoelementos[i].largura < 0) {
+                        segundoelementos[i].x = tela.largura;
+                        segundoelementos[i].y = Math.random() * (tela.altura - segundoelementos[i].altura);
+
+                        segundoelementos[i].visivel = true;
+                        segundoelementos[i].activo = true;
+                    }
+                    if (segundoelementos[i].colide(joggg)) {
+                        vidas--
+                        vidas--
+                        vidas--
+                        segundoelementos[i].visivel = false;
+                        segundoelementos[i].activo = false  ;
+                    }
+                    if (segundoelementos[i].colide(retanguloesq)) {
+                        vidas--
+                        vidas--
+                        segundoelementos[i].visivel = false;
+                        segundoelementos[i].activo = false  ;
+                    }
+                }
+
+                
+                
+
+                    for (var i = 0; i < coracoesvidas.length; i++) {
+                        coracoesvidas[i].desenha(tela);
+                        if (coracoesvidas[i].x + coracoesvidas[i].largura < 0) {
+                            coracoesvidas[i].x = tela.largura;
+                            coracoesvidas[i].y = Math.random() * (tela.altura - coracoesvidas[i].altura);
+
+                            coracoesvidas[i].visivel = true;
+                            coracoesvidas[i].activo = true;
+                        }
+                        if (coracoesvidas[i].colide(joggg)) {
+                            if (vidas < 7){
+                                vidas++
+                                coracoesvidas[i].visivel = false;
+                                coracoesvidas[i].activo = false ;
+                                somvida.reproduz(true)
+                            }
+                        }
+                        if (coracoesvidas[i].colide(retanguloesq)) {
+                            //...
+                        }
+                    }
+
+                joggg.desenha(tela);
+
+                for (var i = 0; i < tiros.length; i++) {
+                    // eliminar os tiros que ultrapassam o limite direito do canvas (retirá-los do array)
+                    if (tiros[i].x > tela.largura) {
+                        tiros.splice(i, 1);
+                        i -= 1;
+                        continue; // break;
+                    }
+                    tiros[i].desenha(tela);
+                    for (var j = 0; j < inimigos.length; j++) {
+                        if (tiros[i].colide(inimigos[j])) {
+                            inimigos[j].visivel = false;
+                            inimigos[j].activo = false;
+                            tiros[i].visivel = false;
+                            tiros[i].activo = false;
+                            //explosao.reproduz(true);//---------------------------------SOM ATIVAR
+                            pontos += 100;
+                        }
+                    }
+                    for (var j = 0; j < segundoelementos.length; j++) {
+                        if (tiros[i].colide(segundoelementos[j])) {
+                            segundoelementos[j].visivel = false;
+                            segundoelementos[j].activo = false;
+                            tiros[i].visivel = false;
+                            tiros[i].activo = false;
+                            //explosao.reproduz(true);//---------------------------------SOM ATIVAR
+                            pontos += 100;
+                        }
+                    }
+                }
+                pontuacao.texto = "Score: " + pontos;
+                pontuacao.desenha(tela);
+                contadora.texto = "contador: " + contador;
+                if (vidas <= 0){
+                    final();
+                    continua = false;
+                }
+                if (vidas == 1){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                }
+                if (vidas == 2){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                }
+                if (vidas == 3){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                    contexto.drawImage(coracao, 600, 15, 35, 32);
+                }
+                if (vidas == 4){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                    contexto.drawImage(coracao, 600, 15, 35, 32);
+                    contexto.drawImage(coracao, 650, 15, 35, 32);
+                }
+                if (vidas == 5){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                    contexto.drawImage(coracao, 600, 15, 35, 32);
+                    contexto.drawImage(coracao, 650, 15, 35, 32);
+                    contexto.drawImage(coracao, 700, 15, 35, 32);
+                }
+                if (vidas == 6){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                    contexto.drawImage(coracao, 600, 15, 35, 32);
+                    contexto.drawImage(coracao, 650, 15, 35, 32);
+                    contexto.drawImage(coracao, 700, 15, 35, 32);
+                    contexto.drawImage(coracao, 750, 15, 35, 32);
+                }
+                if (vidas == 7){
+                    contexto.drawImage(coracao, 500, 15, 35, 32);
+                    contexto.drawImage(coracao, 550, 15, 35, 32);
+                    contexto.drawImage(coracao, 600, 15, 35, 32);
+                    contexto.drawImage(coracao, 650, 15, 35, 32);
+                    contexto.drawImage(coracao, 700, 15, 35, 32);
+                    contexto.drawImage(coracao, 750, 15, 35, 32);
+                    contexto.drawImage(coracao, 800, 15, 35, 32);
+                }
+
+                if (continua) {
+                    contador++;
+                    window.requestAnimationFrame(playjogo);
+                }
+            }
+            /*-------------------som de fundo----------------------*/
+            function somdefundo(){
+                if(somvol == false){
+                    musicafundo.reproduz(false);
+                    muteico.globalAlpha = 0.1;
+                    somvol = true;
+                }
+                else if(somvol == true){
+                    musicafundo.pausa(true);
+                    somvol = false;
+                }
+                else{
+                    //console.log("erro");
+                }
+                //musicafundo.reproduz(true);
+            }
+
+            //------rato clique
+            function getMousePosition(canvas, event) {
+                let rect = canvas.getBoundingClientRect();
+                let x = event.clientX - rect.left;
+                let y = event.clientY - rect.top;
+                clicou(x, y);
+            }
+            let canvasElem = document.querySelector("canvas");
+            canvasElem.addEventListener("mousedown", function(e)
+            {
+                getMousePosition(canvasElem, e);
+            });
+            function clicou(x, y){
+                if(paginaatual == "menuprincipal"){//se ta no menu principal
+                    if(x>2 && x<102 && y>2 && y<52){//carregar help
+                        //alert("ir pagina help")
+                        menuhelp();
+                    }
+                    if(x>600 && x<800 && y>550 && y<650){//carregar play
+                        //alert("ir pagina play")
+                        selecionaravatar();
+                        //playjogo();
+                    }
+                    if(x>467 && x<933 && y>620 && y<732){//carregar personagem
+                        //alert("ir pagina personagem")
+                        menupersonagem();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                    if(x>tela.largura-102 && x<tela.largura && y>tela.altura-26 && y<tela.altura){//carregar help
+                        //alert("ir pagina help")
+                        menucreditos();
+                    }
+                }
+                else if(paginaatual == "menutpersonagem"){//se ta na pagina personagem
+                    if(x>50 && x<550 && y>90 && y<180){//carregar logo
+                        menuprincipal()
+                        //console.log("personagem-men principal");
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                    if(x>400 && x<450 && y>375 && y<425){//boneco anterior
+                        //alert("seta esq");
+                        bonecoanterior();
+                    }
+                    if(x>930 && x<980 && y>375 && y<425){//boneco seguinte
+                        //alert("seta dir");
+                        bonecoseguinte();
+                    }
+                }
+                else if(paginaatual == "menuhelp"){//se ta na pagina help
+                    if(x>50 && x<550 && y>90 && y<180){//carregar logo
+                        menuprincipal()
+                        //console.log("personagem-men principal");
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                else if(paginaatual == "menucreditos"){//se ta na pagina creditos
+                    if(x>50 && x<550 && y>90 && y<180){//carregar logo
+                        menuprincipal()
+                        //console.log("personagem-men principal");
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                else if(paginaatual == "jogo"){//se ta na jogo
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                else{
+                    alert("nao ta no menu principal: " + paginaatual);
+                };
+
+                //alert("x: " + x + ", y: " + y);
+            }
+            //-------------------------------
+
+            
+
+            //rato - teclado - janela iniciada
+
+            function processaTeclaPremida(tecla) {
+                if (tecla.keyCode == 49) {  // num1
+                    menuprincipal()
+                }
+                if (tecla.keyCode == 50) {  // num2
+                    menupersonagem()
+                }
+                if (tecla.keyCode == 51) {  // num3
+                    menuhelp()
+                }
+                if (tecla.keyCode == 52) {  // num4
+                    playjogo()
+                }
+                if (tecla.keyCode == 53) {  // num5
+                    desenha();
+                }
+                if (tecla.keyCode == 27) {  // esc - pausa
+                    if(paginaatual == "menuhelp"){//se ta na pagina help
+                        menuprincipal()
+                    }
+                    if(paginaatual == "menutpersonagem"){//se ta na pagina help
+                        menuprincipal()
+                    }
+                    if(paginaatual == "menucreditos"){//se ta na pagina help
+                        menuprincipal()
+                    }
+                }
+                if (tecla.keyCode == 32) {  // barra de espaços
+                    var tiro = new Imagem(0, 0, document.getElementById("tiro"));
+                    tiro.x = joggg.x + 180;
+                    tiro.y = joggg.y + 70;
+                    tiro.deltaX = 5;
+                    tiros.push(tiro);
+                    disparo.reproduz(true);//---------------------------------ATIVAR SOMMMMMM!!!!!!!!!!!!!!
+                //...
+                    //.........
+                }
+                if (tecla.keyCode == 73) {  // i
+                    somdefundo();
+                }
+                /*if (tecla.keyCode == 81) {  // q
+                    continua = false;
+                }
+                if (tecla.keyCode == 87) {  // w
+                    continua = true;
+                }*/
+                if (tecla.keyCode == 38) {  // seta cima
+                    if(paginaatual == "jogo"){//se ta no jogo
+                       if(joggg.y > 6){
+                        joggg.deltaY = -6;
+                       }
+                        //joggg.deltaY = -6;
+                       //console.log("cima");
+                    }
+                }
+                if (tecla.keyCode == 40) {  // seta baixo
+                    if(paginaatual == "jogo"){//se ta no jogo
+                       if(joggg.y+joggg.altura < 800-6){
+                            joggg.deltaY = 6;
+                       }
+                    }
+                }
+                if (tecla.keyCode == 27) {  // esc - pausa
+                    if(paginaatual == "jogo"){//se ta no jogo
+                        continua = false;
+                        menuprincipal()
+                    }
+                }
+                if (tecla.keyCode == 37) {  // seta esq
+                    if(paginaatual == "menutpersonagem"){//se ta no menu personagem
+                        bonecoanterior();
+                    }
+                }
+                if (tecla.keyCode == 39) {  // seta dir
+                    if(paginaatual == "menutpersonagem"){//se ta no menu personagem
+                        bonecoseguinte();
+                    }
+                }
+                //console.log(joggg)
+            }
+
+            function processaTeclaLibertada(tecla) {
+                if (tecla.keyCode == 32) {
+                    //...
+                }
+                if ((tecla.keyCode == 37) || (tecla.keyCode == 39)) {
+                    //...
+                }
+                if ((tecla.keyCode == 38) || (tecla.keyCode == 40)) {
+                    joggg.deltaY = 0;
+                    //...
+                }
+            }
+
+            window.onkeydown = processaTeclaPremida;
+            window.onkeyup = processaTeclaLibertada;
+            window.onload = function () {
+                inicia();
+                
+            };
+
+        </script>
+    </body>
+</html>
