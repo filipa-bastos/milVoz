@@ -1,7 +1,5 @@
 
 
-
-
 const menuBtn = document.querySelector('.menu-btn');
 let menuOpen = false;
 
@@ -41,39 +39,36 @@ window.addEventListener ('scroll', function(){
 })
 
 
-var modal1 = document.getElementById("myModal1");
-var modal2 = document.getElementById("myModal2");
 
-var btn1 = document.getElementById("alegria");
-var btn2 = document.getElementById("pescaria");
+//BIORESERVAS///
 
-var span1 = document.getElementsByClassName("close1")[0];
-var span2 = document.getElementsByClassName("close2")[0];
-	
-btn1.onmouseover = function() {
-	modal1.style.display = "block";
-  }
-  
-  btn2.onmouseover = function() {
-	modal2.style.display = "block";
+document.addEventListener('DOMContentLoaded', function() {
+  var parent = document.querySelector('.splitview'),
+      topPanel = parent.querySelector('.top'),
+      handle = parent.querySelector('.handle'),
+      skewHack = 0,
+      delta = 0;
+
+  // If the parent has .skewed class, set the skewHack var.
+  if (parent.className.indexOf('skewed') != -1) {
+      skewHack = 1000;
   }
 
-  span1.onclick = function() {
-	modal1.style.display = "none";
-  }
-  
-  span2.onclick = function() {
-	modal2.style.display = "none";
-  }
+  parent.addEventListener('mousemove', function(event) {
+      // Get the delta between the mouse position and center point.
+      delta = (event.clientX - window.innerWidth / 2) * 0.5;
 
-  window.onclick = function(event) {
-	if (event.target == modal1 ) {
-	  modal1.style.display = "none";
-	}else if (event.target == modal2){
-	  modal2.style.display = "none";
-	}
-  }
+      // Move the handle.
+      handle.style.left = event.clientX + delta + 'px';
 
+      // Adjust the top panel width.
+      topPanel.style.width = event.clientX + skewHack + delta + 'px';
+  });
+});
+
+
+
+//BIODIVERSIDADES/// 
 
 let span = document.getElementsByTagName('span');
 let mamiferos = document.getElementsByClassName('mamifero');
@@ -88,7 +83,7 @@ function moveDirMamiferos(){
     l = l + movimento;
     for(const m of mamiferos){
        //limite do ultimo item mostrado em função da seta (span à direita)
-        if(mamiferos[mamiferos.length-1].offsetLeft + mamiferos[mamiferos.length-1].offsetWidth > span[2].offsetLeft){
+        if(mamiferos[mamiferos.length-1].offsetLeft + mamiferos[mamiferos.length-1].offsetWidth > span[0].offsetLeft){
             m.style.left = '-' + l + 'px';
         }        
     }
@@ -103,5 +98,5 @@ function moveEsqMamiferos(){
 
 
 
-span[2].onclick  = ()=>{moveEsqMamiferos();}
-span[3].onclick  = ()=>{moveDirMamiferos();}
+span[0].onclick  = ()=>{moveEsqMamiferos();}
+span[1].onclick  = ()=>{moveDirMamiferos();}
