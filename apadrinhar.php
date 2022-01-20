@@ -269,7 +269,7 @@
                                             </div>
                                         
                                             <div class="col-12 ">
-                                            <form  action="#">
+                                            <form action="addapadrinhar.php" method="post">
                                                 <div class="row">
                                                 <div class="col-sm-6 col-12 ">
                                                     <!--formulario de ser socio-->
@@ -277,19 +277,19 @@
                                                         <div class="d-flex flex flex-column justify-content-end mb-3">
                                                             <!--nome completo-->
                                                             <label for="nome">Nome Completo:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="nomecompleto" />
                                                             <!--nome no cartao de socio-->
                                                             <label class="mt-3" for="nome">Nome para o seu cartão de sócio:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="nomecartaosocio" />
                                                             <!--morada-->
                                                             <label class="mt-3" for="nome">Morada:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="morada" />
                                                             <!--telefone-->
                                                             <label class="mt-3" for="nome">Telefone:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="telefone" />
                                                             <!--numero de cc BI-->
                                                             <label class="mt-3" for="nome">Número CC/BI:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="numerocc" />
                                                             <!--comprovativo-->
                                                             <p class="mt-3" style="font-size: 13px;"><img class="mr-4" height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download">&nbsp; anexar comprovativo de pagamento </p>   
                                                         </div>
@@ -299,22 +299,22 @@
                                                         <div class="d-flex flex flex-column mb-3">
                                                             <!--sexo-->
                                                             <label for="nome">Sexo:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="sexo" />
                                                             <!--data de nascimento-->
                                                             <label class="mt-3" for="nome">Data de Nascimento:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="datanascimento" />
                                                             <!--codigo postal-->
                                                             <label class="mt-3" for="nome">Código Postal:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="codigopostal" />
                                                             <!--email-->
                                                             <label class="mt-3" for="nome">E-mail:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="email" />
                                                             <!--nif-->
                                                             <label class="mt-3" for="nome">NIF:</label>
-                                                            <input type="text" id="nome" name="usuario_nome" />
+                                                            <input type="text" id="nome" name="nif" />
                                                             <!--radio button-->
                                                             <label class="mt-3" for="nome">Quer menção honrosa nas redes sociais?</label>
-                                                            <div class="d-flex align-items-center "">
+                                                            <div class="d-flex align-items-center ">
                                                                 <input type="radio" id="sim" name="resposta" value="sim">
                                                                 <label  style="margin-left: 2px" for="sim">Sim</label><br>
                                                                 <input  style="margin-left: 20px" type="radio" id="nao" name="resposta" value="nao" >
