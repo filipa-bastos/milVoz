@@ -269,7 +269,7 @@
                                             </div>
                                         
                                             <div class="col-12 ">
-                                            <form action="addapadrinhar.php" method="post">
+                                            <form method="post">
                                                 <div class="row">
                                                 <div class="col-sm-6 col-12 ">
                                                     <!--formulario de ser socio-->
@@ -324,12 +324,80 @@
                                                         </div>
                                                         <!--botão enviar-->
                                                         <div class="d-flex justify-content-end ">
-                                                            <button  class="botao d-inline-block" type="submit">Enviar </button>
+                                                            <button  class="botao d-inline-block" name="sub" type="submit">Enviar </button>
                                                         </div>
                                                     </div>
                                             </div>
                                             </div>
                                             </form>
+                                            <?php
+                                                function alert($msg) {
+                                                    echo "<script type='text/javascript'>alert('$msg');</script>";
+                                                }
+
+                                                if(isset($_POST['sub'])):
+                                                    $nomecompleto =  $_POST['nomecompleto'];
+                                                    $nomecartaosocio = $_POST['nomecartaosocio'];
+                                                    $morada =  $_POST['morada'];
+                                                    $telefone = $_POST['telefone'];
+                                                    $numerocc = $_POST['numerocc'];
+                                                    $sexo =  $_POST['sexo'];
+                                                    $datanascimento = $_POST['datanascimento'];
+                                                    $codigopostal =  $_POST['codigopostal'];
+                                                    $email = $_POST['email'];
+                                                    $nif = $_POST['nif'];
+                
+                                                    // Conexão
+                                                    $servernamea = "10.10.0.120";
+                                                    $usernamea = "a2019135496";
+                                                    $passworda = "Charuto123";
+                                                    $db_namea = "a2019135496";
+                    
+                                                    $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+                    
+                                                    if(mysqli_connect_error()):
+                                                        echo "Falha na conexão: ".mysqli_connect_error();
+                                                    endif;
+                    
+                                                    $selecaoadd = "INSERT INTO apadrinhar
+                                                    VALUES (NULL, '$nomecompleto', '$nomecartaosocio', '$morada', '$telefone', '$numerocc', '$sexo', '$datanascimento', '$codigopostal', '$email', '$nif');";
+                                                    $resultadoadd = $connecta->query($selecaoadd);
+                                                    alert(" foi alterado com sucesso! ");
+                                                    /*
+                                                    $nomeclid = $_POST['nome'];
+                                                    $contclid = $_POST['contacto'];
+                                                    $mailclid = $_POST['mail'];
+                                                    $dnclid = $_POST['dn'];
+                                                    $sexoclid = $_POST['sexo'];
+                
+                                                    // Conexão
+                                                    $servernamea = "10.10.0.120";
+                                                    $usernamea = "a2019135496";
+                                                    $passworda = "Charuto123";
+                                                    $db_namea = "a2019135496";
+                    
+                                                    $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+                    
+                                                    if(mysqli_connect_error()):
+                                                        echo "Falha na conexão: ".mysqli_connect_error();
+                                                    endif;
+                    
+                                                    // Verificação
+                                                    if(!isset($_SESSION['logado'])):
+                                                    header('Location: index.php');
+                                                    endif;
+                    
+                                                    $selecaoadd = "UPDATE `Clientes` SET `nome_cliente` = '$nomeclid', `data_nascimento_cliente` = '$dnclid', 
+                                                                    `sexo_cliente` = '$sexoclid', `telemovel_cliente` = '$contclid', `mail_cliente` = '$mailclid' 
+                                                                    WHERE `Clientes`.`idcliente` = $idprod ";
+                                                    $resultadoadd = $connecta->query($selecaoadd);
+                                                    
+                                                    alert($nomeclid. " cliente nr. ". $idprod. " foi alterado com sucesso! ");
+                                                    header('Location: 8listacli.php');*/
+                
+                                                
+                                                endif;
+                                            ?>
                                         </div>
                                 </div>
                             </div>
