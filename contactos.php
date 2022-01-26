@@ -116,27 +116,57 @@
                         <!--formulario-->
                         <div class="col-12 col-md-8 px-5">
                             <h1 class="mb-5">Sua mensagem</h1>
-                            <form action="#"">
+                            <form method="post">
                                 <div class="d-flex mb-5">
                                     <div class="d-flex flex flex-column">
-                                        <label for="nome">Nome:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label for="vnome">Nome:</label>
+                                        <input type="text" id="vnome" name="vnome" />
                                     </div>
                                     <div class="d-flex flex flex-column px-5">
-                                        <label for="email">E-mail:</label>
-                                        <input type="email" id="email" name="usuario_email" />
+                                        <label for="vmail">E-mail:</label>
+                                        <input type="email" id="vmail" name="vmail" />
                                     </div>
                                 </div>
                                 
                                 <div class="d-flex flex-column">
-                                    <label for="msg">Mensagem:</label>
-                                    <textarea id="msg" name="usuario_msg"></textarea>
+                                    <label for="vmsg">Mensagem:</label>
+                                    <textarea id="vmsg" name="vmsg"></textarea>
                                 </div>
                             
                                 <div class="d-flex justify-content-end mt-5">
-                                    <button  class="botao d-inline-block" type="submit">Enviar</button>
+                                    <button  class="botao d-inline-block" name="subvol" type="submit">Enviar</button>
                                 </div>
                             </form>
+                        <?php
+                            function alert($msg) {
+                                echo "<script type='text/javascript'>alert('$msg');</script>";
+                            }
+                            if(isset($_POST['subvol'])):
+                                $vnome =  $_POST['vnome'];
+                                $vmail = $_POST['vmail'];
+                                $vmsg =  $_POST['vmsg'];
+
+                                // Conexão
+                                $servernamea = "10.10.0.120";
+                                $usernamea = "a2019135496";
+                                $passworda = "Charuto123";
+                                $db_namea = "a2019135496";
+
+                                $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+
+                                if(mysqli_connect_error()):
+                                    echo "Falha na conexão: ".mysqli_connect_error();
+                                endif;
+
+
+                                $selecaoadd = "INSERT INTO `mensagemcontactos` (`idmensagem`, `nome`, `mail`, `mensagem`) VALUES (NULL, '$vnome', '$vmail', '$vmsg');";
+
+                                
+                                $resultadoadd = $connecta->query($selecaoadd);
+                                alert("Submetido com sucesso! ");                
+                            
+                            endif;
+                        ?>
                         </div>
                         <div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start">
                             <!--facebook-->
@@ -197,7 +227,7 @@
                                     <dt>ONGA</dt>
                                     <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
                                 </a>
-                                <a href="apoiar.html">
+                                <a href="apoiar.php">
                                     <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
                                 </a>
                             </dl>
@@ -223,7 +253,7 @@
                             </dl>
 
                             <dl>
-                                <a href="contactos.html">
+                                <a href="contactos.php">
                                 <dt>CONTACTOS</dt>
                                     <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
                                     <dd  style="font-size: 13px;">&#8226 913 123 132</dd>

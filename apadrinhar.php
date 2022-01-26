@@ -293,7 +293,6 @@
                                                             <!--comprovativo-->
                                                             <p class="mt-3" style="font-size: 13px;"><img class="mr-4" height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download">&nbsp; anexar comprovativo de pagamento </p>   
                                                         </div>
-                                                    </form>
                                                 </div>
                                                     <div class="col-sm-6 col-12">
                                                         <div class="d-flex flex flex-column mb-3">
@@ -362,39 +361,7 @@
                                                     $selecaoadd = "INSERT INTO apadrinhar
                                                     VALUES (NULL, '$nomecompleto', '$nomecartaosocio', '$morada', '$telefone', '$numerocc', '$sexo', '$datanascimento', '$codigopostal', '$email', '$nif');";
                                                     $resultadoadd = $connecta->query($selecaoadd);
-                                                    alert(" foi alterado com sucesso! ");
-                                                    /*
-                                                    $nomeclid = $_POST['nome'];
-                                                    $contclid = $_POST['contacto'];
-                                                    $mailclid = $_POST['mail'];
-                                                    $dnclid = $_POST['dn'];
-                                                    $sexoclid = $_POST['sexo'];
-                
-                                                    // Conexão
-                                                    $servernamea = "10.10.0.120";
-                                                    $usernamea = "a2019135496";
-                                                    $passworda = "Charuto123";
-                                                    $db_namea = "a2019135496";
-                    
-                                                    $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
-                    
-                                                    if(mysqli_connect_error()):
-                                                        echo "Falha na conexão: ".mysqli_connect_error();
-                                                    endif;
-                    
-                                                    // Verificação
-                                                    if(!isset($_SESSION['logado'])):
-                                                    header('Location: index.php');
-                                                    endif;
-                    
-                                                    $selecaoadd = "UPDATE `Clientes` SET `nome_cliente` = '$nomeclid', `data_nascimento_cliente` = '$dnclid', 
-                                                                    `sexo_cliente` = '$sexoclid', `telemovel_cliente` = '$contclid', `mail_cliente` = '$mailclid' 
-                                                                    WHERE `Clientes`.`idcliente` = $idprod ";
-                                                    $resultadoadd = $connecta->query($selecaoadd);
-                                                    
-                                                    alert($nomeclid. " cliente nr. ". $idprod. " foi alterado com sucesso! ");
-                                                    header('Location: 8listacli.php');*/
-                
+                                                    alert("Submetido com sucesso! ");                
                                                 
                                                 endif;
                                             ?>
@@ -430,7 +397,7 @@
                                     <dt>ONGA</dt>
                                     <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
                                 </a>
-                                <a href="apoiar.html">
+                                <a href="apoiar.php">
                                     <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
                                 </a>
                             </dl>
@@ -456,7 +423,7 @@
                             </dl>
 
                             <dl>
-                                <a href="contactos.html">
+                                <a href="contactos.php">
                                 <dt>CONTACTOS</dt>
                                     <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
                                     <dd  style="font-size: 13px;">&#8226 913 123 132</dd>

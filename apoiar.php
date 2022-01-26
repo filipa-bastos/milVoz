@@ -126,52 +126,50 @@
                         </div>
                        
                         <div class="col-12 col-lg-6">
-                        <form  action="#">
                             <div class="row">
                             <div class="col-sm-6 col-12 ">
                                 <!--formulario de ser socio-->
-                                <form>
+                                <form method="post">
                                     <div class="d-flex flex flex-column justify-content-end mb-3">
                                         <!--nome completo-->
                                         <label for="nome">Nome Completo:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <input type="text" id="nome" name="socio_nome" />
                                         <!--nome no cartao de socio-->
-                                        <label class="mt-3" for="nome">Nome para o seu cartão de sócio:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="nomec">Nome para o seu cartão de sócio:</label>
+                                        <input type="text" id="nomec" name="socio_nomecart" />
                                         <!--morada-->
-                                        <label class="mt-3" for="nome">Morada:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="morada">Morada:</label>
+                                        <input type="text" id="morada" name="socio_morada" />
                                         <!--telefone-->
-                                        <label class="mt-3" for="nome">Telefone:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="telm">Telefone:</label>
+                                        <input type="text" id="telm" name="socio_tel" />
                                         <!--numero de cc BI-->
-                                        <label class="mt-3" for="nome">Número CC/BI:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="nrcc">Número CC/BI:</label>
+                                        <input type="text" id="nrcc" name="socio_nrcc" />
                                         <!--comprovativo-->
                                         <p class="mt-3" style="font-size: 13px;"><img class="mr-4" height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download">&nbsp; anexar comprovativo de pagamento </p>   
                                     </div>
-                                </form>
                             </div>
                                 <div class="col-sm-6 col-12">
                                     <div class="d-flex flex flex-column mb-3">
                                         <!--sexo-->
-                                        <label for="nome">Sexo:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label for="sexo">Sexo:</label>
+                                        <input type="text" id="sexo" name="socio_sexo" />
                                         <!--data de nascimento-->
-                                        <label class="mt-3" for="nome">Data de Nascimento:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="dn">Data de Nascimento:</label>
+                                        <input type="text" id="dn" name="socio_dn" />
                                         <!--codigo postal-->
-                                        <label class="mt-3" for="nome">Código Postal:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="cp">Código Postal:</label>
+                                        <input type="text" id="cp" name="socio_cp" />
                                         <!--email-->
-                                        <label class="mt-3" for="nome">E-mail:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="mail">E-mail:</label>
+                                        <input type="text" id="mail" name="socio_mail" />
                                         <!--nif-->
-                                        <label class="mt-3" for="nome">NIF:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="nif">NIF:</label>
+                                        <input type="text" id="nif" name="socio_nif" />
                                         <!--radio button-->
                                         <label class="mt-3" for="nome">Quer menção honrosa nas redes sociais?</label>
-                                        <div class="d-flex align-items-center "">
+                                        <div class="d-flex align-items-center ">
                                             <input type="radio" id="sim" name="resposta" value="sim">
                                             <label  style="margin-left: 2px" for="sim">Sim</label><br>
                                             <input  style="margin-left: 20px" type="radio" id="nao" name="resposta" value="nao" >
@@ -181,12 +179,49 @@
                                     </div>
                                     <!--botão enviar-->
                                     <div class="d-flex justify-content-end ">
-                                        <button  class="botao d-inline-block" type="submit">Enviar </button>
+                                        <button  class="botao d-inline-block" name="sub" type="submit">Enviar </button>
                                     </div>
                                 </div>
                         </div>
                         </div>
                         </form>
+                        <?php
+                            function alert($msg) {
+                                echo "<script type='text/javascript'>alert('$msg');</script>";
+                            }
+
+                            if(isset($_POST['sub'])):
+                                $nomecompleto =  $_POST['socio_nome'];
+                                $nomecartaosocio = $_POST['socio_nomecart'];
+                                $morada =  $_POST['socio_morada'];
+                                $telefone = $_POST['socio_tel'];
+                                $numerocc = $_POST['socio_nrcc'];
+                                $sexo =  $_POST['socio_sexo'];
+                                $datanascimento = $_POST['socio_dn'];
+                                $codigopostal =  $_POST['socio_cp'];
+                                $email = $_POST['socio_mail'];
+                                $nif = $_POST['socio_nif'];
+
+                                // Conexão
+                                $servernamea = "10.10.0.120";
+                                $usernamea = "a2019135496";
+                                $passworda = "Charuto123";
+                                $db_namea = "a2019135496";
+
+                                $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+
+                                if(mysqli_connect_error()):
+                                    echo "Falha na conexão: ".mysqli_connect_error();
+                                endif;
+
+
+                                $selecaoadd = "INSERT INTO `sersocio` (`nomecompleto`, `nomecartao`, `morada`, `telefone`, `nrcc`, `sexo`, `dn`, `codpostal`, `mail`, `nif`, `idsocio`) 
+                                                VALUES ('$nomecompleto', '$nomecartaosocio', '$morada', '$telefone', '$numerocc', '$sexo', '$datanascimento', '$codigopostal', '$email', '$nif', NULL);";
+                                $resultadoadd = $connecta->query($selecaoadd);
+                                alert("Submetido com sucesso! ");                
+                            
+                            endif;
+                        ?>
                     </div>
             </div>
         </div>
@@ -210,19 +245,19 @@
                             <div class="row">
                                
                             <div class="col-sm-6 col-12 ">
-                            <form> 
+                            <form method="post"> 
                                 <!--formulario de ser socio-->
                                
                                     <div class="d-flex flex flex-column justify-content-end mb-3">
                                         <!--nome completo-->
-                                        <label for="nome">Nome Completo:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label for="dnome">Nome Completo:</label>
+                                        <input type="text" id="dnome" name="dnome" />
                                         <!--morada-->
-                                        <label class="mt-3" for="nome">Morada:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="dmorada">Morada:</label>
+                                        <input type="text" id="dmorada" name="dmorada" />
                                         <!--telefone-->
-                                        <label class="mt-3" for="nome">Telefone:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="dtel">Telefone:</label>
+                                        <input type="text" id="dtel" name="dtel" />
                                         <!--comprovativo-->
                                         <p class="mt-3" style="font-size: 13px;"><img class="mr-4" height="40px" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/1ddb2396d7b2ca8b462e103e1bf4bc36f0b1b9e4/recursos/icons/downloadIcon.svg" alt="icone download">&nbsp; anexar comprovativo de pagamento </p>   
                                     </div>
@@ -231,21 +266,50 @@
                             <div class="col-sm-6 col-12">
                                     <div class="d-flex flex flex-column mb-3">
                                         <!--codigo postal-->
-                                        <label class="mt-3" for="nome">Código Postal:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="dcp">Código Postal:</label>
+                                        <input type="text" id="dcp" name="dcp" />
                                         <!--nif-->
-                                        <label class="mt-3" for="nome">NIF:</label>
-                                        <input type="text" id="nome" name="usuario_nome" />
+                                        <label class="mt-3" for="nomednif">NIF:</label>
+                                        <input type="text" id="nomednif" name="dnif" />
                                          <!--email-->
-                                         <label class="mt-3" for="nome">E-mail:</label>
-                                         <input type="text" id="nome" name="usuario_nome" />
+                                         <label class="mt-3" for="dmail">E-mail:</label>
+                                         <input type="text" id="dmail" name="dmail" />
                                     </div>
                                     <!--botão enviar-->
                                     <div class="d-flex justify-content-end ">
-                                        <button  class="botao d-inline-block" type="submit">Enviar </button>
+                                        <button  class="botao d-inline-block" name="subdoar" type="submit">Enviar </button>
                                     </div>
                             </div>
                             </form>
+                        <?php
+                            if(isset($_POST['subdoar'])):
+                                $dnome =  $_POST['dnome'];
+                                $dmorada = $_POST['dmorada'];
+                                $dtel =  $_POST['dtel'];
+                                $dcp = $_POST['dcp'];
+                                $dnif = $_POST['dnif'];
+                                $dmail =  $_POST['dmail'];
+
+                                // Conexão
+                                $servernamea = "10.10.0.120";
+                                $usernamea = "a2019135496";
+                                $passworda = "Charuto123";
+                                $db_namea = "a2019135496";
+
+                                $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+
+                                if(mysqli_connect_error()):
+                                    echo "Falha na conexão: ".mysqli_connect_error();
+                                endif;
+
+
+                                $selecaoadd = "INSERT INTO `doar` (`iddoar`, `nome`, `morada`, `tel`, `codigopostal`, `nif`, `mail`) 
+                                                VALUES (NULL, '$dnome', '$dmorada', '$dtel', '$dcp', '$dnif', '$dmail');";
+                                $resultadoadd = $connecta->query($selecaoadd);
+                                alert("Submetido com sucesso! ");                
+                            
+                            endif;
+                        ?>
                         </div>
                         </div>
                     </div>
@@ -268,27 +332,52 @@
         
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    <form action="#"">
+                                    <form method="post">
                                         <div class="d-flex mb-5">
                                             <div class="d-flex flex flex-column">
-                                                <label for="nome">Nome:</label>
-                                                <input type="text" id="nome" name="usuario_nome" />
+                                                <label for="vnome">Nome:</label>
+                                                <input type="text" id="vnome" name="vnome" />
                                             </div>
                                             <div class="d-flex flex flex-column px-5">
-                                                <label for="email">E-mail:</label>
-                                                <input type="email" id="email" name="usuario_email" />
+                                                <label for="vemail">E-mail:</label>
+                                                <input type="email" id="vemail" name="vmail" />
                                             </div>
                                         </div>
                                         
                                         <div class="d-flex flex-column">
-                                            <label for="msg">Mensagem:</label>
-                                            <textarea id="msg" name="usuario_msg"></textarea>
+                                            <label for="vmsg">Mensagem:</label>
+                                            <textarea id="vmsg" name="vmsg"></textarea>
                                         </div>
                                     
                                         <div class="d-flex justify-content-end mt-5">
-                                            <button  class="botao d-inline-block" type="submit">Enviar</button>
+                                            <button  class="botao d-inline-block" name="subvol" type="submit">Enviar</button>
                                         </div>
                                     </form>
+                        <?php
+                            if(isset($_POST['subvol'])):
+                                $vnome =  $_POST['vnome'];
+                                $vmail = $_POST['vmail'];
+                                $vmsg =  $_POST['vmsg'];
+
+                                // Conexão
+                                $servernamea = "10.10.0.120";
+                                $usernamea = "a2019135496";
+                                $passworda = "Charuto123";
+                                $db_namea = "a2019135496";
+
+                                $connecta = mysqli_connect($servernamea, $usernamea, $passworda, $db_namea);
+
+                                if(mysqli_connect_error()):
+                                    echo "Falha na conexão: ".mysqli_connect_error();
+                                endif;
+
+
+                                $selecaoadd = "INSERT INTO `voluntarios` (`idvoluntario`, `nome`, `mail`, `mensagem`) VALUES (NULL, '$vnome', '$vmail', '$vmsg');";
+                                $resultadoadd = $connecta->query($selecaoadd);
+                                alert("Submetido com sucesso! ");                
+                            
+                            endif;
+                        ?>
                                 </div>
                             </div>
                     </div>
@@ -318,7 +407,7 @@
                                     <dt>ONGA</dt>
                                     <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
                                 </a>
-                                <a href="apoiar.html">
+                                <a href="apoiar.php">
                                     <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
                                 </a>
                             </dl>
@@ -344,7 +433,7 @@
                             </dl>
 
                             <dl>
-                                <a href="contactos.html">
+                                <a href="contactos.php">
                                 <dt>CONTACTOS</dt>
                                     <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
                                     <dd  style="font-size: 13px;">&#8226 913 123 132</dd>
