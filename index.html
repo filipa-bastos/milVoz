@@ -42,11 +42,17 @@
       </a>
   
       <!-- Toggle button -->
+      <!-- ABRIR A CLASSE MODAL 
+      <div class="menu-btn">
+        <button type="button" class="btn menu-btn__burger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        </button>
+      </div>-->
       <button
-        class="navbar-toggler"
+        class="navbar-toggler btn"
         type="button"
         data-mdb-toggle="collapse"
-        data-mdb-target="#navbarButtonsExample" 
+        data-bs-target="#exampleModal"
+        data-bs-toggle="modal"
         aria-controls="navbarButtonsExample"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -84,9 +90,11 @@
             APOIAR
             </a>
           
-            <!-- ABRIR A CLASSE MODAL -->
-            <div class="menu-btn">
-              <div class="menu-btn__burger"></div>
+             <!-- ABRIR A CLASSE MODAL -->
+             <div class="menu-btn">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="fas fa-bars cor-primaria" style="font-size:30px"></i>
+              </button>
             </div>
         </div>
       </div>
@@ -95,6 +103,110 @@
     <!-- Container wrapper --> 
   </nav>
   <!-- Navbar -->
+
+
+<!--MODAL -->
+<!-- Full screen modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header castanho-background" style=" padding-top: 100px;">
+        <a class="navbar-brand ms-5" href="index.html">
+          <img
+            src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+            height="48px"
+            width="124px"
+            alt="Milvoz Logotipo"
+            loading="lazy">
+        </a>
+        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close" style=" margin-right: 150px;"><i class="fas fa-times" style="background-color:none !important; font-size:30px"></i></button>
+      </div>
+      <div class="modal-body castanho-background conteudoMenu">
+        
+          <div class="row ">
+            <div class="col-12 col-md-4">
+              <dl>
+                <a href="sobre.html">
+                  <dt> <h2>ONGA</h2></dt>
+                  <dd class="infoMenu" style="font-size: 16px;"> Quem somos?</dd>
+                  <dd class="infoMenu" style="font-size: 16px;"> Ser sócio</dd>
+                </a>
+              </dl>
+              <br>
+              <dl>
+                <a href="actuacao.html">
+                  <dt> <h2>ACTIVIDADES</h2></dt>
+                  <dd class="infoMenu" style="font-size: 16px;"> Gestão Ecológica</dd>
+                  <dd class="infoMenu" style="font-size: 16px;"> Educação Ambiental</dd>
+                  <dd class="infoMenu" style="font-size: 16px;"> Aconselhamentos</dd>
+                </a>
+              </dl>
+              <br>
+            </div>
+            
+            <div class="col-12 col-md-4">
+              <dl>
+                <a href="bioreservas.html">
+                  <dt> <h2>BIO-RESERVAS</h2></dt>
+                  <dd class="infoMenu" style="font-size: 16px;"> Nossa Senhora da Alegria</dd>
+                  <dd class="infoMenu" style="font-size: 16px;"> Serra da Pescaria</dd>
+                </a>
+              </dl>
+              <br>
+              <dl>
+                <a href="apoiar.php">
+                  <dt> <h2>SÊ MAIS <br> UMA VOZ</h2></dt>
+                      <dd class="infoMenu" style="font-size: 16px;">Ser sócio</dd>
+                      <dd class="infoMenu" style="font-size: 16px;">Doar</dd>
+                      <dd class="infoMenu" style="font-size: 16px;">Voluntariar</dd>
+                  </a>
+              </dl>
+              <br>
+            </div>
+            <div class="col-12 col-md-4">
+              <dl>
+                <a href="biodiversidade.html">
+                  <dt> <h2>BIODIVERSIDADE</h2></dt>
+                  <dd  class="infoMenu" style="font-size: 16px;">Mamíferosa</dd>
+                  <dd class="infoMenu" style="font-size: 16px;">Anfíbios</dd>
+                  <dd class="infoMenu" style="font-size: 16px;">Répteis</dd>
+                  <dd class="infoMenu" style="font-size: 16px;">Aves</dd>
+                  <dd class="infoMenu" style="font-size: 16px;">Plantas</dd>
+                </a>
+              </dl>
+              <br>
+              <dl>
+                <a href="contactos.php">
+                  <dt><h2>CONTACTOS</h2></dt>
+                  </a>
+              </dl>
+              <br>
+              <dl>
+                <a href="apadrinhar.php">
+                  <dt><h2>APADRINHAR</h2></dt>
+                  </a>
+              </dl>
+              <br>
+              <dl>
+                <a href="#">
+                  <dt> <h2>JOGO</h2></dt>
+                </a>
+              </dl>
+
+            </div>
+            <!--fim de row-->
+          </div>
+        
+      <!--fim de contento do modal-->
+      </div>
+      <!--<div class="modal-footer castanho-background">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>-->
+    </div>
+  </div>
+</div>
+  
 
  <!-- PARALLAX -->
     <section>
@@ -450,29 +562,35 @@
 
                   <div class="col-6 col-md-4 d-flex flex-column ">
                       <dl>
+                        <a href="sobre.html">
                           <dt>ONGA</dt>
                           <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
                           <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
+                        </a>
                       </dl>
 
                       <dl>
+                        <a href="actuacao.html">
                           <dt>ACTIVIDADES</dt>
                           <dd style="font-size: 13px;">&#8226 Gestão Ecológica</dd>
                           <dd  style="font-size: 13px;">&#8226 Educação Ambiental</dd>
                           <dd  style="font-size: 13px;">&#8226 Aconselhamentos</dd>
+                        </a>
                       </dl>
 
                   </div>
 
                   <div class="col-6 col-md-4 ">
                       <dl>
+                        <a href="bioreservas.html">
                           <dt>BIO-RESERVAS</dt>
                           <dd style="font-size: 13px;">&#8226 Nossa Senhora da Alegria</dd>
                           <dd  style="font-size: 13px;">&#8226 Serra da Pescaria</dd>
+                        </a>
                       </dl>
 
                       <dl>
-                          <a href="contactos.php">
+                        <a href="contactos.php">
                           <dt>CONTACTOS</dt>
                               <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
                               <dd  style="font-size: 13px;">&#8226 913 123 132</dd>
@@ -483,10 +601,12 @@
                   <div class="col-12 col-md-4 d-flex flex-column">
                       <div class="row">
                               <div class="col-6 col-md-12">
+                                <a href="contactos.php">
                                   <dt>MORADA</dt>
                                   <dd style="font-size: 13px;">&#8226 Rua da Calçada Antiga nº1 <br>
                                       Assafarge / Coimbra<br>
                                       3040-657</dd>
+                                  </a>
                               </div>
 
                               <div class="col-6 col-md-12">
