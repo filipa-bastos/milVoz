@@ -77,12 +77,12 @@
                     </ul>
                     <!-- Right links -->
                     <div class="d-flex align-items-center ">
-                        <button type="button" class="botao me-3 apadrinhar">
-                            APADRINHAR
-                        </button>
-                        <button type="button" class="botao me-3 apoiar">
-                        APOIAR
-                        </button>
+            <a href="apadrinhar.php" type="button" class="botao me-3 apadrinhar">
+                APADRINHAR
+            </a>
+            <a href="apoiar.php" type="button" class="botao me-3 apoiar">
+            APOIAR
+            </a>
                     
                         <!-- ABRIR A CLASSE MODAL -->
                         <div class="menu-btn">
