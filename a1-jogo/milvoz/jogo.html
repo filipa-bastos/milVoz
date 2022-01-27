@@ -63,6 +63,30 @@
             <img id="arvoreseis" src="recursos/positivos/Spruce_Sapling_JE7_BE2.png">
             <img id="animalum" src="recursos/positivos/esquilo1.png">
             <img id="animaldois" src="recursos/positivos/unnamed1.png">
+            <img id="cigarro" src="recursos/negativos/cigarro1.png">
+            <img id="fogo" src="recursos/negativos/fogo1.png">
+            <img id="lixoum" src="recursos/negativos/lixo11.png">
+            <img id="lixodois" src="recursos/negativos/lixo21.png">
+            <img id="maca" src="recursos/campanha/maca1.png">
+            <img id="reciclagem" src="recursos/campanha/reciclagem1.png">
+            <audio id="musicafundo" src="recursos/AriaMath.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!
+            </audio>
+            <img id="nivelum" src="recursos/nivel1.png">
+            <img id="niveldois" src="recursos/nivel2.png">
+            <img id="niveltres" src="recursos/nivel3.png">
+            <img id="nivelquatro" src="recursos/nivel4.png">
+            <img id="paisagemum" src="recursos/paisagem1.png">
+            <img id="paisagemdois" src="recursos/paisagem2.png">
+            <img id="paisagemtres" src="recursos/paisagem3.png">
+            <img id="paisagemquatro" src="recursos/paisagem4.png">
+            <img id="poluicaoum" src="recursos/poluicao1.png">
+            <img id="poluicaodois" src="recursos/poluicao2.png">
+            <img id="poluicaotres" src="recursos/poluicao3.png">
+            <img id="poluicaoquatro" src="recursos/poluicao4.png">
+            
+            <img id="backacabou" src="recursos/backabaou.png">
+            <img id="terminou" src="recursos/terminou.png">
 
 
 
@@ -103,10 +127,44 @@
             var animalum;
             var animaldois;
 
+            var negum;
+            var negdois;
+            var negtres;
+            var negquatro;
+
+            var campum;
+            var campdois;
+
             var natureza;
             var naturezaa;
+            var poluicao;
+
+            var nivelum;
+            var niveldois;
+            var niveltres;
+            var nivelquatro;
 
             var paginaatual;
+
+            var somvol;
+            var volume;
+            var musicafundo;
+
+            var paisagemselec;
+            var paisagemum;
+            var paisagemdois;
+            var paisagemtres;
+            var paisagemquatro;
+            var poluicaoselec;
+            var poluicaoum;
+            var poluicaodois;
+            var poluicaotres;
+            var poluicaoquatro;
+
+            var backabaou;
+            var terminou;
+
+            var pontuacao;
 
             //funcao iniciar - declarar valor variaveis / passar vars para arrays / textos / primeira funcao
 
@@ -114,6 +172,9 @@
                 tela = new Tela(document.getElementById("tela"));
                 contexto = tela.contexto;
                 fundo = new Rectangulo(0, 0, tela.largura, tela.altura, "lightblue");
+
+                somvol = false;
+                musicafundo = new Som(document.getElementById("musicafundo"));
 
                 fundo = document.getElementById("capainicio");
                 fundohelp = document.getElementById("capahelp");
@@ -126,12 +187,38 @@
                 fundojogo = document.getElementById("fundojogo");
                 personagem = document.getElementById("personagem");
                 continua = true;
+                
+                nivelum = document.getElementById("nivelum");
+                niveldois = document.getElementById("niveldois");
+                niveltres = document.getElementById("niveltres");
+                nivelquatro = document.getElementById("nivelquatro");
+                
+                paisagemum = document.getElementById("paisagemum");
+                paisagemdois = document.getElementById("paisagemdois");
+                paisagemtres = document.getElementById("paisagemtres");
+                paisagemquatro = document.getElementById("paisagemquatro");
+                paisagemselec = paisagemum;
+
+                poluicaoum = document.getElementById("poluicaoum");
+                poluicaodois = document.getElementById("poluicaodois");
+                poluicaotres = document.getElementById("poluicaotres");
+                poluicaoquatro = document.getElementById("poluicaoquatro");
+                poluicaoselec = poluicaoum;
+                
+                backacabou = document.getElementById("backacabou");
+                terminou = document.getElementById("terminou");
+                
+                
                 joggg = new Imagem(668, 650, personagem);
                 contador = 0;
-                contadora = new Texto(250, 25, "contador: " + contador, "white", "black", 2);
+                contadora = new Texto(250, 60, "contador: " + contador, "white", "black", 2);
                 contadora.tamanho = 32;
-                naturezaa = new Texto(950, 25, "contador: " + natureza, "white", "black", 2);
+                naturezaa = new Texto(250, 25, "contador: " + natureza, "white", "black", 2);
                 naturezaa.tamanho = 32;
+                poluicaoa = new Texto(950, 25, "contador: " + poluicao, "white", "black", 2);
+                poluicaoa.tamanho = 32;
+                pontuacaoa = new Texto(550, 500, "A sua pontuação é: " + pontuacao, "white", "black", 2);
+                pontuacaoa.tamanho = 32;
 
                 ratoX = 0;
                 ratoY = 0;
@@ -147,10 +234,15 @@
                 arvoreseis = document.getElementById("arvoreseis");
                 animalum = document.getElementById("animalum");
                 animaldois = document.getElementById("animaldois");
+                negum = document.getElementById("cigarro");
+                negdois = document.getElementById("fogo");
+                negtres = document.getElementById("lixoum");
+                negquatro = document.getElementById("lixodois");
+                campum = document.getElementById("maca");
+                campdois = document.getElementById("reciclagem");
 
                 natureza = 1;
-
-
+                poluicao = 1;
 
                 nivelelemum = 1;
                 elemarvoreum = new Array();
@@ -162,7 +254,6 @@
                     elemarvore.deltaY = 2;
                     elemarvoreum.push(elemarvore);
                 }
-
                 nivelelemdois = 1;
                 elemarvoredoisarr = new Array();
                 for (var i = 0; i < nivelelemdois; i++) {
@@ -173,72 +264,144 @@
                     elemarvoredois.deltaY = 2;
                     elemarvoredoisarr.push(elemarvoredois);
                 }
-
-                nivelelemtres = 1;
-                elemarvoretresarr = new Array();
-                for (var i = 0; i < nivelelemtres; i++) {
-                    var elemarvoretres = new Imagem(0, 0, document.getElementById("arvoretres"));
-                    elemarvoretres.x = Math.random() * tela.largura /*+ tela.largura*/;
-                    elemarvoretres.y = (Math.random() * (tela.altura - elemarvoretres.altura))-tela.altura;
-               
-                    elemarvoretres.deltaY = 2;
-                    elemarvoretresarr.push(elemarvoretres);
-                }
-
-                nivelelemquatro = 1;
-                elemarvorequatroarr = new Array();
-                for (var i = 0; i < nivelelemquatro; i++) {
-                    var elemarvorequatro = new Imagem(0, 0, document.getElementById("arvorequatro"));
-                    elemarvorequatro.x = Math.random() * tela.largura /*+ tela.largura*/;
-                    elemarvorequatro.y = (Math.random() * (tela.altura - elemarvorequatro.altura))-tela.altura;
-               
-                    elemarvorequatro.deltaY = 2;
-                    elemarvorequatroarr.push(elemarvorequatro);
-                }
-
-                nivelelemcinco = 1;
-                elemarvorecincoarr = new Array();
-                for (var i = 0; i < nivelelemcinco; i++) {
-                    var elemarvorecinco = new Imagem(0, 0, document.getElementById("arvorecinco"));
-                    elemarvorecinco.x = Math.random() * tela.largura /*+ tela.largura*/;
-                    elemarvorecinco.y = (Math.random() * (tela.altura - elemarvorecinco.altura))-tela.altura;
-               
-                    elemarvorecinco.deltaY = 2;
-                    elemarvorecincoarr.push(elemarvorecinco);
-                }
-
-                nivelelemseis = 1;
-                elemarvoreseisarr = new Array();
-                for (var i = 0; i < nivelelemseis; i++) {
-                    var elemarvoreseis = new Imagem(0, 0, document.getElementById("arvoreseis"));
-                    elemarvoreseis.x = Math.random() * tela.largura /*+ tela.largura*/;
-                    elemarvoreseis.y = (Math.random() * (tela.altura - elemarvoreseis.altura))-tela.altura;
-               
-                    elemarvoreseis.deltaY = 2;
-                    elemarvoreseisarr.push(elemarvoreseis);
-                }
-                /*------------animais----------------*/
                 nivelanimum = 1;
                 elemanimumarr = new Array();
                 for (var i = 0; i < nivelanimum; i++) {
-                    var elemanimum = new Imagem(0, 0, document.getElementById("animaldois"));
+                    var elemanimum = new Imagem(0, 0, document.getElementById("animalum"));
                     elemanimum.x = Math.random() * tela.largura /*+ tela.largura*/;
                     elemanimum.y = (Math.random() * (tela.altura - elemanimum.altura))-tela.altura;
                
                     elemanimum.deltaY = 2;
                     elemanimumarr.push(elemanimum);
                 }
-
-                nivelanimdois = 1;
-                elemanimdoisarr = new Array();
-                for (var i = 0; i < nivelanimdois; i++) {
-                    var elemanimdois = new Imagem(0, 0, document.getElementById("animalum"));
-                    elemanimdois.x = Math.random() * tela.largura /*+ tela.largura*/;
-                    elemanimdois.y = (Math.random() * (tela.altura - elemanimdois.altura))-tela.altura;
+                nivelnegum = 1;
+                elemnegumarr = new Array();
+                for (var i = 0; i < nivelnegum; i++) {
+                    var elemnegum = new Imagem(0, 0, document.getElementById("cigarro"));
+                    elemnegum.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemnegum.y = (Math.random() * (tela.altura - elemnegum.altura))-tela.altura;
                
-                    elemanimdois.deltaY = 2;
-                    elemanimdoisarr.push(elemanimdois);
+                    elemnegum.deltaY = 2;
+                    elemnegumarr.push(elemnegum);
                 }
+                nivelcampum = 1;
+                elemcampumarr = new Array();
+                for (var i = 0; i < nivelcampum; i++) {
+                    var elemcampum = new Imagem(0, 0, document.getElementById("maca"));
+                    elemcampum.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemcampum.y = (Math.random() * (tela.altura - elemcampum.altura))-tela.altura;
+               
+                    elemcampum.deltaY = 2;
+                    elemcampumarr.push(elemcampum);
+                }
+
+                
+                
+                nivelelemtres = 0;
+                nivelanimdois = 0;
+                nivelnegdois = 0;
+                nivelelemquatro = 0;
+                nivelnegtres = 0;
+                nivelelemcinco = 0;
+                nivelelemseis = 0;
+                nivelnegquatro = 0;
+                nivelcampdois = 0;
+
+             
+                    nivelelemtres = 0;
+                    elemarvoretresarr = new Array();
+                    for (var i = 0; i < nivelelemtres; i++) {
+                        var elemarvoretres = new Imagem(0, 0, document.getElementById("arvoretres"));
+                        elemarvoretres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoretres.y = (Math.random() * (tela.altura - elemarvoretres.altura))-tela.altura;
+                
+                        elemarvoretres.deltaY = 2;
+                        elemarvoretresarr.push(elemarvoretres);
+                    }
+                    nivelanimdois = 0;
+                    elemanimdoisarr = new Array();
+                    for (var i = 0; i < nivelanimdois; i++) {
+                        var elemanimdois = new Imagem(0, 0, document.getElementById("animaldois"));
+                        elemanimdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemanimdois.y = (Math.random() * (tela.altura - elemanimdois.altura))-tela.altura;
+                
+                        elemanimdois.deltaY = 2;
+                        elemanimdoisarr.push(elemanimdois);
+                    }
+                    nivelnegdois = 0;
+                    elemnegdoisarr = new Array();
+                    for (var i = 0; i < nivelnegdois; i++) {
+                        var elemnegdois = new Imagem(0, 0, document.getElementById("fogo"));
+                        elemnegdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegdois.y = (Math.random() * (tela.altura - elemnegdois.altura))-tela.altura;
+                
+                        elemnegdois.deltaY = 2;
+                        elemnegdoisarr.push(elemnegdois);
+                    }
+                    nivelelemquatro = 0;
+                    elemarvorequatroarr = new Array();
+                    for (var i = 0; i < nivelelemquatro; i++) {
+                        var elemarvorequatro = new Imagem(0, 0, document.getElementById("arvorequatro"));
+                        elemarvorequatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorequatro.y = (Math.random() * (tela.altura - elemarvorequatro.altura))-tela.altura;
+                
+                        elemarvorequatro.deltaY = 2;
+                        elemarvorequatroarr.push(elemarvorequatro);
+                    }
+                    nivelnegtres = 0;
+                    elemnegtresarr = new Array();
+                    for (var i = 0; i < nivelnegtres; i++) {
+                        var elemnegtres = new Imagem(0, 0, document.getElementById("lixoum"));
+                        elemnegtres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegtres.y = (Math.random() * (tela.altura - elemnegtres.altura))-tela.altura;
+                
+                        elemnegtres.deltaY = 2;
+                        elemnegtresarr.push(elemnegtres);
+                    }
+                    nivelelemcinco = 0;
+                    elemarvorecincoarr = new Array();
+                    for (var i = 0; i < nivelelemcinco; i++) {
+                        var elemarvorecinco = new Imagem(0, 0, document.getElementById("arvorecinco"));
+                        elemarvorecinco.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorecinco.y = (Math.random() * (tela.altura - elemarvorecinco.altura))-tela.altura;
+                
+                        elemarvorecinco.deltaY = 2;
+                        elemarvorecincoarr.push(elemarvorecinco);
+                    }
+                    nivelelemseis = 0;
+                    elemarvoreseisarr = new Array();
+                    for (var i = 0; i < nivelelemseis; i++) {
+                        var elemarvoreseis = new Imagem(0, 0, document.getElementById("arvoreseis"));
+                        elemarvoreseis.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoreseis.y = (Math.random() * (tela.altura - elemarvoreseis.altura))-tela.altura;
+                
+                        elemarvoreseis.deltaY = 2;
+                        elemarvoreseisarr.push(elemarvoreseis);
+                    }
+                    nivelnegquatro = 0;
+                    elemnegquatroarr = new Array();
+                    for (var i = 0; i < nivelnegquatro; i++) {
+                        var elemnegquatro = new Imagem(0, 0, document.getElementById("lixodois"));
+                        elemnegquatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegquatro.y = (Math.random() * (tela.altura - elemnegquatro.altura))-tela.altura;
+                
+                        elemnegquatro.deltaY = 2;
+                        elemnegquatroarr.push(elemnegquatro);
+                    }
+                    nivelcampdois = 0;
+                    elemcampdoisarr = new Array();
+                    for (var i = 0; i < nivelcampdois; i++) {
+                        var elemcampdois = new Imagem(0, 0, document.getElementById("reciclagem"));
+                        elemcampdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemcampdois.y = (Math.random() * (tela.altura - elemcampdois.altura))-tela.altura;
+                
+                        elemcampdois.deltaY = 2;
+                        elemcampdoisarr.push(elemcampdois);
+                    }
+
+
+
+                
 
 
 
@@ -255,6 +418,133 @@
 
                 menuprincipal();
             }
+
+            /*-------------------elementos-------------------*/
+
+            function arrayelementos(){
+                if(contador==700){  //--------nivel 2
+                    nivelelemtres = 1;
+                    elemarvoretresarr = new Array();
+                    for (var i = 0; i < nivelelemtres; i++) {
+                        var elemarvoretres = new Imagem(0, 0, document.getElementById("arvoretres"));
+                        elemarvoretres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoretres.y = (Math.random() * (tela.altura - elemarvoretres.altura))-tela.altura;
+                
+                        elemarvoretres.deltaY = 2;
+                        elemarvoretresarr.push(elemarvoretres);
+                    }
+                    nivelanimdois = 1;
+                    elemanimdoisarr = new Array();
+                    for (var i = 0; i < nivelanimdois; i++) {
+                        var elemanimdois = new Imagem(0, 0, document.getElementById("animaldois"));
+                        elemanimdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemanimdois.y = (Math.random() * (tela.altura - elemanimdois.altura))-tela.altura;
+                
+                        elemanimdois.deltaY = 2;
+                        elemanimdoisarr.push(elemanimdois);
+                    }
+                    nivelnegdois = 1;
+                    elemnegdoisarr = new Array();
+                    for (var i = 0; i < nivelnegdois; i++) {
+                        var elemnegdois = new Imagem(0, 0, document.getElementById("fogo"));
+                        elemnegdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegdois.y = (Math.random() * (tela.altura - elemnegdois.altura))-tela.altura;
+                
+                        elemnegdois.deltaY = 2;
+                        elemnegdoisarr.push(elemnegdois);
+                    }
+                    
+                }
+                if(contador==1900){  //--------nivel 3
+                    nivelelemquatro = 1;
+                    elemarvorequatroarr = new Array();
+                    for (var i = 0; i < nivelelemquatro; i++) {
+                        var elemarvorequatro = new Imagem(0, 0, document.getElementById("arvorequatro"));
+                        elemarvorequatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorequatro.y = (Math.random() * (tela.altura - elemarvorequatro.altura))-tela.altura;
+                
+                        elemarvorequatro.deltaY = 2;
+                        elemarvorequatroarr.push(elemarvorequatro);
+                    }
+                    nivelnegtres = 1;
+                    elemnegtresarr = new Array();
+                    for (var i = 0; i < nivelnegtres; i++) {
+                        var elemnegtres = new Imagem(0, 0, document.getElementById("lixoum"));
+                        elemnegtres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegtres.y = (Math.random() * (tela.altura - elemnegtres.altura))-tela.altura;
+                
+                        elemnegtres.deltaY = 2;
+                        elemnegtresarr.push(elemnegtres);
+                    }
+
+                }
+                if(contador==2900){  //--------nivel 4
+                    nivelelemcinco = 1;
+                    elemarvorecincoarr = new Array();
+                    for (var i = 0; i < nivelelemcinco; i++) {
+                        var elemarvorecinco = new Imagem(0, 0, document.getElementById("arvorecinco"));
+                        elemarvorecinco.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorecinco.y = (Math.random() * (tela.altura - elemarvorecinco.altura))-tela.altura;
+                
+                        elemarvorecinco.deltaY = 2;
+                        elemarvorecincoarr.push(elemarvorecinco);
+                    }
+                    nivelelemseis = 1;
+                    elemarvoreseisarr = new Array();
+                    for (var i = 0; i < nivelelemseis; i++) {
+                        var elemarvoreseis = new Imagem(0, 0, document.getElementById("arvoreseis"));
+                        elemarvoreseis.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoreseis.y = (Math.random() * (tela.altura - elemarvoreseis.altura))-tela.altura;
+                
+                        elemarvoreseis.deltaY = 2;
+                        elemarvoreseisarr.push(elemarvoreseis);
+                    }
+                    nivelnegquatro = 1;
+                    elemnegquatroarr = new Array();
+                    for (var i = 0; i < nivelnegquatro; i++) {
+                        var elemnegquatro = new Imagem(0, 0, document.getElementById("lixodois"));
+                        elemnegquatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegquatro.y = (Math.random() * (tela.altura - elemnegquatro.altura))-tela.altura;
+                
+                        elemnegquatro.deltaY = 2;
+                        elemnegquatroarr.push(elemnegquatro);
+                    }
+                    nivelcampdois = 1;
+                    elemcampdoisarr = new Array();
+                    for (var i = 0; i < nivelcampdois; i++) {
+                        var elemcampdois = new Imagem(0, 0, document.getElementById("reciclagem"));
+                        elemcampdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemcampdois.y = (Math.random() * (tela.altura - elemcampdois.altura))-tela.altura;
+                
+                        elemcampdois.deltaY = 2;
+                        elemcampdoisarr.push(elemcampdois);
+                    }
+                }
+                if(contador==3600){  //--------acabou
+                    continua = false;
+                    var d = document.getElementById("tela");
+                    contexto.clearRect(0, 0, d.width, d.height);
+                    acabou();
+                }
+            }
+
+            /*-------------------som de fundo----------------------*/
+            function somdefundo(){
+                if(somvol == false){
+                    musicafundo.reproduz(false);
+                    muteico.globalAlpha = 0.1;
+                    somvol = true;
+                }
+                else if(somvol == true){
+                    musicafundo.pausa(true);
+                    somvol = false;
+                }
+                else{
+                    //console.log("erro");
+                }
+                //musicafundo.reproduz(true);
+            }
+
             //-------------------------------menu iniciar-----------------------------
 
             function menuprincipal(){
@@ -270,6 +560,25 @@
                 contexto.drawImage(muteico, 1340, 10, 50, 50);
             }   
 
+            //-----------------------------acabou-----------------------------
+
+            function acabou(){
+                paginaatual = "acabou";
+                var d = document.getElementById("tela");
+                contexto.clearRect(0, 0, d.width, d.height);
+                contexto.beginPath();
+                contexto.drawImage(fundojogo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(setaback, 15, 15, 40, 40);
+                contexto.drawImage(logomilvoz, 621, 10, 45, 50);
+                contexto.drawImage(letrasmilvoz, 680, 20, 120, 30);
+                contexto.drawImage(terminou, 522, 400, 357, 62);
+
+                pontuacao = natureza - poluicao;
+                pontuacaoa.texto = "A sua pontuacao é: " + pontuacao;
+                pontuacaoa.desenha(tela);
+            } 
+
 
             //-------------------------------menu help-----------------------------
             function menuhelp(){
@@ -280,6 +589,12 @@
                 contexto.drawImage(fundohelp, 0, 0, 1400, 800);
                 contexto.drawImage(muteico, 1340, 10, 50, 50);
                 contexto.drawImage(setaback, 15, 15, 40, 40);
+            }
+
+            /*-------------reload---------------------*/
+
+            function refrescar(){
+                location.reload();
             }
 
 
@@ -294,15 +609,67 @@
                 contexto.drawImage(setaback, 15, 15, 40, 40);
                 contexto.drawImage(logomilvoz, 621, 10, 45, 50);
                 contexto.drawImage(letrasmilvoz, 680, 20, 120, 30);
+                
+                contexto.drawImage(paisagemselec, 0, 40, 1400, 800);
+                contexto.drawImage(poluicaoselec, 0, 20, 1400, 800);
+
+                arrayelementos();
+                
+
+                if(contador >0 && contador <100){//nivel 1
+                    contexto.drawImage(nivelum, 580, 369, 239, 62);
+                }
+
+                if(contador >700 && contador <800){//nivel 2
+                    contexto.drawImage(niveldois, 580, 369, 239, 62);
+                }
+
+                if(contador >2000 && contador <2100){//nivel 3
+                    contexto.drawImage(niveltres, 580, 369, 239, 62);
+                }
+
+                if(contador >3500 && contador <3600){//nivel 4
+                    contexto.drawImage(nivelquatro, 580, 369, 239, 62);
+                }
+
+
+                if(natureza >0 && natureza <10){//paisagem um
+                    paisagemselec = paisagemum;
+                }
+                if(natureza >10 && natureza <20){//paisagem dois
+                    paisagemselec = paisagemdois;
+                }
+                if(natureza >20 && natureza <30){//paisagem tres
+                    paisagemselec = paisagemtres;
+                }
+                if(natureza >30){//paisagem quatro
+                    paisagemselec = paisagemquatro;
+                }
+
+
+                if(poluicao >0 && poluicao <6){//poluicao um
+                    poluicaoselec = poluicaoum;
+                }
+                if(poluicao >6 && poluicao <12){//poluicao dois
+                    poluicaoselec = poluicaodois;
+                }
+                if(poluicao >12 && poluicao <18){//poluicao tres
+                    poluicaoselec = poluicaotres;
+                }
+                if(poluicao >18){//poluicao quatro
+                    poluicaoselec = poluicaoquatro;
+                }
 
                 
                 contadora.texto = "contador: " + contador;
                 contadora.desenha(tela);
                 naturezaa.texto = "Natureza: " + natureza;
                 naturezaa.desenha(tela);
+                poluicaoa.texto = "Poluição: " + poluicao;
+                poluicaoa.desenha(tela);
 
 
-
+                /*---------------positivos------------------*/
                 for (var i = 0; i < elemarvoreum.length; i++) {
                     elemarvoreum[i].desenha(tela);
                     if (elemarvoreum[i].y > tela.altura) {
@@ -318,7 +685,6 @@
                         elemarvoreum[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemarvoredoisarr.length; i++) {
                     elemarvoredoisarr[i].desenha(tela);
                     if (elemarvoredoisarr[i].y > tela.altura) {
@@ -334,7 +700,6 @@
                         elemarvoredoisarr[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemarvoretresarr.length; i++) {
                     elemarvoretresarr[i].desenha(tela);
                     if (elemarvoretresarr[i].y > tela.altura) {
@@ -350,7 +715,6 @@
                         elemarvoretresarr[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemarvorequatroarr.length; i++) {
                     elemarvorequatroarr[i].desenha(tela);
                     if (elemarvorequatroarr[i].y > tela.altura) {
@@ -366,7 +730,6 @@
                         elemarvorequatroarr[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemarvorecincoarr.length; i++) {
                     elemarvorecincoarr[i].desenha(tela);
                     if (elemarvorecincoarr[i].y > tela.altura) {
@@ -382,7 +745,6 @@
                         elemarvorecincoarr[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemarvoreseisarr.length; i++) {
                     elemarvoreseisarr[i].desenha(tela);
                     if (elemarvoreseisarr[i].y > tela.altura) {
@@ -398,9 +760,7 @@
                         elemarvoreseisarr[i].activo = false;
                     }
                 }
-
                 /*---------------animais----------------*/
-                
                 for (var i = 0; i < elemanimumarr.length; i++) {
                     elemanimumarr[i].desenha(tela);
                     if (elemanimumarr[i].y > tela.altura) {
@@ -411,12 +771,12 @@
                     }
                     if (elemanimumarr[i].colide(joggg)) {
                         natureza++
+                        natureza++
                         //console.log(natureza);
                         elemanimumarr[i].visivel = false;
                         elemanimumarr[i].activo = false;
                     }
                 }
-                
                 for (var i = 0; i < elemanimdoisarr.length; i++) {
                     elemanimdoisarr[i].desenha(tela);
                     if (elemanimdoisarr[i].y > tela.altura) {
@@ -427,9 +787,113 @@
                     }
                     if (elemanimdoisarr[i].colide(joggg)) {
                         natureza++
+                        natureza++
                         //console.log(natureza);
                         elemanimdoisarr[i].visivel = false;
                         elemanimdoisarr[i].activo = false;
+                    }
+                }
+                /*---------------negativos----------------*/
+                for (var i = 0; i < elemnegumarr.length; i++) {
+                    elemnegumarr[i].desenha(tela);
+                    if (elemnegumarr[i].y > tela.altura) {
+                        elemnegumarr[i].y = 0-elemnegumarr[i].altura;
+                        elemnegumarr[i].x = Math.random() * tela.largura;
+                        elemnegumarr[i].visivel = true;
+                        elemnegumarr[i].activo = true;
+                    }
+                    if (elemnegumarr[i].colide(joggg)) {
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegumarr[i].visivel = false;
+                        elemnegumarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegdoisarr.length; i++) {
+                    elemnegdoisarr[i].desenha(tela);
+                    if (elemnegdoisarr[i].y > tela.altura) {
+                        elemnegdoisarr[i].y = 0-elemnegdoisarr[i].altura;
+                        elemnegdoisarr[i].x = Math.random() * tela.largura;
+                        elemnegdoisarr[i].visivel = true;
+                        elemnegdoisarr[i].activo = true;
+                    }
+                    if (elemnegdoisarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegdoisarr[i].visivel = false;
+                        elemnegdoisarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegtresarr.length; i++) {
+                    elemnegtresarr[i].desenha(tela);
+                    if (elemnegtresarr[i].y > tela.altura) {
+                        elemnegtresarr[i].y = 0-elemnegtresarr[i].altura;
+                        elemnegtresarr[i].x = Math.random() * tela.largura;
+                        elemnegtresarr[i].visivel = true;
+                        elemnegtresarr[i].activo = true;
+                    }
+                    if (elemnegtresarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegtresarr[i].visivel = false;
+                        elemnegtresarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegquatroarr.length; i++) {
+                    elemnegquatroarr[i].desenha(tela);
+                    if (elemnegquatroarr[i].y > tela.altura) {
+                        elemnegquatroarr[i].y = 0-elemnegquatroarr[i].altura;
+                        elemnegquatroarr[i].x = Math.random() * tela.largura;
+                        elemnegquatroarr[i].visivel = true;
+                        elemnegquatroarr[i].activo = true;
+                    }
+                    if (elemnegquatroarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegquatroarr[i].visivel = false;
+                        elemnegquatroarr[i].activo = false;
+                    }
+                }
+                /*---------------campanha-------------------------*/               
+                for (var i = 0; i < elemcampumarr.length; i++) {
+                    elemcampumarr[i].desenha(tela);
+                    if (elemcampumarr[i].y > tela.altura) {
+                        elemcampumarr[i].y = 0-elemcampumarr[i].altura;
+                        elemcampumarr[i].x = Math.random() * tela.largura;
+                        elemcampumarr[i].visivel = true;
+                        elemcampumarr[i].activo = true;
+                    }
+                    if (elemcampumarr[i].colide(joggg)) {
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        //console.log(natureza);
+                        elemcampumarr[i].visivel = false;
+                        elemcampumarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemcampdoisarr.length; i++) {
+                    elemcampdoisarr[i].desenha(tela);
+                    if (elemcampdoisarr[i].y > tela.altura) {
+                        elemcampdoisarr[i].y = 0-elemcampdoisarr[i].altura;
+                        elemcampdoisarr[i].x = Math.random() * tela.largura;
+                        elemcampdoisarr[i].visivel = true;
+                        elemcampdoisarr[i].activo = true;
+                    }
+                    if (elemcampdoisarr[i].colide(joggg)) {
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        //console.log(natureza);
+                        elemcampdoisarr[i].visivel = false;
+                        elemcampdoisarr[i].activo = false;
                     }
                 }
                 
@@ -463,11 +927,22 @@
                 if(paginaatual == "menuprincipal"){//se ta no menu principal
                     if(x>470 && x<600 && y>730 && y<770){//carregar jogar
                         //alert("carregou no jogar")
+                        continua = true;
                         jogar();
                     }
                     if(x>800 && x<1030 && y>730 && y<770){//carregar nas instrucoes
                         //alert("carregou instrucoes")
                         menuhelp();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                if(paginaatual == "acabou"){//se acabou
+                    if(x>15 && x<55 && y>15 && y<55){//carregar voltar para tras
+                        //alert("carregou no jogar")
+                        refrescar()
                     }
                 }
                 if(paginaatual == "menuhelp"){//se ta no menu HELP
@@ -475,11 +950,19 @@
                         //alert("carregou no jogar")
                         menuprincipal();
                     }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
                 }
                 if(paginaatual == "jogo"){//se ta no menu HELP
                     if(x>15 && x<55 && y>15 && y<55){//carregar voltar para tras
                         //alert("carregou no jogar")
                         menuprincipal();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
                     }
                 }
             }
@@ -490,6 +973,9 @@
             //rato - teclado - janela iniciada
 
             function processaTeclaPremida(tecla) {
+                if (tecla.keyCode == 82) {  // r - reload
+                    window.location.reload();
+                }
                 if (tecla.keyCode == 49) {  // num1
                     menuprincipal()
                 }
@@ -512,6 +998,15 @@
                         joggg.deltaX = -6;
                         //console.log(joggg.x)
                        }
+                    }
+                }
+                if (tecla.keyCode == 27) {  // esc - pausa
+                    if(paginaatual == "menuhelp"){//se ta na pagina help
+                        menuprincipal()
+                    }
+                    if(paginaatual == "jogo"){//se ta no jogo
+                        continua = false;
+                        menuprincipal()
                     }
                 }
             }
