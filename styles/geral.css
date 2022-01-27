@@ -16,7 +16,8 @@ h1 {
 }
 
 /*prevenir o scrool horizontal do bootstrap*/
-html, body {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -44,6 +45,34 @@ html, body {
   );
 }
 
+/*modal*/
+h2 {
+  color: #c5b590 !important;
+  font-family: "Allerta Stencil", sans-serif !important;
+  font-size: 28px !important;
+}
+
+.conteudoMenu{
+  padding: 8rem !important;
+}
+
+@media only screen and (max-width: 960px) {
+  .conteudoMenu{
+    padding: 4rem !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .infoMenu{
+    display: none;
+  }
+}
+
+
+
+/*generico*/
+
+
 .castanho-background {
   background-color: #0f0701;
 }
@@ -67,7 +96,7 @@ html, body {
   font-weight: 500;
 }
 
-.botao:hover{
+.botao:hover {
   border: 2px solid #f6ecd1;
   background-color: #f6ecd1;
   color: #0f0701;
@@ -75,11 +104,15 @@ html, body {
   transition: all 0.1s 0s ease;
 }
 
+/*modal*/
+.modal-header {
+  border: none !important;
+}
 
 /*formulario*/
 input[type="text"],
-select,input[type="email"]
-{
+select,
+input[type="email"] {
   width: 100%;
   padding: 5px;
   border: none;
@@ -90,8 +123,7 @@ select,input[type="email"]
   outline: none;
 }
 
-
-input[type='radio']:checked:after {
+input[type="radio"]:checked:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -100,7 +132,7 @@ input[type='radio']:checked:after {
   border: 2px solid white;
   background-color: #0f0701 !important;
   visibility: visible;
-  content: '';
+  content: "";
   position: relative;
   display: inline-block;
 }
@@ -115,7 +147,7 @@ textarea {
   outline: none;
 }
 
-label{
+label {
   font-size: 13px;
 }
 
