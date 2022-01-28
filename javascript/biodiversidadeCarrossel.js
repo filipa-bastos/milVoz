@@ -5,7 +5,6 @@ let l = 0;
 //movimento em função da largura dos cartoes
 let movimento = anfibios[0].offsetWidth ;
 
-
 //============MAMIFEROS 
 //função para mover para a direita
 function moveDirMamiferos(){
@@ -17,14 +16,12 @@ function moveDirMamiferos(){
         }        
     }
 }
-
 function moveEsqMamiferos(){
     l = l - movimento;
     for(const m of mamiferos){
             m.style.left = '-' + l + 'px';        
     }
 }
-
 
 // =============ANFIBIOS
 //função para mover para a direita
@@ -37,7 +34,6 @@ function moveDirAnfibios(){
         }        
     }
 }
-
 function moveEsqAnfibios(){
     l = l - movimento;
     for(const m of anfibios){ 
@@ -50,6 +46,8 @@ function moveEsqAnfibios(){
 span[3].onclick  = ()=>{moveEsqAnfibios();}
 span[4].onclick  = ()=>{moveDirAnfibios();}
 
+
+//primeiro span diz respeito ao titulo
 span[1].onclick  = ()=>{moveEsqMamiferos();}
 span[2].onclick  = ()=>{moveDirMamiferos();}
 
