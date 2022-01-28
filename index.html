@@ -7,8 +7,11 @@
     <title>Milvoz - ONGA</title>
     
     <!--Styles-->
+    
     <link rel="stylesheet" href="./styles/geral.css">
     <link rel="stylesheet" href="./styles/homepage.css">
+  
+    
     
     <!--STYLE BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -30,13 +33,13 @@
  <!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0F0701" >
     <!-- Container wrapper  -->
-    <div class="container-fluid mt-2 mb-2">
+    <div class="container-fluid mt-3 mb-3">
       <!-- Navbar brand -->
       <a class="navbar-brand ms-5" href="index.html">
         <img
           src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
-          height="24px"
-          width="94px"
+          height="38px"
+          width="120px"
           alt="Milvoz Logotipo"
           loading="lazy">
       </a>
@@ -104,13 +107,13 @@
   </nav>
   <!-- Navbar -->
 
-
+<!--MENU-->
 <!--MODAL -->
 <!-- Full screen modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
-      <div class="modal-header castanho-background" style=" padding-top: 100px;">
+      <div class="modal-header castanho-background" style=" padding-top: 180px;">
         <a class="navbar-brand ms-5" href="index.html">
           <img
             src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
@@ -347,6 +350,7 @@
 </div>
 
 <!-- Cartões biodiversidade-->
+
 <div class="biodiversidade castanho-background">
   <header>
     <h1 class="text-center mx-auto text-uppercase">Biodiversidade Local</h1>
@@ -356,205 +360,208 @@
     </p>
   </header>
 
-<div class="contentor p-5 ">
-  
-    <!--Cartão do Corço --> 
+  <div class="cartoesHomepage">
+    <div class="contentor p-5 ">
+      
+        <!--Cartão do Corço --> 
+        
+        <div class="anfibio">
+          <div class="card tamanhoCartao">
+
+              <!--topo do cartao com imagem do animal+ icone da bioreserva-->
+              <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/corcoCartao.png?raw=true" alt="Corço">
+              <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
+              
+
+              <!--corpo do cartão - descrição do animal -->
+              <div class="card-body d-flex flex-column align-items-center" >
+              <h5 class="card-title">CORÇO</h5>
+                <p class="card-text">
+                Tradicionalmente, o corço foi descrito como uma espécie de pequeno-médio porte, própria de zonas de bosque, de comportamento solitário e que vive em pequenos grupos familiares, muito selectivos na sua alimentação. Isto terá levado ao desenvolvimento da territorialidade nos machos e um elevado grau de estabilidade espacial.
+                </p>	
+              </div>
+
+              <!--primeiro footer-->
+              <div class="card-footer footerTop">
+                <small >Capreolus capreolus</small> 
+              </div>
+
+              <!--footer inferior-->
+              <div class="card-footer footerBottom d-flex justify-content-between">
+                <small >Mamífero</small> 
+                <small >Herbívoro</small> 
+                <small >Cervidae</small> 
+                <small >Diurno</small> 
+              </div>
+            </div>
+        </div>
+
+          <!--Cartão NOVO VEADO --> 
+        
+          <div class="anfibio">
+            <div class="card tamanhoCartao">
+      
+                <!--topo do cartao com imagem do animal+ icone da bioreserva-->
+                <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/veadoCartao.png?raw=true" alt="VEADO">
+                <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
+                
+      
+                <!--corpo do cartão - descrição do animal -->
+                <div class="card-body d-flex flex-column align-items-center" >
+                <h5 class="card-title">VEADO</h5>
+                  <p class="card-text">
+                    Apresentam um elevado dimorfismo sexual, sendo os machos  maiores do que as fêmeas e os únicos que desenvolvem hastes. Tais estruturas são utilizadas sobretudo durante a época de reprodução, conhecida como brama, altura em que os machos lutam pelo direito a territórios nos quais irão acasalar. A cada ano, as hastes caem e são substituídas por umas novas, mais ramificadas, dando-nos assim a possibilidade de inferir a idade dos indivíduos. 
+                  </p>	
+                </div>
+      
+                <!--primeiro footer-->
+                <div class="card-footer footerTop">
+                  <small >Cervus elaphus</small> 
+                </div>
+      
+                <!--footer inferior-->
+                <div class="card-footer footerBottom d-flex justify-content-between">
+                  <small >Mamífero</small> 
+                  <small >Herbívoro</small> 
+                  <small >Cervidae</small> 
+                  <small >Diurno</small> 
+                </div>
+              </div>
+          </div>
+
+        
+      
+
+        <!--Cartão do JAVALI-->
+        <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
+        <div class="anfibio">
+          <div class="card tamanhoCartao">
+
+              <!--topo do cartao com imagem do animal+ icone da bioreserva-->
+              <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/javaliCartao.png?raw=true" alt="Card image cap">
+              <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
+              
+
+              <!--corpo do cartão - descrição do animal -->
+              <div class="card-body d-flex flex-column align-items-center" >
+              <h5 class="card-title">Javali</h5>
+                <p class="card-text">
+                  Tem principalmente atividade corpuscular e noturna no verão. No inverno a atividade é quase sempre diurna. É um animal sociável na vida familiar, mas o machos adulto, fora da época do cio, é solitário. O peso oscila entre os 50 e 300 quilos. É um animal omnívoro que se alimenta de raízes, tubérculos, verduras, gramíneas, insetos, minhocas, ovos, roedores e bolotas.
+                </p>	
+              </div>
+
+              <!--primeiro footer-->
+              <div class="card-footer footerTop">
+                <small>Sus scrofa</small> 
+              </div>
+
+              <!--footer inferior-->
+              <div class="card-footer footerBottom d-flex justify-content-between">
+                <small >Mamífero</small> 
+                <small >Omnívoro</small> 
+                <small >Suídae</small> 
+                <small >Nocturno</small> 
+              </div>
+                    </div>
+        </div>
+      
+        <!--Cartão do RAPOSA-->
+        <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
+        <div class="anfibio">
+          <div class="card tamanhoCartao">
+
+              <!--topo do cartao com imagem do animal+ icone da bioreserva-->
+              <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/raposaCartao.png?raw=true" alt="Card image cap">
+              <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
+              
+
+              <!--corpo do cartão - descrição do animal -->
+              <div class="card-body d-flex flex-column align-items-center" >
+              <h5 class="card-title">Raposa</h5>
+                <p class="card-text">
+                  De focinho pontiagudo e longas orelhas, é um animal sempre atento a qualquer ruído na vegetação. A cauda é longa e felpuda, terminando numa ponta branca, cor também distribuída por todo o ventre e garganta. Pequenos animais, carcaças e os frutos da época são a essência da sua alimentação. Durante a Primavera e o Verão, a procura é intensificada para alimentar as várias crias.
+                </p>	
+              </div>
+
+              <!--primeiro footer-->
+              <div class="card-footer footerTop">
+                <small>Vulpes vulpes</small> 
+              </div>
+
+              <!--footer inferior-->
+              <div class="card-footer footerBottom d-flex justify-content-between">
+                <small >Mamífero</small> 
+                <small >Carnívoro</small> 
+                <small >Canidae</small> 
+                <small >Diurno</small> 
+              </div>
+                    </div>
+        </div>
+
+        
+        <!--Cartão do SACARRABOS-->
+        <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
+        <div class="anfibio">
+          <div class="card tamanhoCartao">
+
+              <!--topo do cartao com imagem do animal+ icone da bioreserva-->
+              <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/sacarrabosCartao.png?raw=true" alt="Card image cap">
+              <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
+              
+
+              <!--corpo do cartão - descrição do animal -->
+              <div class="card-body d-flex flex-column align-items-center" >
+              <h5 class="card-title">Sacarrabos</h5>
+                <p class="card-text">
+                  A elevada movimentação primaveril faz adivinhar o empenho na época de reprodução e na defesa do território. As crias nascem no Verão e acompanham a progenitora durante alguns meses, até se tornarem independentes. Embora sejam continentes com composições faunísticas muito distintas, África traz até à Europa alguma da sua essência através de espécies como o sacarrabos, um mesocarnívoro que hoje presta um enorme contributo para o equilíbrio dos ecossistemas portugueses.
+                </p>	
+              </div>
+
+              <!--primeiro footer-->
+              <div class="card-footer footerTop">
+                <small>Herpestes ichneumon</small> 
+              </div>
+
+              <!--footer inferior-->
+              <div class="card-footer footerBottom d-flex justify-content-between">
+                <small >Mamífero</small> 
+                <small >Carnívoro</small> 
+                <small >Herpestidae</small> 
+                <small >Diurno</small> 
+              </div>
+                    </div>
+        </div>
+        
+        
     
-    <div class="mamifero">
-      <div class="card tamanhoCartao">
+    </div>	
+  </div>
 
-          <!--topo do cartao com imagem do animal+ icone da bioreserva-->
-          <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/corcoCartao.png?raw=true" alt="Corço">
-          <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
-          
-
-          <!--corpo do cartão - descrição do animal -->
-          <div class="card-body d-flex flex-column align-items-center" >
-          <h5 class="card-title">CORÇO</h5>
-            <p class="card-text">
-            Tradicionalmente, o corço foi descrito como uma espécie de pequeno-médio porte, própria de zonas de bosque, de comportamento solitário e que vive em pequenos grupos familiares, muito selectivos na sua alimentação. Isto terá levado ao desenvolvimento da territorialidade nos machos e um elevado grau de estabilidade espacial.
-            </p>	
-          </div>
-
-          <!--primeiro footer-->
-          <div class="card-footer footerTop">
-            <small >Capreolus capreolus</small> 
-          </div>
-
-          <!--footer inferior-->
-          <div class="card-footer footerBottom d-flex justify-content-between">
-            <small >Mamífero</small> 
-            <small >Herbívoro</small> 
-            <small >Cervidae</small> 
-            <small >Diurno</small> 
-          </div>
-                </div>
-    </div>
-
-    <!--Cartão do Veado -->
-    <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
-    <div class="mamifero">
-      <div class="card tamanhoCartao">
-
-          <!--topo do cartao com imagem do animal+ icone da bioreserva-->
-          <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/veadoCartao.png?raw=true" alt="Card image cap">
-          <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
-          
-
-          <!--corpo do cartão - descrição do animal -->
-          <div class="card-body d-flex flex-column align-items-center" >
-          <h5 class="card-title">VEADO</h5>
-            <p class="card-text">
-              Apresentam um elevado dimorfismo sexual, sendo os machos  maiores do que as fêmeas e os únicos que desenvolvem hastes. Tais estruturas são utilizadas sobretudo durante a época de reprodução, conhecida como brama, altura em que os machos lutam pelo direito a territórios nos quais irão acasalar. A cada ano, as hastes caem e são substituídas por umas novas, mais ramificadas, dando-nos assim a possibilidade de inferir a idade dos indivíduos. 
-            </p>	
-          </div>
-
-          <!--primeiro footer-->
-          <div class="card-footer footerTop">
-            <small>Cervus elaphus</small> 
-          </div>
-
-          <!--footer inferior-->
-          <div class="card-footer footerBottom d-flex justify-content-between">
-            <small >Mamífero</small> 
-            <small >Herbívoro</small> 
-            <small >Cervidae</small> 
-            <small >Diurno</small> 
-          </div>
-                </div>
-    </div>
-
-
-    <!--Cartão do JAVALI-->
-    <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
-    <div class="mamifero">
-      <div class="card tamanhoCartao">
-
-          <!--topo do cartao com imagem do animal+ icone da bioreserva-->
-          <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/javaliCartao.png?raw=true" alt="Card image cap">
-          <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
-          
-
-          <!--corpo do cartão - descrição do animal -->
-          <div class="card-body d-flex flex-column align-items-center" >
-          <h5 class="card-title">Javali</h5>
-            <p class="card-text">
-              Tem principalmente atividade corpuscular e noturna no verão. No inverno a atividade é quase sempre diurna. É um animal sociável na vida familiar, mas o machos adulto, fora da época do cio, é solitário. O peso oscila entre os 50 e 300 quilos. É um animal omnívoro que se alimenta de raízes, tubérculos, verduras, gramíneas, insetos, minhocas, ovos, roedores e bolotas.
-            </p>	
-          </div>
-
-          <!--primeiro footer-->
-          <div class="card-footer footerTop">
-            <small>Sus scrofa</small> 
-          </div>
-
-          <!--footer inferior-->
-          <div class="card-footer footerBottom d-flex justify-content-between">
-            <small >Mamífero</small> 
-            <small >Omnívoro</small> 
-            <small >Suídae</small> 
-            <small >Nocturno</small> 
-          </div>
-                </div>
-    </div>
-  
-    <!--Cartão do RAPOSA-->
-    <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
-    <div class="mamifero">
-      <div class="card tamanhoCartao">
-
-          <!--topo do cartao com imagem do animal+ icone da bioreserva-->
-          <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/raposaCartao.png?raw=true" alt="Card image cap">
-          <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
-          
-
-          <!--corpo do cartão - descrição do animal -->
-          <div class="card-body d-flex flex-column align-items-center" >
-          <h5 class="card-title">Raposa</h5>
-            <p class="card-text">
-              De focinho pontiagudo e longas orelhas, é um animal sempre atento a qualquer ruído na vegetação. A cauda é longa e felpuda, terminando numa ponta branca, cor também distribuída por todo o ventre e garganta. Pequenos animais, carcaças e os frutos da época são a essência da sua alimentação. Durante a Primavera e o Verão, a procura é intensificada para alimentar as várias crias.
-            </p>	
-          </div>
-
-          <!--primeiro footer-->
-          <div class="card-footer footerTop">
-            <small>Vulpes vulpes</small> 
-          </div>
-
-          <!--footer inferior-->
-          <div class="card-footer footerBottom d-flex justify-content-between">
-            <small >Mamífero</small> 
-            <small >Carnívoro</small> 
-            <small >Canidae</small> 
-            <small >Diurno</small> 
-          </div>
-                </div>
-    </div>
-
-    
-    <!--Cartão do SACARRABOS-->
-    <!-- a class product diz respeito ao carrossel feito em JS e também alguma formatção CSS-->
-    <div class="mamifero">
-      <div class="card tamanhoCartao">
-
-          <!--topo do cartao com imagem do animal+ icone da bioreserva-->
-          <img class="card-img-top" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/cards/sacarrabosCartao.png?raw=true" alt="Card image cap">
-          <img class="position-absolute iconeBioreserva" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/083246a79a746a5074ea4490eebf572d02407f35/recursos/icons/salamandraIconCard.svg" alt="iconce salamandra">
-          
-
-          <!--corpo do cartão - descrição do animal -->
-          <div class="card-body d-flex flex-column align-items-center" >
-          <h5 class="card-title">Sacarrabos</h5>
-            <p class="card-text">
-              A elevada movimentação primaveril faz adivinhar o empenho na época de reprodução e na defesa do território. As crias nascem no Verão e acompanham a progenitora durante alguns meses, até se tornarem independentes. Embora sejam continentes com composições faunísticas muito distintas, África traz até à Europa alguma da sua essência através de espécies como o sacarrabos, um mesocarnívoro que hoje presta um enorme contributo para o equilíbrio dos ecossistemas portugueses.
-            </p>	
-          </div>
-
-          <!--primeiro footer-->
-          <div class="card-footer footerTop">
-            <small>Herpestes ichneumon</small> 
-          </div>
-
-          <!--footer inferior-->
-          <div class="card-footer footerBottom d-flex justify-content-between">
-            <small >Mamífero</small> 
-            <small >Carnívoro</small> 
-            <small >Herpestidae</small> 
-            <small >Diurno</small> 
-          </div>
-                </div>
-    </div>
-    
-    
- 
-</div>	
-
-
-
-    </div>
+</div>
 
 
 <!-- Newsletter-->
 
 <div class="container-fluid d-flex justify-content-center mb-auto andorinha">
   <div class="d-flex flex-column justify-content-center txtdoninha">
-    <img class="rounded mx-auto d-block mb-3" src="https://raw.githubusercontent.com/filipa-bastos/milVoz/8f46610398bcee739c42e864ff4ceca7de2a6c07/recursos/icons/Newsletter_icon.svg" alt="newsletter">
-    <h2 class="text-center"> Newsletter</h2>
-    <p>Receba as nossas novidades!</p>
-    <button type="button" class="botao text-center w-70 mx-auto h6" >Subscrever</button>
+    
+    
+ 
+    <h3 class="text-center" style="font-size:30px;"> Jogar</h3>
+    <a href="#" type="button" class="botao text-center w-70 mx-auto h6" ><i class="fas fa-gamepad cor-primaria" style="font-size:50px;"></i></a>
   </div>
 </div>
 
 
 <!--Footer-->
-<footer class="castanho-background dNoneTel">
-  <div class="container margemLateral py-5">
-      <div class="row ">
-          <div class="col-12 col-lg-3 mb-lg-0 ">
-              <img class="logotipoFooter"
+<footer class="castanho-background dNoneTel ">
+  <div class="margemLateral ">
+      <div class="row d-flex justify-content-center py-5">
+          <div class="col-12 col-lg-3 mb-lg-0 footerLeft">
+              <img class="mDir logotipoFooter"
               src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
               alt="Milvoz Logotipo">
-              <p class="mt-xl-3 mDir py-3" style="font-size:10px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
+              <p class="mt-xl-3 mDir py-3" style="font-size:16px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
               <hr  class="d-lg-none d-block">
           </div>
           <div class="col-12 col-lg-9 pEsq">
@@ -564,17 +571,17 @@
                       <dl>
                         <a href="sobre.html">
                           <dt>ONGA</dt>
-                          <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
-                          <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
+                          <dd  style="font-size: 16px;">&#8226 Quem somos?</dd>
+                          <dd  style="font-size: 16px;">&#8226 Ser sócio</dd>
                         </a>
                       </dl>
 
                       <dl>
                         <a href="actuacao.html">
                           <dt>ACTIVIDADES</dt>
-                          <dd style="font-size: 13px;">&#8226 Gestão Ecológica</dd>
-                          <dd  style="font-size: 13px;">&#8226 Educação Ambiental</dd>
-                          <dd  style="font-size: 13px;">&#8226 Aconselhamentos</dd>
+                          <dd style="font-size: 16px;">&#8226 Gestão Ecológica</dd>
+                          <dd  style="font-size: 16px;">&#8226 Educação Ambiental</dd>
+                          <dd  style="font-size: 16px;">&#8226 Aconselhamentos</dd>
                         </a>
                       </dl>
 
@@ -584,17 +591,17 @@
                       <dl>
                         <a href="bioreservas.html">
                           <dt>BIO-RESERVAS</dt>
-                          <dd style="font-size: 13px;">&#8226 Nossa Senhora da Alegria</dd>
-                          <dd  style="font-size: 13px;">&#8226 Serra da Pescaria</dd>
+                          <dd style="font-size: 16px;">&#8226 Nossa Senhora da Alegria</dd>
+                          <dd  style="font-size: 16px;">&#8226 Serra da Pescaria</dd>
                         </a>
                       </dl>
 
                       <dl>
                         <a href="contactos.php">
                           <dt>CONTACTOS</dt>
-                              <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
-                              <dd  style="font-size: 13px;">&#8226 913 123 132</dd>
-                              <dd  style="font-size: 13px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
+                              <dd style="font-size: 16px;">&#8226 geral@milvoz.pt</dd>
+                              <dd  style="font-size: 16px;">&#8226 913 123 132</dd>
+                              <dd  style="font-size: 16px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
                           </a>
                       </dl>
                   </div>
@@ -603,7 +610,7 @@
                               <div class="col-6 col-md-12">
                                 <a href="contactos.php">
                                   <dt>MORADA</dt>
-                                  <dd style="font-size: 13px;">&#8226 Rua da Calçada Antiga nº1 <br>
+                                  <dd style="font-size: 16px;">&#8226 Rua da Calçada Antiga nº1 <br>
                                       Assafarge / Coimbra<br>
                                       3040-657</dd>
                                   </a>
