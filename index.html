@@ -190,7 +190,7 @@
                 </dl>
                 <br>
                 <dl>
-                  <a href="#">
+                  <a href="jogo.html">
                     <dt> <h2>JOGO</h2></dt>
                   </a>
                 </dl>
