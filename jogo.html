@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Milvoz
+        </title>
+        <script src="ElementosJogo.js"></script>
+        <style>
+            body{
+                background-color: #111111;
+            }
+
+            #recursos {
+                display: none;
+            }
+    
+            #tela {
+                display: block;
+                background-color: aquamarine;
+                /*background-color: #111111;*/
+                position: fixed;
+                top: calc(50vh - 400px);
+                right: calc(50vw - 700px);
+                /*width: 100vw;
+                height: 100vh;*/
+            }
+        </style>
+        <link rel="stylesheet" href="styles/geral.css"> 
+        <link rel="stylesheet" href="styles/apadrinhar.css"> 
+        
+        <!--STYLE BOOTSTRAP-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <!--STYLE FONT AWESOME-->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        
+        <!--FONTE POPPINS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
+        <!--FONTE AXIA -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,700;1,800&display=swap" rel="stylesheet">
+        
+
+    </head>
+    <body class="castanho-background">
+            
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0F0701" >
+        <!-- Container wrapper  -->
+        <div class="container-fluid mt-3 mb-3">
+        <!-- Navbar brand -->
+        <a class="navbar-brand ms-5" href="index.html">
+            <img
+            src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+            height="38px"
+            width="120px"
+            alt="Milvoz Logotipo"
+            loading="lazy">
+        </a>
+    
+        <!-- Toggle button -->
+        <!-- ABRIR A CLASSE MODAL 
+        <div class="menu-btn">
+            <button type="button" class="btn menu-btn__burger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </button>
+        </div>-->
+        <button
+            class="navbar-toggler btn"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-bs-target="#exampleModal"
+            data-bs-toggle="modal"
+            aria-controls="navbarButtonsExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars cor-primaria"></i>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            
+            <!-- Left links .-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item me-2 ms-3 facebook">
+                <a class="nav-link" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                </a>
+            </li>
+            <li class="nav-item me-2 ">
+                <a class="nav-link instagram" href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                </a>
+            </li>
+            
+            </ul>
+            <!-- Right links -->
+            <div class="d-flex align-items-center ">
+                <a href="apadrinhar.php" type="button" class="botao me-3 apadrinhar">
+                    APADRINHAR
+                </a>
+                <a href="apoiar.php" type="button" class="botao me-3 apoiar">
+                APOIAR
+                </a>
+            
+                <!-- ABRIR A CLASSE MODAL -->
+                <div class="menu-btn">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-bars cor-primaria" style="font-size:30px"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper --> 
+    </nav>
+    <!-- Navbar -->
+
+    <!--MENU-->
+    <!--MODAL -->
+    <!-- Full screen modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header castanho-background" style=" padding-top: 120px;">
+            <a class="navbar-brand ms-5" href="index.html">
+                <img
+                src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+                height="48px"
+                width="124px"
+                alt="Milvoz Logotipo"
+                loading="lazy">
+            </a>
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close" style=" margin-right: 150px;"><i class="fas fa-times" style="background-color:none !important; font-size:30px"></i></button>
+            </div>
+            <div class="modal-body castanho-background conteudoMenu">
+            
+                <div class="row ">
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="sobre.html">
+                        <dt> <h2>ONGA</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Quem somos?</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Ser sócio</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="actuacao.html">
+                        <dt> <h2>ACTIVIDADES</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Gestão Ecológica</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Educação Ambiental</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Aconselhamentos</dd>
+                    </a>
+                    </dl>
+                    <br>
+                </div>
+                
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="bioreservas.html">
+                        <dt> <h2>BIO-RESERVAS</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Nossa Senhora da Alegria</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Serra da Pescaria</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="apoiar.php">
+                        <dt> <h2>SÊ MAIS <br> UMA VOZ</h2></dt>
+                            <dd class="infoMenu" style="font-size: 16px;">Ser sócio</dd>
+                            <dd class="infoMenu" style="font-size: 16px;">Doar</dd>
+                            <dd class="infoMenu" style="font-size: 16px;">Voluntariar</dd>
+                        </a>
+                    </dl>
+                    <br>
+                </div>
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="biodiversidade.html">
+                        <dt> <h2>BIODIVERSIDADE</h2></dt>
+                        <dd  class="infoMenu" style="font-size: 16px;">Mamíferosa</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Anfíbios</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Répteis</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Aves</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Plantas</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="contactos.php">
+                        <dt><h2>CONTACTOS</h2></dt>
+                        </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="apadrinhar.php">
+                        <dt><h2>APADRINHAR</h2></dt>
+                        </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="#">
+                        <dt> <h2>JOGO</h2></dt>
+                    </a>
+                    </dl>
+
+                </div>
+                <!--fim de row-->
+                </div>
+            
+            <!--fim de contento do modal-->
+            </div>
+            <!--<div class="modal-footer castanho-background">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+        </div>
+        </div>
+    </div>
+        <canvas id="tela" width="1400" height="800">O seu <em>browser</em> não suporta o elemento
+            <code>canvas</code>!
+        </canvas>
+
+        <div id="recursos">
+            <!--todos is recursos aqui-->
+            <!--
+                exemplo:
+
+            <img id="avacinco" class="jogador" src="recursos/ava5.png">
+            <img id="avaseis" class="jogador" src="recursos/ava6.png">
+            <audio id="musicafundo" src="recursos/daft-punk-the-game-of-love-official-audio.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!
+            </audio>
+ 
+            -->
+
+            <img id="capainicio" class="capaini" src="recursos-jogo/avas/capa1.jpg">
+            <img id="capahelp" class="capahelp" src="recursos-jogo/avas/fundohelp.jpg">
+            <img id="logomilvoz" class="logomilvoz" src="recursos-jogo/avas/logo.png">
+            <img id="letrasmilvoz" class="letrasmilvoz" src="recursos-jogo/avas/letrasmilvoz.png">
+            <img id="letrasjogar" class="letrasjogar" src="recursos-jogo/avas/letrasjogar.png">
+            <img id="letrascomojogar" class="letrascomojogar" src="recursos-jogo/avas/letrascomojogar.png">
+            <img id="muteico" src="recursos-jogo/muteicon.png">
+            <img id="setaback" src="recursos-jogo/setaesq.png">
+            <img id="fundojogo" src="recursos-jogo/fundosjogo/fundo1.jpg">
+            <img id="personagem" src="recursos-jogo/peronagem.png">
+            <img id="arvoreum" src="recursos-jogo/positivos/Acacia_Sapling_JE7_BE2.png">
+            <img id="arvoredois" src="recursos-jogo/positivos/Birch_Sapling_JE7_BE2.png">
+            <img id="arvoretres" src="recursos-jogo/positivos/Dark_Oak_Sapling_JE7_BE2.png">
+            <img id="arvorequatro" src="recursos-jogo/positivos/Jungle_Sapling_JE7_BE2.png">
+            <img id="arvorecinco" src="recursos-jogo/positivos/Oak_Sapling_JE13.png">
+            <img id="arvoreseis" src="recursos-jogo/positivos/Spruce_Sapling_JE7_BE2.png">
+            <img id="animalum" src="recursos-jogo/positivos/esquilo1.png">
+            <img id="animaldois" src="recursos-jogo/positivos/unnamed1.png">
+            <img id="cigarro" src="recursos-jogo/negativos/cigarro1.png">
+            <img id="fogo" src="recursos-jogo/negativos/fogo1.png">
+            <img id="lixoum" src="recursos-jogo/negativos/lixo11.png">
+            <img id="lixodois" src="recursos-jogo/negativos/lixo21.png">
+            <img id="maca" src="recursos-jogo/campanha/maca1.png">
+            <img id="reciclagem" src="recursos-jogo/campanha/reciclagem1.png">
+            <audio id="musicafundo" src="recursos-jogo/AriaMath.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!
+            </audio>
+            <img id="nivelum" src="recursos-jogo/nivel1.png">
+            <img id="niveldois" src="recursos-jogo/nivel2.png">
+            <img id="niveltres" src="recursos-jogo/nivel3.png">
+            <img id="nivelquatro" src="recursos-jogo/nivel4.png">
+            <img id="paisagemum" src="recursos-jogo/paisagem1.png">
+            <img id="paisagemdois" src="recursos-jogo/paisagem2.png">
+            <img id="paisagemtres" src="recursos-jogo/paisagem3.png">
+            <img id="paisagemquatro" src="recursos-jogo/paisagem4.png">
+            <img id="poluicaoum" src="recursos-jogo/poluicao1.png">
+            <img id="poluicaodois" src="recursos-jogo/poluicao2.png">
+            <img id="poluicaotres" src="recursos-jogo/poluicao3.png">
+            <img id="poluicaoquatro" src="recursos-jogo/poluicao4.png">
+            
+            <img id="backacabou" src="recursos-jogo/backabaou.png">
+            <img id="terminou" src="recursos-jogo/terminou.png">
+
+
+
+
+        </div>
+        <script>
+
+            //variaveis
+            var tela;
+            var contexto;
+
+            var racioX;
+            var racioY;
+
+            var ratoX;
+            var ratoY;
+
+            var fundo;
+            var fundohelp;
+            var logomilvoz;
+            var letrasmilvoz;
+            var letrasjogar;
+            var letrascomojogar;
+            var muteico;
+            var setaback;
+
+            var fundojogo;
+            var personagem;
+            var contador;
+            var contadora;
+
+            var arvoreum;
+            var arvoredois;
+            var arvoretres;
+            var arvorequatro;
+            var arvorecinco;
+            var arvoreseis;
+            var animalum;
+            var animaldois;
+
+            var negum;
+            var negdois;
+            var negtres;
+            var negquatro;
+
+            var campum;
+            var campdois;
+
+            var natureza;
+            var naturezaa;
+            var poluicao;
+
+            var nivelum;
+            var niveldois;
+            var niveltres;
+            var nivelquatro;
+
+            var paginaatual;
+
+            var somvol;
+            var volume;
+            var musicafundo;
+
+            var paisagemselec;
+            var paisagemum;
+            var paisagemdois;
+            var paisagemtres;
+            var paisagemquatro;
+            var poluicaoselec;
+            var poluicaoum;
+            var poluicaodois;
+            var poluicaotres;
+            var poluicaoquatro;
+
+            var backabaou;
+            var terminou;
+
+            var pontuacao;
+
+            //funcao iniciar - declarar valor variaveis / passar vars para arrays / textos / primeira funcao
+
+            function inicia(){
+                tela = new Tela(document.getElementById("tela"));
+                contexto = tela.contexto;
+                fundo = new Rectangulo(0, 0, tela.largura, tela.altura, "lightblue");
+
+                somvol = false;
+                musicafundo = new Som(document.getElementById("musicafundo"));
+
+                fundo = document.getElementById("capainicio");
+                fundohelp = document.getElementById("capahelp");
+                logomilvoz = document.getElementById("logomilvoz");
+                letrasmilvoz = document.getElementById("letrasmilvoz");
+                letrasjogar = document.getElementById("letrasjogar");
+                letrascomojogar = document.getElementById("letrascomojogar");
+                muteico = document.getElementById("muteico");
+                setaback = document.getElementById("setaback");
+                fundojogo = document.getElementById("fundojogo");
+                personagem = document.getElementById("personagem");
+                continua = true;
+                
+                nivelum = document.getElementById("nivelum");
+                niveldois = document.getElementById("niveldois");
+                niveltres = document.getElementById("niveltres");
+                nivelquatro = document.getElementById("nivelquatro");
+                
+                paisagemum = document.getElementById("paisagemum");
+                paisagemdois = document.getElementById("paisagemdois");
+                paisagemtres = document.getElementById("paisagemtres");
+                paisagemquatro = document.getElementById("paisagemquatro");
+                paisagemselec = paisagemum;
+
+                poluicaoum = document.getElementById("poluicaoum");
+                poluicaodois = document.getElementById("poluicaodois");
+                poluicaotres = document.getElementById("poluicaotres");
+                poluicaoquatro = document.getElementById("poluicaoquatro");
+                poluicaoselec = poluicaoum;
+                
+                backacabou = document.getElementById("backacabou");
+                terminou = document.getElementById("terminou");
+                
+                
+                joggg = new Imagem(668, 650, personagem);
+                contador = 0;
+                contadora = new Texto(250, 60, "contador: " + contador, "white", "black", 2);
+                contadora.tamanho = 32;
+                naturezaa = new Texto(250, 25, "contador: " + natureza, "white", "black", 2);
+                naturezaa.tamanho = 32;
+                poluicaoa = new Texto(950, 25, "contador: " + poluicao, "white", "black", 2);
+                poluicaoa.tamanho = 32;
+                pontuacaoa = new Texto(550, 500, "A sua pontuação é: " + pontuacao, "white", "black", 2);
+                pontuacaoa.tamanho = 32;
+
+                ratoX = 0;
+                ratoY = 0;
+
+                racioX = tela.largura / tela.larguraFinal;
+                racioY = tela.altura / tela.alturaFinal;
+
+                arvoreum = document.getElementById("arvoreum");
+                arvoredois = document.getElementById("arvoredois");
+                arvoretres = document.getElementById("arvoretres");
+                arvorequatro = document.getElementById("arvorequatro");
+                arvorecinco = document.getElementById("arvorecinco");
+                arvoreseis = document.getElementById("arvoreseis");
+                animalum = document.getElementById("animalum");
+                animaldois = document.getElementById("animaldois");
+                negum = document.getElementById("cigarro");
+                negdois = document.getElementById("fogo");
+                negtres = document.getElementById("lixoum");
+                negquatro = document.getElementById("lixodois");
+                campum = document.getElementById("maca");
+                campdois = document.getElementById("reciclagem");
+
+                natureza = 1;
+                poluicao = 1;
+
+                nivelelemum = 1;
+                elemarvoreum = new Array();
+                for (var i = 0; i < nivelelemum; i++) {
+                    var elemarvore = new Imagem(0, 0, document.getElementById("arvoreum"));
+                    elemarvore.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemarvore.y = (Math.random() * (tela.altura - elemarvore.altura))-tela.altura;
+               
+                    elemarvore.deltaY = 2;
+                    elemarvoreum.push(elemarvore);
+                }
+                nivelelemdois = 1;
+                elemarvoredoisarr = new Array();
+                for (var i = 0; i < nivelelemdois; i++) {
+                    var elemarvoredois = new Imagem(0, 0, document.getElementById("arvoredois"));
+                    elemarvoredois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemarvoredois.y = (Math.random() * (tela.altura - elemarvoredois.altura))-tela.altura;
+               
+                    elemarvoredois.deltaY = 2;
+                    elemarvoredoisarr.push(elemarvoredois);
+                }
+                nivelanimum = 1;
+                elemanimumarr = new Array();
+                for (var i = 0; i < nivelanimum; i++) {
+                    var elemanimum = new Imagem(0, 0, document.getElementById("animalum"));
+                    elemanimum.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemanimum.y = (Math.random() * (tela.altura - elemanimum.altura))-tela.altura;
+               
+                    elemanimum.deltaY = 2;
+                    elemanimumarr.push(elemanimum);
+                }
+                nivelnegum = 1;
+                elemnegumarr = new Array();
+                for (var i = 0; i < nivelnegum; i++) {
+                    var elemnegum = new Imagem(0, 0, document.getElementById("cigarro"));
+                    elemnegum.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemnegum.y = (Math.random() * (tela.altura - elemnegum.altura))-tela.altura;
+               
+                    elemnegum.deltaY = 2;
+                    elemnegumarr.push(elemnegum);
+                }
+                nivelcampum = 1;
+                elemcampumarr = new Array();
+                for (var i = 0; i < nivelcampum; i++) {
+                    var elemcampum = new Imagem(0, 0, document.getElementById("maca"));
+                    elemcampum.x = Math.random() * tela.largura /*+ tela.largura*/;
+                    elemcampum.y = (Math.random() * (tela.altura - elemcampum.altura))-tela.altura;
+               
+                    elemcampum.deltaY = 2;
+                    elemcampumarr.push(elemcampum);
+                }
+
+                
+                
+                nivelelemtres = 0;
+                nivelanimdois = 0;
+                nivelnegdois = 0;
+                nivelelemquatro = 0;
+                nivelnegtres = 0;
+                nivelelemcinco = 0;
+                nivelelemseis = 0;
+                nivelnegquatro = 0;
+                nivelcampdois = 0;
+
+             
+                    nivelelemtres = 0;
+                    elemarvoretresarr = new Array();
+                    for (var i = 0; i < nivelelemtres; i++) {
+                        var elemarvoretres = new Imagem(0, 0, document.getElementById("arvoretres"));
+                        elemarvoretres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoretres.y = (Math.random() * (tela.altura - elemarvoretres.altura))-tela.altura;
+                
+                        elemarvoretres.deltaY = 2;
+                        elemarvoretresarr.push(elemarvoretres);
+                    }
+                    nivelanimdois = 0;
+                    elemanimdoisarr = new Array();
+                    for (var i = 0; i < nivelanimdois; i++) {
+                        var elemanimdois = new Imagem(0, 0, document.getElementById("animaldois"));
+                        elemanimdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemanimdois.y = (Math.random() * (tela.altura - elemanimdois.altura))-tela.altura;
+                
+                        elemanimdois.deltaY = 2;
+                        elemanimdoisarr.push(elemanimdois);
+                    }
+                    nivelnegdois = 0;
+                    elemnegdoisarr = new Array();
+                    for (var i = 0; i < nivelnegdois; i++) {
+                        var elemnegdois = new Imagem(0, 0, document.getElementById("fogo"));
+                        elemnegdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegdois.y = (Math.random() * (tela.altura - elemnegdois.altura))-tela.altura;
+                
+                        elemnegdois.deltaY = 2;
+                        elemnegdoisarr.push(elemnegdois);
+                    }
+                    nivelelemquatro = 0;
+                    elemarvorequatroarr = new Array();
+                    for (var i = 0; i < nivelelemquatro; i++) {
+                        var elemarvorequatro = new Imagem(0, 0, document.getElementById("arvorequatro"));
+                        elemarvorequatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorequatro.y = (Math.random() * (tela.altura - elemarvorequatro.altura))-tela.altura;
+                
+                        elemarvorequatro.deltaY = 2;
+                        elemarvorequatroarr.push(elemarvorequatro);
+                    }
+                    nivelnegtres = 0;
+                    elemnegtresarr = new Array();
+                    for (var i = 0; i < nivelnegtres; i++) {
+                        var elemnegtres = new Imagem(0, 0, document.getElementById("lixoum"));
+                        elemnegtres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegtres.y = (Math.random() * (tela.altura - elemnegtres.altura))-tela.altura;
+                
+                        elemnegtres.deltaY = 2;
+                        elemnegtresarr.push(elemnegtres);
+                    }
+                    nivelelemcinco = 0;
+                    elemarvorecincoarr = new Array();
+                    for (var i = 0; i < nivelelemcinco; i++) {
+                        var elemarvorecinco = new Imagem(0, 0, document.getElementById("arvorecinco"));
+                        elemarvorecinco.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorecinco.y = (Math.random() * (tela.altura - elemarvorecinco.altura))-tela.altura;
+                
+                        elemarvorecinco.deltaY = 2;
+                        elemarvorecincoarr.push(elemarvorecinco);
+                    }
+                    nivelelemseis = 0;
+                    elemarvoreseisarr = new Array();
+                    for (var i = 0; i < nivelelemseis; i++) {
+                        var elemarvoreseis = new Imagem(0, 0, document.getElementById("arvoreseis"));
+                        elemarvoreseis.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoreseis.y = (Math.random() * (tela.altura - elemarvoreseis.altura))-tela.altura;
+                
+                        elemarvoreseis.deltaY = 2;
+                        elemarvoreseisarr.push(elemarvoreseis);
+                    }
+                    nivelnegquatro = 0;
+                    elemnegquatroarr = new Array();
+                    for (var i = 0; i < nivelnegquatro; i++) {
+                        var elemnegquatro = new Imagem(0, 0, document.getElementById("lixodois"));
+                        elemnegquatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegquatro.y = (Math.random() * (tela.altura - elemnegquatro.altura))-tela.altura;
+                
+                        elemnegquatro.deltaY = 2;
+                        elemnegquatroarr.push(elemnegquatro);
+                    }
+                    nivelcampdois = 0;
+                    elemcampdoisarr = new Array();
+                    for (var i = 0; i < nivelcampdois; i++) {
+                        var elemcampdois = new Imagem(0, 0, document.getElementById("reciclagem"));
+                        elemcampdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemcampdois.y = (Math.random() * (tela.altura - elemcampdois.altura))-tela.altura;
+                
+                        elemcampdois.deltaY = 2;
+                        elemcampdoisarr.push(elemcampdois);
+                    }
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                menuprincipal();
+            }
+
+            /*-------------------elementos-------------------*/
+
+            function arrayelementos(){
+                if(contador==700){  //--------nivel 2
+                    nivelelemtres = 1;
+                    elemarvoretresarr = new Array();
+                    for (var i = 0; i < nivelelemtres; i++) {
+                        var elemarvoretres = new Imagem(0, 0, document.getElementById("arvoretres"));
+                        elemarvoretres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoretres.y = (Math.random() * (tela.altura - elemarvoretres.altura))-tela.altura;
+                
+                        elemarvoretres.deltaY = 2;
+                        elemarvoretresarr.push(elemarvoretres);
+                    }
+                    nivelanimdois = 1;
+                    elemanimdoisarr = new Array();
+                    for (var i = 0; i < nivelanimdois; i++) {
+                        var elemanimdois = new Imagem(0, 0, document.getElementById("animaldois"));
+                        elemanimdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemanimdois.y = (Math.random() * (tela.altura - elemanimdois.altura))-tela.altura;
+                
+                        elemanimdois.deltaY = 2;
+                        elemanimdoisarr.push(elemanimdois);
+                    }
+                    nivelnegdois = 1;
+                    elemnegdoisarr = new Array();
+                    for (var i = 0; i < nivelnegdois; i++) {
+                        var elemnegdois = new Imagem(0, 0, document.getElementById("fogo"));
+                        elemnegdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegdois.y = (Math.random() * (tela.altura - elemnegdois.altura))-tela.altura;
+                
+                        elemnegdois.deltaY = 2;
+                        elemnegdoisarr.push(elemnegdois);
+                    }
+                    
+                }
+                if(contador==1900){  //--------nivel 3
+                    nivelelemquatro = 1;
+                    elemarvorequatroarr = new Array();
+                    for (var i = 0; i < nivelelemquatro; i++) {
+                        var elemarvorequatro = new Imagem(0, 0, document.getElementById("arvorequatro"));
+                        elemarvorequatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorequatro.y = (Math.random() * (tela.altura - elemarvorequatro.altura))-tela.altura;
+                
+                        elemarvorequatro.deltaY = 2;
+                        elemarvorequatroarr.push(elemarvorequatro);
+                    }
+                    nivelnegtres = 1;
+                    elemnegtresarr = new Array();
+                    for (var i = 0; i < nivelnegtres; i++) {
+                        var elemnegtres = new Imagem(0, 0, document.getElementById("lixoum"));
+                        elemnegtres.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegtres.y = (Math.random() * (tela.altura - elemnegtres.altura))-tela.altura;
+                
+                        elemnegtres.deltaY = 2;
+                        elemnegtresarr.push(elemnegtres);
+                    }
+
+                }
+                if(contador==2900){  //--------nivel 4
+                    nivelelemcinco = 1;
+                    elemarvorecincoarr = new Array();
+                    for (var i = 0; i < nivelelemcinco; i++) {
+                        var elemarvorecinco = new Imagem(0, 0, document.getElementById("arvorecinco"));
+                        elemarvorecinco.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvorecinco.y = (Math.random() * (tela.altura - elemarvorecinco.altura))-tela.altura;
+                
+                        elemarvorecinco.deltaY = 2;
+                        elemarvorecincoarr.push(elemarvorecinco);
+                    }
+                    nivelelemseis = 1;
+                    elemarvoreseisarr = new Array();
+                    for (var i = 0; i < nivelelemseis; i++) {
+                        var elemarvoreseis = new Imagem(0, 0, document.getElementById("arvoreseis"));
+                        elemarvoreseis.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemarvoreseis.y = (Math.random() * (tela.altura - elemarvoreseis.altura))-tela.altura;
+                
+                        elemarvoreseis.deltaY = 2;
+                        elemarvoreseisarr.push(elemarvoreseis);
+                    }
+                    nivelnegquatro = 1;
+                    elemnegquatroarr = new Array();
+                    for (var i = 0; i < nivelnegquatro; i++) {
+                        var elemnegquatro = new Imagem(0, 0, document.getElementById("lixodois"));
+                        elemnegquatro.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemnegquatro.y = (Math.random() * (tela.altura - elemnegquatro.altura))-tela.altura;
+                
+                        elemnegquatro.deltaY = 2;
+                        elemnegquatroarr.push(elemnegquatro);
+                    }
+                    nivelcampdois = 1;
+                    elemcampdoisarr = new Array();
+                    for (var i = 0; i < nivelcampdois; i++) {
+                        var elemcampdois = new Imagem(0, 0, document.getElementById("reciclagem"));
+                        elemcampdois.x = Math.random() * tela.largura /*+ tela.largura*/;
+                        elemcampdois.y = (Math.random() * (tela.altura - elemcampdois.altura))-tela.altura;
+                
+                        elemcampdois.deltaY = 2;
+                        elemcampdoisarr.push(elemcampdois);
+                    }
+                }
+                if(contador==3600){  //--------acabou
+                    continua = false;
+                    var d = document.getElementById("tela");
+                    contexto.clearRect(0, 0, d.width, d.height);
+                    acabou();
+                }
+            }
+
+            /*-------------------som de fundo----------------------*/
+            function somdefundo(){
+                if(somvol == false){
+                    musicafundo.reproduz(false);
+                    muteico.globalAlpha = 0.1;
+                    somvol = true;
+                }
+                else if(somvol == true){
+                    musicafundo.pausa(true);
+                    somvol = false;
+                }
+                else{
+                    //console.log("erro");
+                }
+                //musicafundo.reproduz(true);
+            }
+
+            //-------------------------------menu iniciar-----------------------------
+
+            function menuprincipal(){
+                paginaatual = "menuprincipal";
+                var d = document.getElementById("tela");
+                contexto.clearRect(0, 0, d.width, d.height);
+                contexto.beginPath();
+                contexto.drawImage(fundo, 0, 0, 1400, 800);
+                contexto.drawImage(logomilvoz, 621, 90, 157, 179);
+                contexto.drawImage(letrasmilvoz, 614, 280, 173, 48);
+                contexto.drawImage(letrasjogar, 470, 730, 130, 40);
+                contexto.drawImage(letrascomojogar, 800, 730, 230, 40);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+            }   
+
+            //-----------------------------acabou-----------------------------
+
+            function acabou(){
+                paginaatual = "acabou";
+                var d = document.getElementById("tela");
+                contexto.clearRect(0, 0, d.width, d.height);
+                contexto.beginPath();
+                contexto.drawImage(fundojogo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(setaback, 15, 15, 40, 40);
+                contexto.drawImage(logomilvoz, 621, 10, 45, 50);
+                contexto.drawImage(letrasmilvoz, 680, 20, 120, 30);
+                contexto.drawImage(terminou, 522, 400, 357, 62);
+
+                pontuacao = natureza - poluicao;
+                pontuacaoa.texto = "A sua pontuacao é: " + pontuacao;
+                pontuacaoa.desenha(tela);
+            } 
+
+
+            //-------------------------------menu help-----------------------------
+            function menuhelp(){
+                paginaatual = "menuhelp";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundohelp, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(setaback, 15, 15, 40, 40);
+            }
+
+            /*-------------reload---------------------*/
+
+            function refrescar(){
+                location.reload();
+            }
+
+
+            //-------------------------------jogo -----------------------------
+            function jogar(){
+                paginaatual = "jogo";
+                var c = document.getElementById("tela");
+                contexto.clearRect(0, 0, c.width, c.height);
+                contexto.beginPath();
+                contexto.drawImage(fundojogo, 0, 0, 1400, 800);
+                contexto.drawImage(muteico, 1340, 10, 50, 50);
+                contexto.drawImage(setaback, 15, 15, 40, 40);
+                contexto.drawImage(logomilvoz, 621, 10, 45, 50);
+                contexto.drawImage(letrasmilvoz, 680, 20, 120, 30);
+                
+                contexto.drawImage(paisagemselec, 0, 40, 1400, 800);
+                contexto.drawImage(poluicaoselec, 0, 20, 1400, 800);
+
+                arrayelementos();
+                
+
+                if(contador >0 && contador <100){//nivel 1
+                    contexto.drawImage(nivelum, 580, 369, 239, 62);
+                }
+
+                if(contador >700 && contador <800){//nivel 2
+                    contexto.drawImage(niveldois, 580, 369, 239, 62);
+                }
+
+                if(contador >2000 && contador <2100){//nivel 3
+                    contexto.drawImage(niveltres, 580, 369, 239, 62);
+                }
+
+                if(contador >3500 && contador <3600){//nivel 4
+                    contexto.drawImage(nivelquatro, 580, 369, 239, 62);
+                }
+
+
+                if(natureza >0 && natureza <10){//paisagem um
+                    paisagemselec = paisagemum;
+                }
+                if(natureza >10 && natureza <20){//paisagem dois
+                    paisagemselec = paisagemdois;
+                }
+                if(natureza >20 && natureza <30){//paisagem tres
+                    paisagemselec = paisagemtres;
+                }
+                if(natureza >30){//paisagem quatro
+                    paisagemselec = paisagemquatro;
+                }
+
+
+                if(poluicao >0 && poluicao <6){//poluicao um
+                    poluicaoselec = poluicaoum;
+                }
+                if(poluicao >6 && poluicao <12){//poluicao dois
+                    poluicaoselec = poluicaodois;
+                }
+                if(poluicao >12 && poluicao <18){//poluicao tres
+                    poluicaoselec = poluicaotres;
+                }
+                if(poluicao >18){//poluicao quatro
+                    poluicaoselec = poluicaoquatro;
+                }
+
+                /*
+                contadora.texto = "contador: " + contador;
+                contadora.desenha(tela);*/
+                naturezaa.texto = "Natureza: " + natureza;
+                naturezaa.desenha(tela);
+                poluicaoa.texto = "Poluição: " + poluicao;
+                poluicaoa.desenha(tela);
+
+
+                /*---------------positivos------------------*/
+                for (var i = 0; i < elemarvoreum.length; i++) {
+                    elemarvoreum[i].desenha(tela);
+                    if (elemarvoreum[i].y > tela.altura) {
+                        elemarvoreum[i].y = 0-elemarvoreum[i].altura;
+                        elemarvoreum[i].x = Math.random() * tela.largura;
+                        elemarvoreum[i].visivel = true;
+                        elemarvoreum[i].activo = true;
+                    }
+                    if (elemarvoreum[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvoreum[i].visivel = false;
+                        elemarvoreum[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemarvoredoisarr.length; i++) {
+                    elemarvoredoisarr[i].desenha(tela);
+                    if (elemarvoredoisarr[i].y > tela.altura) {
+                        elemarvoredoisarr[i].y = 0-elemarvoredoisarr[i].altura;
+                        elemarvoredoisarr[i].x = Math.random() * tela.largura;
+                        elemarvoredoisarr[i].visivel = true;
+                        elemarvoredoisarr[i].activo = true;
+                    }
+                    if (elemarvoredoisarr[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvoredoisarr[i].visivel = false;
+                        elemarvoredoisarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemarvoretresarr.length; i++) {
+                    elemarvoretresarr[i].desenha(tela);
+                    if (elemarvoretresarr[i].y > tela.altura) {
+                        elemarvoretresarr[i].y = 0-elemarvoretresarr[i].altura;
+                        elemarvoretresarr[i].x = Math.random() * tela.largura;
+                        elemarvoretresarr[i].visivel = true;
+                        elemarvoretresarr[i].activo = true;
+                    }
+                    if (elemarvoretresarr[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvoretresarr[i].visivel = false;
+                        elemarvoretresarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemarvorequatroarr.length; i++) {
+                    elemarvorequatroarr[i].desenha(tela);
+                    if (elemarvorequatroarr[i].y > tela.altura) {
+                        elemarvorequatroarr[i].y = 0-elemarvorequatroarr[i].altura;
+                        elemarvorequatroarr[i].x = Math.random() * tela.largura;
+                        elemarvorequatroarr[i].visivel = true;
+                        elemarvorequatroarr[i].activo = true;
+                    }
+                    if (elemarvorequatroarr[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvorequatroarr[i].visivel = false;
+                        elemarvorequatroarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemarvorecincoarr.length; i++) {
+                    elemarvorecincoarr[i].desenha(tela);
+                    if (elemarvorecincoarr[i].y > tela.altura) {
+                        elemarvorecincoarr[i].y = 0-elemarvorecincoarr[i].altura;
+                        elemarvorecincoarr[i].x = Math.random() * tela.largura;
+                        elemarvorecincoarr[i].visivel = true;
+                        elemarvorecincoarr[i].activo = true;
+                    }
+                    if (elemarvorecincoarr[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvorecincoarr[i].visivel = false;
+                        elemarvorecincoarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemarvoreseisarr.length; i++) {
+                    elemarvoreseisarr[i].desenha(tela);
+                    if (elemarvoreseisarr[i].y > tela.altura) {
+                        elemarvoreseisarr[i].y = 0-elemarvoreseisarr[i].altura;
+                        elemarvoreseisarr[i].x = Math.random() * tela.largura;
+                        elemarvoreseisarr[i].visivel = true;
+                        elemarvoreseisarr[i].activo = true;
+                    }
+                    if (elemarvoreseisarr[i].colide(joggg)) {
+                        natureza++
+                        //console.log(natureza);
+                        elemarvoreseisarr[i].visivel = false;
+                        elemarvoreseisarr[i].activo = false;
+                    }
+                }
+                /*---------------animais----------------*/
+                for (var i = 0; i < elemanimumarr.length; i++) {
+                    elemanimumarr[i].desenha(tela);
+                    if (elemanimumarr[i].y > tela.altura) {
+                        elemanimumarr[i].y = 0-elemanimumarr[i].altura;
+                        elemanimumarr[i].x = Math.random() * tela.largura;
+                        elemanimumarr[i].visivel = true;
+                        elemanimumarr[i].activo = true;
+                    }
+                    if (elemanimumarr[i].colide(joggg)) {
+                        natureza++
+                        natureza++
+                        //console.log(natureza);
+                        elemanimumarr[i].visivel = false;
+                        elemanimumarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemanimdoisarr.length; i++) {
+                    elemanimdoisarr[i].desenha(tela);
+                    if (elemanimdoisarr[i].y > tela.altura) {
+                        elemanimdoisarr[i].y = 0-elemanimdoisarr[i].altura;
+                        elemanimdoisarr[i].x = Math.random() * tela.largura;
+                        elemanimdoisarr[i].visivel = true;
+                        elemanimdoisarr[i].activo = true;
+                    }
+                    if (elemanimdoisarr[i].colide(joggg)) {
+                        natureza++
+                        natureza++
+                        //console.log(natureza);
+                        elemanimdoisarr[i].visivel = false;
+                        elemanimdoisarr[i].activo = false;
+                    }
+                }
+                /*---------------negativos----------------*/
+                for (var i = 0; i < elemnegumarr.length; i++) {
+                    elemnegumarr[i].desenha(tela);
+                    if (elemnegumarr[i].y > tela.altura) {
+                        elemnegumarr[i].y = 0-elemnegumarr[i].altura;
+                        elemnegumarr[i].x = Math.random() * tela.largura;
+                        elemnegumarr[i].visivel = true;
+                        elemnegumarr[i].activo = true;
+                    }
+                    if (elemnegumarr[i].colide(joggg)) {
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegumarr[i].visivel = false;
+                        elemnegumarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegdoisarr.length; i++) {
+                    elemnegdoisarr[i].desenha(tela);
+                    if (elemnegdoisarr[i].y > tela.altura) {
+                        elemnegdoisarr[i].y = 0-elemnegdoisarr[i].altura;
+                        elemnegdoisarr[i].x = Math.random() * tela.largura;
+                        elemnegdoisarr[i].visivel = true;
+                        elemnegdoisarr[i].activo = true;
+                    }
+                    if (elemnegdoisarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegdoisarr[i].visivel = false;
+                        elemnegdoisarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegtresarr.length; i++) {
+                    elemnegtresarr[i].desenha(tela);
+                    if (elemnegtresarr[i].y > tela.altura) {
+                        elemnegtresarr[i].y = 0-elemnegtresarr[i].altura;
+                        elemnegtresarr[i].x = Math.random() * tela.largura;
+                        elemnegtresarr[i].visivel = true;
+                        elemnegtresarr[i].activo = true;
+                    }
+                    if (elemnegtresarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegtresarr[i].visivel = false;
+                        elemnegtresarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemnegquatroarr.length; i++) {
+                    elemnegquatroarr[i].desenha(tela);
+                    if (elemnegquatroarr[i].y > tela.altura) {
+                        elemnegquatroarr[i].y = 0-elemnegquatroarr[i].altura;
+                        elemnegquatroarr[i].x = Math.random() * tela.largura;
+                        elemnegquatroarr[i].visivel = true;
+                        elemnegquatroarr[i].activo = true;
+                    }
+                    if (elemnegquatroarr[i].colide(joggg)) {
+                        poluicao++
+                        poluicao++
+                        //console.log(natureza);
+                        elemnegquatroarr[i].visivel = false;
+                        elemnegquatroarr[i].activo = false;
+                    }
+                }
+                /*---------------campanha-------------------------*/               
+                for (var i = 0; i < elemcampumarr.length; i++) {
+                    elemcampumarr[i].desenha(tela);
+                    if (elemcampumarr[i].y > tela.altura) {
+                        elemcampumarr[i].y = 0-elemcampumarr[i].altura;
+                        elemcampumarr[i].x = Math.random() * tela.largura;
+                        elemcampumarr[i].visivel = true;
+                        elemcampumarr[i].activo = true;
+                    }
+                    if (elemcampumarr[i].colide(joggg)) {
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        //console.log(natureza);
+                        elemcampumarr[i].visivel = false;
+                        elemcampumarr[i].activo = false;
+                    }
+                }
+                for (var i = 0; i < elemcampdoisarr.length; i++) {
+                    elemcampdoisarr[i].desenha(tela);
+                    if (elemcampdoisarr[i].y > tela.altura) {
+                        elemcampdoisarr[i].y = 0-elemcampdoisarr[i].altura;
+                        elemcampdoisarr[i].x = Math.random() * tela.largura;
+                        elemcampdoisarr[i].visivel = true;
+                        elemcampdoisarr[i].activo = true;
+                    }
+                    if (elemcampdoisarr[i].colide(joggg)) {
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        poluicao--
+                        //console.log(natureza);
+                        elemcampdoisarr[i].visivel = false;
+                        elemcampdoisarr[i].activo = false;
+                    }
+                }
+                
+                
+
+                //contexto.drawImage(personagem, 668, 650, 65, 100);
+                joggg.desenha(tela);
+
+                
+
+                if (continua) {
+                    contador++;
+                    window.requestAnimationFrame(jogar);
+                }
+            }
+
+
+            //------rato clique
+            function getMousePosition(canvas, event) {
+                let rect = canvas.getBoundingClientRect();
+                let x = event.clientX - rect.left;
+                let y = event.clientY - rect.top;
+                clicou(x, y);
+            }
+            let canvasElem = document.querySelector("canvas");
+            canvasElem.addEventListener("mousedown", function(e)
+            {
+                getMousePosition(canvasElem, e);
+            });
+            function clicou(x, y){
+                if(paginaatual == "menuprincipal"){//se ta no menu principal
+                    if(x>470 && x<600 && y>730 && y<770){//carregar jogar
+                        //alert("carregou no jogar")
+                        continua = true;
+                        jogar();
+                    }
+                    if(x>800 && x<1030 && y>730 && y<770){//carregar nas instrucoes
+                        //alert("carregou instrucoes")
+                        menuhelp();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                if(paginaatual == "acabou"){//se acabou
+                    if(x>15 && x<55 && y>15 && y<55){//carregar voltar para tras
+                        //alert("carregou no jogar")
+                        refrescar()
+                    }
+                }
+                if(paginaatual == "menuhelp"){//se ta no menu HELP
+                    if(x>15 && x<55 && y>15 && y<55){//carregar voltar para tras
+                        //alert("carregou no jogar")
+                        menuprincipal();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+                if(paginaatual == "jogo"){//se ta no menu HELP
+                    if(x>15 && x<55 && y>15 && y<55){//carregar voltar para tras
+                        //alert("carregou no jogar")
+                        menuprincipal();
+                    }
+                    if(x>1340 && x<1390 && y>10 && y<60){//carregar som
+                        //alert("som")
+                        somdefundo();
+                    }
+                }
+            }
+
+
+
+
+            //rato - teclado - janela iniciada
+
+            function processaTeclaPremida(tecla) {
+                if (tecla.keyCode == 82) {  // r - reload
+                    window.location.reload();
+                }
+                if (tecla.keyCode == 49) {  // num1
+                    menuprincipal()
+                }
+                if (tecla.keyCode == 50) {  // num2
+                    jogar()
+                }
+                if (tecla.keyCode == 51) {  // num3
+                    menuhelp()
+                }
+                if (tecla.keyCode == 39) {  // seta lado direito
+                    if(paginaatual == "jogo"){//se ta no jogo
+                       if(joggg.x+joggg.largura < 1400 - 6){
+                        joggg.deltaX = +6;
+                       }
+                    }
+                }
+                if (tecla.keyCode == 37) {  // seta lado esquerdo
+                    if(paginaatual == "jogo"){//se ta no jogo
+                       if(joggg.x > 6){
+                        joggg.deltaX = -6;
+                        //console.log(joggg.x)
+                       }
+                    }
+                }
+                if (tecla.keyCode == 27) {  // esc - pausa
+                    if(paginaatual == "menuhelp"){//se ta na pagina help
+                        menuprincipal()
+                    }
+                    if(paginaatual == "jogo"){//se ta no jogo
+                        continua = false;
+                        menuprincipal()
+                    }
+                }
+            }
+
+            function processaTeclaLibertada(tecla) {
+                if ((tecla.keyCode == 39) || (tecla.keyCode == 37)) { /*setas lados parar*/
+                    joggg.deltaX = 0;
+                    //...
+                }
+            }
+
+            window.onkeydown = processaTeclaPremida;
+            window.onkeyup = processaTeclaLibertada;
+
+
+
+
+
+
+            //arrancar inicio jogo
+            window.onload = function () {
+                inicia();
+                
+            };
+
+        </script>
+ 
+    </body>
+</html>
