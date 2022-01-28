@@ -27,6 +27,188 @@
     
     </head>
 <body>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #0F0701" >
+        <!-- Container wrapper  -->
+        <div class="container-fluid mt-3 mb-3">
+        <!-- Navbar brand -->
+        <a class="navbar-brand ms-5" href="index.html">
+            <img
+            src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+            height="38px"
+            width="120px"
+            alt="Milvoz Logotipo"
+            loading="lazy">
+        </a>
+    
+        <!-- Toggle button -->
+        <!-- ABRIR A CLASSE MODAL 
+        <div class="menu-btn">
+            <button type="button" class="btn menu-btn__burger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </button>
+        </div>-->
+        <button
+            class="navbar-toggler btn"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-bs-target="#exampleModal"
+            data-bs-toggle="modal"
+            aria-controls="navbarButtonsExample"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars cor-primaria"></i>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+            
+            <!-- Left links .-->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+            <li class="nav-item me-2 ms-3 facebook">
+                <a class="nav-link" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                </a>
+            </li>
+            <li class="nav-item me-2 ">
+                <a class="nav-link instagram" href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                </a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                </a>
+            </li>
+            
+            </ul>
+            <!-- Right links -->
+            <div class="d-flex align-items-center ">
+                <a href="apadrinhar.php" type="button" class="botao me-3 apadrinhar">
+                    APADRINHAR
+                </a>
+                <a href="apoiar.php" type="button" class="botao me-3 apoiar">
+                APOIAR
+                </a>
+            
+                <!-- ABRIR A CLASSE MODAL -->
+                <div class="menu-btn">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="fas fa-bars cor-primaria" style="font-size:30px"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper --> 
+    </nav>
+    <!-- Navbar -->
+
+    <!--MENU-->
+    <!--MODAL -->
+    <!-- Full screen modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header castanho-background" style=" padding-top: 120px;">
+            <a class="navbar-brand ms-5" href="index.html">
+                <img
+                src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+                height="48px"
+                width="124px"
+                alt="Milvoz Logotipo"
+                loading="lazy">
+            </a>
+            <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close" style=" margin-right: 150px;"><i class="fas fa-times" style="background-color:none !important; font-size:30px"></i></button>
+            </div>
+            <div class="modal-body castanho-background conteudoMenu">
+            
+                <div class="row ">
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="sobre.html">
+                        <dt> <h2>ONGA</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Quem somos?</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Ser sócio</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="actuacao.html">
+                        <dt> <h2>ACTIVIDADES</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Gestão Ecológica</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Educação Ambiental</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Aconselhamentos</dd>
+                    </a>
+                    </dl>
+                    <br>
+                </div>
+                
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="bioreservas.html">
+                        <dt> <h2>BIO-RESERVAS</h2></dt>
+                        <dd class="infoMenu" style="font-size: 16px;"> Nossa Senhora da Alegria</dd>
+                        <dd class="infoMenu" style="font-size: 16px;"> Serra da Pescaria</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="apoiar.php">
+                        <dt> <h2>SÊ MAIS <br> UMA VOZ</h2></dt>
+                            <dd class="infoMenu" style="font-size: 16px;">Ser sócio</dd>
+                            <dd class="infoMenu" style="font-size: 16px;">Doar</dd>
+                            <dd class="infoMenu" style="font-size: 16px;">Voluntariar</dd>
+                        </a>
+                    </dl>
+                    <br>
+                </div>
+                <div class="col-12 col-md-4">
+                    <dl>
+                    <a href="biodiversidade.html">
+                        <dt> <h2>BIODIVERSIDADE</h2></dt>
+                        <dd  class="infoMenu" style="font-size: 16px;">Mamíferosa</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Anfíbios</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Répteis</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Aves</dd>
+                        <dd class="infoMenu" style="font-size: 16px;">Plantas</dd>
+                    </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="contactos.php">
+                        <dt><h2>CONTACTOS</h2></dt>
+                        </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="apadrinhar.php">
+                        <dt><h2>APADRINHAR</h2></dt>
+                        </a>
+                    </dl>
+                    <br>
+                    <dl>
+                    <a href="#">
+                        <dt> <h2>JOGO</h2></dt>
+                    </a>
+                    </dl>
+
+                </div>
+                <!--fim de row-->
+                </div>
+            
+            <!--fim de contento do modal-->
+            </div>
+            <!--<div class="modal-footer castanho-background">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+            </div>-->
+        </div>
+        </div>
+    </div>
+
+
 
     <div class="row position-relative">
         <img class="img-fluid w-100" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/lepiotaGogumeloCorteAlternativo.jpg?raw=true" alt="cogumelo">
@@ -62,12 +244,13 @@
                </ul>
             </div>
         </div>
+    </div>
 
     <!-- GESTÃO ECOLÓGICA Trigger/Open The Modal -->
     <!-- The Modal  -->
-    <div id="myModal1" class="modal">
+    <div id="myModal1" class="modal1">
     <!--  Modal content -->  
-        <div class="modal-content">
+        <div class="modal1-content">
             <span class="close1">&times;</span>
             <h1 class="">
                 Gestão Ecológica
@@ -93,11 +276,9 @@
     
     <!-- EDUCAÇÃO AMBIENTAL Trigger/Open The Modal -->
     <!-- The Modal  -->
-    <div id="myModal2" class="modal">
-
-    <!--  Modal content -->
-   
-        <div class="modal-content">
+    <div id="myModal2" class="modal1">
+        <!--  Modal content -->  
+        <div class="modal1-content">
             <span class="close2">&times;</span>
             <h1 class="">
                 EDUCAÇÃO AMBIENTAL
@@ -118,11 +299,11 @@
         </div>
     </div>
 
-<!-- ACONSELHAMENTO E PARTILHA DE EXPERIÊNCIAS Trigger/Open The Modal -->
-<!-- The Modal  -->
-    <div id="myModal3" class="modal">
+    <!-- ACONSELHAMENTO E PARTILHA DE EXPERIÊNCIAS Trigger/Open The Modal -->
+    <!-- The Modal  -->
+    <div id="myModal3" class="modal1">
     <!--  Modal content -->
-        <div class="modal-content">
+        <div class="modal1-content">
             <span class="close3">&times;</span>
             <h1 class="">
                 ACONSELHAMENTO E PARTILHA DE EXPERIÊNCIAS
@@ -143,95 +324,103 @@
         </div>
     </div>
 
-    <!--FOOTER-->    
-    <footer class="castanho-background dNoneTel">
-        <div class="container margemLateral py-5">
-            <div class="row ">
-                <div class="col-12 col-lg-3 mb-lg-0 ">
-                    <a href="index.html">
-                    <img class="logotipoFooter"
-                    src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
-                    alt="Milvoz Logotipo">
-                    </a>
-                    <p class="mt-xl-3 mDir py-3" style="font-size:10px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
-                    <hr  class="d-lg-none d-block">
-                </div>
-                <div class="col-12 col-lg-9 pEsq">
-                    <div class="row d-flex align-content-center">
-
-                        <div class="col-6 col-md-4 d-flex flex-column ">
-                            <dl>
-                                <a href="sobre.html">
-                                    <dt>ONGA</dt>
-                                    <dd style="font-size: 13px;">&#8226 Quem somos?</dd>
-                                </a>
-                                <a href="apoiar.php">
-                                    <dd  style="font-size: 13px;">&#8226 Ser sócio</dd>
-                                </a>
-                            </dl>
-
-                            <dl>
-                                <a href="actuacao.html">
-                                <dt>ACTIVIDADES</dt>
-                                    <dd style="font-size: 13px;">&#8226 Gestão Ecológica</dd>
-                                    <dd  style="font-size: 13px;">&#8226 Educação Ambiental</dd>
-                                    <dd  style="font-size: 13px;">&#8226 Aconselhamentos</dd>
-                                </a>
-                            </dl>
+<!--Footer-->
+<footer class="castanho-background dNoneTel ">
+    <div class="margemLateral ">
+        <div class="row d-flex justify-content-center py-5">
+            <div class="col-12 col-lg-3 mb-lg-0 footerLeft">
+                <img class="mDir logotipoFooter"
+                src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+                alt="Milvoz Logotipo">
+                <p class="mt-xl-3 mDir py-3" style="font-size:16px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
+                <hr  class="d-lg-none d-block">
+            </div>
+            <div class="col-12 col-lg-9 pEsq">
+                <div class="row d-flex align-content-center">
   
-                        </div>
-
-                        <div class="col-6 col-md-4 ">
-                            <dl>
-                                <a href="bioreservas.html">
-                                    <dt>BIO-RESERVAS</dt>
-                                    <dd style="font-size: 13px;">&#8226 Nossa Senhora da Alegria</dd>
-                                    <dd  style="font-size: 13px;">&#8226 Serra da Pescaria</dd>
-                                </a>
-                            </dl>
-
-                            <dl>
-                                <a href="contactos.php">
-                                <dt>CONTACTOS</dt>
-                                    <dd style="font-size: 13px;">&#8226 geral@milvoz.pt</dd>
-                                    <dd  style="font-size: 13px;">&#8226 913 123 132</dd>
-                                    <dd  style="font-size: 13px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
-                                </a>
-                            </dl>
-                        </div>
-                        <div class="col-12 col-md-4 d-flex flex-column">
-                            <div class="row">
-                                    <div class="col-6 col-md-12">
-                                        <dt>MORADA</dt>
-                                        <dd style="font-size: 13px;">&#8226 Rua da Calçada Antiga nº1 <br>
-                                            Assafarge / Coimbra<br>
-                                            3040-657</dd>
+                    <div class="col-6 col-md-4 d-flex flex-column ">
+                        <dl>
+                          <a href="sobre.html">
+                            <dt>ONGA</dt>
+                            <dd  style="font-size: 16px;">&#8226 Quem somos?</dd>
+                            <dd  style="font-size: 16px;">&#8226 Ser sócio</dd>
+                          </a>
+                        </dl>
+  
+                        <dl>
+                          <a href="actuacao.html">
+                            <dt>ACTIVIDADES</dt>
+                            <dd style="font-size: 16px;">&#8226 Gestão Ecológica</dd>
+                            <dd  style="font-size: 16px;">&#8226 Educação Ambiental</dd>
+                            <dd  style="font-size: 16px;">&#8226 Aconselhamentos</dd>
+                          </a>
+                        </dl>
+  
+                    </div>
+  
+                    <div class="col-6 col-md-4 ">
+                        <dl>
+                          <a href="bioreservas.html">
+                            <dt>BIO-RESERVAS</dt>
+                            <dd style="font-size: 16px;">&#8226 Nossa Senhora da Alegria</dd>
+                            <dd  style="font-size: 16px;">&#8226 Serra da Pescaria</dd>
+                          </a>
+                        </dl>
+  
+                        <dl>
+                          <a href="contactos.php">
+                            <dt>CONTACTOS</dt>
+                                <dd style="font-size: 16px;">&#8226 geral@milvoz.pt</dd>
+                                <dd  style="font-size: 16px;">&#8226 913 123 132</dd>
+                                <dd  style="font-size: 16px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
+                            </a>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex flex-column">
+                        <div class="row">
+                                <div class="col-6 col-md-12">
+                                  <a href="contactos.php">
+                                    <dt>MORADA</dt>
+                                    <dd style="font-size: 16px;">&#8226 Rua da Calçada Antiga nº1 <br>
+                                        Assafarge / Coimbra<br>
+                                        3040-657</dd>
+                                    </a>
+                                </div>
+  
+                                <div class="col-6 col-md-12">
+                                    <p class="mt-3" style="font-weight: 800;"> SÊ MAIS UMA VOZ</p>  
+                                    <div class="d-flex justify-content-start " >
+                                        <a class="p-2 facebook" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                                        </a>
+  
+                                        <a  class="p-2 instagram"href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                                        </a>
+                                        <a class="p-2 youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                                        </a>
                                     </div>
-
-                                    <div class="col-6 col-md-12">
-                                        <p class="mt-3" style="font-weight: 800;"> SÊ MAIS UMA VOZ</p>  
-                                        <div class="d-flex justify-content-start " >
-                                            <a class="p-2" href="https://www.facebook.com/MilVozNatureza" target="_blank">
-                                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
-                                            </a>
-
-                                            <a  class="p-2"href="https://www.instagram.com/milvoznatureza/" target="_blank">
-                                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
-                                            </a>
-                                            <a class="p-2" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
-                                                <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
-                                            </a>
-                                        </div>
-                                    </div>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+  </footer>
 
 
+    <!--srcript da pagina actuaçao-->
     <script src="./javascript/actuacao.js"></script>
+
+     <!-- SCRIPT DA BOOTSTRAP-->
+  <!-- jQuery, Popper.js e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript" src="./javascript/index.js"></script>
 </body>
 </html>
