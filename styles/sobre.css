@@ -101,3 +101,11 @@ span {
     background-position: center;
   }
 }
+
+/*video*/
+
+.paiVideo{
+  position: absolute;
+  height: 360px;
+  width: 640px;
+}
