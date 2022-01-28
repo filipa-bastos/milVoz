@@ -296,7 +296,15 @@
             
             <img id="backacabou" src="recursos-jogo/backabaou.png">
             <img id="terminou" src="recursos-jogo/terminou.png">
+            
+            <audio id="somum" src="recursos-jogo/somum.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
 
+            <audio id="somdois" src="recursos-jogo/somdois.mp3">O seu <em>browser</em> não suporta o elemento
+                <code>audio</code>!</audio>
+
+                <audio id="somtres" src="recursos-jogo/somtres.mp3">O seu <em>browser</em> não suporta o elemento
+                    <code>audio</code>!</audio>
 
 
 
@@ -375,6 +383,10 @@
 
             var pontuacao;
 
+            var somdois;
+            var somum;
+            var somtres;
+
             //funcao iniciar - declarar valor variaveis / passar vars para arrays / textos / primeira funcao
 
             function inicia(){
@@ -449,6 +461,11 @@
                 negquatro = document.getElementById("lixodois");
                 campum = document.getElementById("maca");
                 campdois = document.getElementById("reciclagem");
+
+                
+                somum = new Som(document.getElementById("somum"));
+                somdois = new Som(document.getElementById("somdois"));
+                somtres = new Som(document.getElementById("somtres"));
 
                 natureza = 1;
                 poluicao = 1;
@@ -892,6 +909,7 @@
                         //console.log(natureza);
                         elemarvoreum[i].visivel = false;
                         elemarvoreum[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemarvoredoisarr.length; i++) {
@@ -907,6 +925,7 @@
                         //console.log(natureza);
                         elemarvoredoisarr[i].visivel = false;
                         elemarvoredoisarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemarvoretresarr.length; i++) {
@@ -922,6 +941,7 @@
                         //console.log(natureza);
                         elemarvoretresarr[i].visivel = false;
                         elemarvoretresarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemarvorequatroarr.length; i++) {
@@ -937,6 +957,7 @@
                         //console.log(natureza);
                         elemarvorequatroarr[i].visivel = false;
                         elemarvorequatroarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemarvorecincoarr.length; i++) {
@@ -952,6 +973,7 @@
                         //console.log(natureza);
                         elemarvorecincoarr[i].visivel = false;
                         elemarvorecincoarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemarvoreseisarr.length; i++) {
@@ -967,6 +989,7 @@
                         //console.log(natureza);
                         elemarvoreseisarr[i].visivel = false;
                         elemarvoreseisarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 /*---------------animais----------------*/
@@ -984,6 +1007,7 @@
                         //console.log(natureza);
                         elemanimumarr[i].visivel = false;
                         elemanimumarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemanimdoisarr.length; i++) {
@@ -1000,6 +1024,7 @@
                         //console.log(natureza);
                         elemanimdoisarr[i].visivel = false;
                         elemanimdoisarr[i].activo = false;
+                        somum.reproduz(true);
                     }
                 }
                 /*---------------negativos----------------*/
@@ -1016,6 +1041,7 @@
                         //console.log(natureza);
                         elemnegumarr[i].visivel = false;
                         elemnegumarr[i].activo = false;
+                        somdois.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemnegdoisarr.length; i++) {
@@ -1032,6 +1058,7 @@
                         //console.log(natureza);
                         elemnegdoisarr[i].visivel = false;
                         elemnegdoisarr[i].activo = false;
+                        somdois.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemnegtresarr.length; i++) {
@@ -1048,6 +1075,7 @@
                         //console.log(natureza);
                         elemnegtresarr[i].visivel = false;
                         elemnegtresarr[i].activo = false;
+                        somdois.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemnegquatroarr.length; i++) {
@@ -1064,6 +1092,7 @@
                         //console.log(natureza);
                         elemnegquatroarr[i].visivel = false;
                         elemnegquatroarr[i].activo = false;
+                        somdois.reproduz(true);
                     }
                 }
                 /*---------------campanha-------------------------*/               
@@ -1083,6 +1112,7 @@
                         //console.log(natureza);
                         elemcampumarr[i].visivel = false;
                         elemcampumarr[i].activo = false;
+                        somtres.reproduz(true);
                     }
                 }
                 for (var i = 0; i < elemcampdoisarr.length; i++) {
@@ -1103,6 +1133,7 @@
                         //console.log(natureza);
                         elemcampdoisarr[i].visivel = false;
                         elemcampdoisarr[i].activo = false;
+                        somtres.reproduz(true);
                     }
                 }
                 
