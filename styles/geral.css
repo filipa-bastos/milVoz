@@ -46,32 +46,34 @@ body {
 }
 
 /*modal*/
+dt:hover, dd:hover, .fas:hover{
+opacity: 50% !important;
+}
+
+
 h2 {
   color: #c5b590 !important;
   font-family: "Allerta Stencil", sans-serif !important;
   font-size: 28px !important;
 }
 
-.conteudoMenu{
+.conteudoMenu {
   padding: 8rem !important;
 }
 
 @media only screen and (max-width: 960px) {
-  .conteudoMenu{
+  .conteudoMenu {
     padding: 4rem !important;
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .infoMenu{
+  .infoMenu {
     display: none;
   }
 }
 
-
-
 /*generico*/
-
 
 .castanho-background {
   background-color: #0f0701;
@@ -89,7 +91,7 @@ h2 {
   border: 2px solid #f6ecd1;
   border-radius: 30px;
   padding: 4px 18px;
-  font-size: 12px;
+  font-size: 18px;
   cursor: pointer;
   background-color: transparent;
   color: #f6ecd1;
@@ -160,12 +162,35 @@ label {
   .logotipoFooter {
     height: 40px;
   }
+  
+}
+
+
+@media only screen and (max-width: 1450px) {
+  .margemLateral {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .logotipoFooter {
+    height: 30px;
+  }
+  .footerLeft {
+    display: none;
+  }
 }
 
 /*padding e margens para o footer*/
 .mDir {
   margin-right: 70px !important;
+  margin-left: 70px !important;
 }
+.margemLateral {
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+
 
 /*em ecrãs pequenos footer fica invisivel*/
 .dNoneTel {
@@ -214,3 +239,4 @@ label {
     font-size: 12px;
   }
 }
+
