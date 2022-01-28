@@ -18,6 +18,9 @@
     transform: translateY(2px);
 }
 
+h3{
+  font-family: "Allerta Stencil", sans-serif;
+}
 
 /*MENU HAMBURGER*/
 .menu-btn {
@@ -40,6 +43,10 @@
   transition: all .5s ease-in-out;
 }
 
+.botao i:hover{
+  color: rgb(27, 16, 7);
+  z-index: 100;
+}
 
 
 /*MENU HAMBURGER BEFORE // AFTER */
@@ -630,6 +637,33 @@ header p span:hover {
 
 /* CARTÕES */ 
 
+.cartoesHomepage {
+  width: 98%;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.cartoesHomepage::-webkit-scrollbar {
+  display: none;
+}
+
+
+.cartoesHomepage .product,
+.anfibio,
+.mamifero {
+  min-width: 320px;
+  height: 80%;
+  /*background: whitesmoke;*/
+  margin: 0 20px 0 0;
+  border-radius: 30px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+
 
 
 .contentor {
@@ -788,4 +822,7 @@ small {
   height: 600px;
   z-index: 10;
 }
+
+
+
 
