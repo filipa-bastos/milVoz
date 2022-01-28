@@ -41,11 +41,9 @@ function moveEsqAnfibios(){
     }
 }
 
-
 //primeiro span diz respeito ao titulo
 span[3].onclick  = ()=>{moveEsqAnfibios();}
 span[4].onclick  = ()=>{moveDirAnfibios();}
-
 
 //primeiro span diz respeito ao titulo
 span[1].onclick  = ()=>{moveEsqMamiferos();}
