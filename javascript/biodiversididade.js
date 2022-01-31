@@ -77,10 +77,3 @@ let mob_view = window.matchMedia("(max-width: 768px)");
 	span[4].onclick = ()=>{right_mover_anfibios();}
 	span[3].onclick = ()=>{left_mover_anfibios();}
 
-	//console.log(anfibios[0].offsetWidth);
-
-	console.log(product_page)
-
-
-
-	// LALALALALLALALAL
