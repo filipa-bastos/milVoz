@@ -1,24 +1,26 @@
 /*Estilo na Homepage*/
 
-
-*{
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   right: 0;
-  left:0;
+  left: 0;
 }
 
+/*//////////////////////////////////NAVBAR ////////////////////////////////*/
 
-  /*//////////////////////////////////NAVBAR ////////////////////////////////*/
-
-
-  .navbar-brand:hover, .facebook:hover, .youtube:hover, .instagram:hover,.apadrinhar:hover, .apoiar:hover{
-    opacity: 30%;
-    transition: all .5s ease-in-out;
-    transform: translateY(2px);
+.navbar-brand:hover,
+.facebook:hover,
+.youtube:hover,
+.instagram:hover,
+.apadrinhar:hover,
+.apoiar:hover {
+  opacity: 30%;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(2px);
 }
 
-h3{
+h3 {
   font-family: "Allerta Stencil", sans-serif;
 }
 
@@ -31,34 +33,33 @@ h3{
   width: 60px;
   height: 60px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   /* border: 3px solid #fff; */
 }
 
 .menu-btn__burger {
   width: 40px;
   height: 4px;
-  background: #F6ECD1;
+  background: #f6ecd1;
   border-radius: 15px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.botao i:hover{
+.botao i:hover {
   color: rgb(27, 16, 7);
   z-index: 100;
 }
 
-
 /*MENU HAMBURGER BEFORE // AFTER */
 .menu-btn__burger::before,
 .menu-btn__burger::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 40px;
   height: 4px;
-  background: #F6ECD1;
+  background: #f6ecd1;
   border-radius: 15px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
   transform: translateY(-10px);
@@ -69,7 +70,7 @@ h3{
 
 /* MENU HAMBURGER hamburger*/
 
-.menu-btn__burger:hover{
+.menu-btn__burger:hover {
   opacity: 30%;
 }
 
@@ -85,10 +86,9 @@ h3{
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-
 /*//////////////////////PARALLAX ///////////////////////////*/
 
-section{
+section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -96,13 +96,12 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 /*PARALLAX BEFORE // AFTER */
 
-section:before{
-  content:'';
+section:before {
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -110,26 +109,25 @@ section:before{
   z-index: 1000;
 }
 
-section:after{
-  content:'';
+section:after {
+  content: "";
   position: relative;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 10;
 }
 
-section img{
+section img {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   pointer-events: none;
 }
-
 
 /*////////////////MILVOZ////////////////*/
 
@@ -140,34 +138,32 @@ section img{
   background-position: center;
   overflow: hidden;
 }
-.logobox{
+.logobox {
   padding-top: 1rem;
 }
-.criado{
+.criado {
   padding-top: 1rem;
 }
-
 
 /*MILVOZ BEFORE // AFTER */
 
-.separador:before{
-  content:'';
+.separador:before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
-  
 }
-.separador:after{
-  content:'';
+.separador:after {
+  content: "";
   position: absolute;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
 }
 
 /*MILVOZ RESPONSIVIDADE */
 
-@media only screen and (max-width: 800px){
-  .separador{
+@media only screen and (max-width: 800px) {
+  .separador {
     height: 20vh;
   }
 }
@@ -180,38 +176,36 @@ section img{
   background-size: cover;
   background-position: center;
   position: relative;
-  height:1114px;
+  height: 1114px;
 }
 
-.atividade{
+.atividade {
   padding-top: 12rem;
   padding-left: 55rem;
 }
 
-
 /* SECÇÃO DAS ATIVIDADES - BEFORA // AFTER */
-.atividadebox:before{
-  content:'';
+.atividadebox:before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #0E0600, transparent);
+  background: linear-gradient(to top, #0e0600, transparent);
   z-index: 10;
 }
 
-.atividadebox:after{
-  content:'';
+.atividadebox:after {
+  content: "";
   position: absolute;
-  background: linear-gradient(to bottom, #0E0600, transparent);
-  left:0;
-  right:0;
+  background: linear-gradient(to bottom, #0e0600, transparent);
+  left: 0;
+  right: 0;
   width: 100%;
   height: 50px;
   z-index: 10;
 }
-
 
 /*SECÇÃO DAS ATIVIDADES - ANIMAÇÃO */
 
@@ -220,12 +214,12 @@ section img{
   transition: all 0.2s ease-in-out 0s;
 }
 
-.rodar h4:hover{
+.rodar h4:hover {
   font-size: 2rem;
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* ////////////////////// BIORESERVAS ////////// */ 
+/* ////////////////////// BIORESERVAS ////////// */
 
 /* Panels. */
 .splitview {
@@ -242,137 +236,134 @@ section img{
   overflow: hidden;
 }
 
-  .panel .content {
-      position: absolute;
-      width: 100vw;
-      height: 100vw;
-      color: #FFF;
-  }
+.panel .content {
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  color: #fff;
+}
 
-  .panel .content .iconapescaria{
-    position: absolute; 
-    top: 15%;
-    right: 25%;
-    z-index: 500;
-  }
+.panel .content .iconapescaria {
+  position: absolute;
+  top: 15%;
+  right: 25%;
+  z-index: 500;
+}
 
-  .panel .content .iconaalegria{
-    position: absolute; 
-    left: 65%;
-    top: 15%;
-    z-index: 500;
-  }
+.panel .content .iconaalegria {
+  position: absolute;
+  left: 65%;
+  top: 15%;
+  z-index: 500;
+}
 
-  .panel .description {
-      width: 25%;
-      position: absolute;
-      z-index: 20;
-      top: 5%;
-      background: linear-gradient(
-        180deg,
-        #0e0600 32.35%,
-        #3e361d 129.39%,
-        #665d3a 208.06%,
-        #9e7e5b 262.44%,
-        #a3815e 262.46%
-      );
-  }
+.panel .description {
+  width: 25%;
+  position: absolute;
+  z-index: 20;
+  top: 5%;
+  background: linear-gradient(
+    180deg,
+    #0e0600 32.35%,
+    #3e361d 129.39%,
+    #665d3a 208.06%,
+    #9e7e5b 262.44%,
+    #a3815e 262.46%
+  );
+}
 
-  .panel .description h3{
-    font-family: "Allerta Stencil", sans-serif;
-    text-shadow: 2px 2px 4px #000000
-  }
-  .panel .description p{
-    font-size: smaller;
-  }
-
-
+.panel .description h3 {
+  font-family: "Allerta Stencil", sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+}
+.panel .description p {
+  font-size: smaller;
+}
 
 .bottom {
   background-color: #161008;
   z-index: 1;
 }
 
-  .bottom .description {
-      left: 5%;
-      min-width: 30%;
-  }
+.bottom .description {
+  left: 5%;
+  min-width: 30%;
+}
 
 .top {
   background-color: #0f0701;
   z-index: 2;
 }
 
-  .top .description {
-      left: 85%;
-      z-index: 50;
-  }
+.top .description {
+  left: 85%;
+  z-index: 50;
+}
 
-  .top .fotopescaria{
-    width: 60%;
-    height: 50%;
-    margin-left: 75%;
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.top .fotopescaria {
+  width: 60%;
+  height: 50%;
+  margin-left: 75%;
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-  .top .fotopescaria:before{
-    content:'';
-    position: absolute;
-    bottom:0;
-    right: 90;
-    width: 30%;
-    height: 100%;
-    background: linear-gradient(to right, #0E0600, transparent);
-    z-index: 5;
-  }
-  
-  .top .fotopescaria:after{
-    content:'';
-    position: absolute;
-    background: linear-gradient(to right, #0E0600, transparent);
-    left:0;
-    right:0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-  }
+.top .fotopescaria:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 90;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, #0e0600, transparent);
+  z-index: 5;
+}
 
-  .bottom .fotoalegria{
-    width: 40%;
-    height: 50%;
-    background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+.top .fotopescaria:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #0e0600, transparent);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
 
-  .bottom .fotoalegria:before{
-    content:'';
-    position: absolute;
-    bottom:0;
-    right: 90;
-    width: 40%;
-    height: 100%;
-    background: linear-gradient(to left, #161008, transparent);
-    z-index: 5;
-  }
-  
-  .bottom .fotoalegria:after{
-    content:'';
-    position: absolute;
-    background: linear-gradient(to left, #161008, transparent);
-    left:0;
-    right:0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-  }
- 
- 
-  /* Handle. */
+.bottom .fotoalegria {
+  width: 40%;
+  height: 50%;
+  background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/serraPescaria.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bottom .fotoalegria:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 90;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to left, #161008, transparent);
+  z-index: 5;
+}
+
+.bottom .fotoalegria:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to left, #161008, transparent);
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+/* Handle. */
 .handle {
   height: 100%;
   position: absolute;
@@ -405,24 +396,20 @@ section img{
   margin-left: 1000px;
 }
 
-
-
-
-
 /* Responsive. */
 
 @media (max-width: 1350px) {
   .top .description {
     width: 30%;
     left: 80%;
-}
-  .iconapescaria img{
+  }
+  .iconapescaria img {
     width: 200px;
   }
-  .iconaalegria{
-    right:10%;
+  .iconaalegria {
+    right: 10%;
   }
-  .iconaalegria img{
+  .iconaalegria img {
     width: 200px;
   }
 }
@@ -432,7 +419,7 @@ section img{
     top: 1%;
     width: 35%;
     left: 75%;
-}
+  }
 }
 
 @media (max-width: 1200px) {
@@ -440,132 +427,130 @@ section img{
     top: 1%;
     width: 36%;
     left: 75%;
-}
-.iconaalegria h1{
-  font-size: 2rem;
-}
-.iconapescaria h1{
-  font-size: 2rem;
-}
-.bottom .description {
-  top: 1%;
-  width: 37%;
-  left: 2%;
-}
+  }
+  .iconaalegria h1 {
+    font-size: 2rem;
+  }
+  .iconapescaria h1 {
+    font-size: 2rem;
+  }
+  .bottom .description {
+    top: 1%;
+    width: 37%;
+    left: 2%;
+  }
 }
 @media (max-width: 1100px) {
   .top .description {
     top: 1%;
     width: 40%;
     left: 70%;
-}
-.bottom .description {
-  top: 1%;
-  width: 40%;
-  left: 2%;
-}
+  }
+  .bottom .description {
+    top: 1%;
+    width: 40%;
+    left: 2%;
+  }
 }
 @media (max-width: 1050px) {
   .top .description {
     top: 1%;
     width: 43%;
     left: 68%;
-}
-.bottom .description {
-  top: 1%;
-  width: 43%;
-  left: 2%;
-}
+  }
+  .bottom .description {
+    top: 1%;
+    width: 43%;
+    left: 2%;
+  }
 }
 @media (max-width: 1020px) {
   .top .description {
     top: 1%;
     width: 55%;
     left: 56%;
-}
-.bottom .description {
-  top: 1%;
-  width: 55%;
-  left: 5%;
-}
-.iconaalegria h1{
-  font-size: 1.5rem;
-}
-.iconapescaria h1{
-  font-size: 1.5rem;
-}
-.iconaalegria img{
-  width: 120px;
-}
-.iconapescaria img{
-  width: 120px;
-}
+  }
+  .bottom .description {
+    top: 1%;
+    width: 55%;
+    left: 5%;
+  }
+  .iconaalegria h1 {
+    font-size: 1.5rem;
+  }
+  .iconapescaria h1 {
+    font-size: 1.5rem;
+  }
+  .iconaalegria img {
+    width: 120px;
+  }
+  .iconapescaria img {
+    width: 120px;
+  }
 }
 
 @media (max-width: 900px) {
   .skewed .content {
-      font-size: 85%;
+    font-size: 85%;
   }
 }
 @media (max-width: 800px) {
   .skewed .content {
-      font-size: 75%;
+    font-size: 75%;
   }
-  .iconaalegria h1{
+  .iconaalegria h1 {
     font-size: 1rem;
   }
-  .iconapescaria h1{
+  .iconapescaria h1 {
     font-size: 1rem;
   }
-  .iconaalegria img{
+  .iconaalegria img {
     width: 90px;
   }
-  .iconapescaria img{
+  .iconapescaria img {
     width: 90px;
   }
-  
 }
 @media (max-width: 700px) {
   .skewed .content {
-      font-size: 65%;
+    font-size: 65%;
   }
 }
 @media (max-width: 750px) {
   .skewed .content {
-      font-size: 60%;
+    font-size: 60%;
   }
 }
 @media (max-width: 650px) {
   .skewed .content {
-      font-size: 60%;
+    font-size: 60%;
   }
-  .iconaalegria h1{
+  .iconaalegria h1 {
     font-size: 0.6rem;
   }
-  .iconapescaria h1{
+  .iconapescaria h1 {
     font-size: 0.6rem;
   }
-  .iconaalegria img{
+  .iconaalegria img {
     width: 90px;
   }
-  .iconapescaria img{
+  .iconapescaria img {
     width: 90px;
   }
   .top .description {
-    top:0;
+    top: 0;
     width: 65%;
     left: 52%;
+  }
+  .bottom .description {
+    top: 0;
+    width: 65%;
+    left: 0;
+  }
 }
-.bottom .description {
-  top:0;
-  width: 65%;
-  left:0;
-}
+/* ////////////////////// SÊ MAIS UMA VOZ ////////// */
 
-}
-/* ////////////////////// SÊ MAIS UMA VOZ ////////// */ 
-
-.doninha{
+.doninha {
   position: relative;
   background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/doninha.jpg?raw=true");
   background-size: cover;
@@ -573,38 +558,38 @@ section img{
   background-position: center;
   background-repeat: no-repeat;
 }
-.txtdoninha{
+.txtdoninha {
   z-index: 15;
 }
 
-/*sÊ MAIS UMA VOZ BEFORE/ AFTER */ 
+/*sÊ MAIS UMA VOZ BEFORE/ AFTER */
 
-.doninha:before{
-  content:'';
+.doninha:before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #0E0600, transparent);
+  background: linear-gradient(to top, #0e0600, transparent);
   z-index: 10;
 }
 
-.doninha:after{
-  content:'';
+.doninha:after {
+  content: "";
   position: absolute;
-  left:0;
-  right:0;
-  background-color: #0E0600;
+  left: 0;
+  right: 0;
+  background-color: #0e0600;
   opacity: 0.5;
   width: 100%;
   height: 600px;
   z-index: 10;
 }
 
-/* ///////// BIODIVERSIDADE LOCAL ///////////////////////*/ 
+/* ///////// BIODIVERSIDADE LOCAL ///////////////////////*/
 
-/* BOTÕES*/ 
+/* BOTÕES*/
 
 main header {
   width: 98%;
@@ -635,7 +620,7 @@ header p span:hover {
   color: #0f0701;
 }
 
-/* CARTÕES */ 
+/* CARTÕES */
 
 .cartoesHomepage {
   width: 98%;
@@ -648,7 +633,6 @@ header p span:hover {
 .cartoesHomepage::-webkit-scrollbar {
   display: none;
 }
-
 
 .cartoesHomepage .product,
 .anfibio,
@@ -663,9 +647,6 @@ header p span:hover {
   transition: 0.5s;
 }
 
-
-
-
 .contentor {
   width: 98%;
   height: 600px;
@@ -673,16 +654,19 @@ header p span:hover {
   display: flex;
   align-items: center;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .biodiversidade:-webkit-scrollbar {
   display: none;
 }
 
-.biodiversidade .product, .mamifero {
+
+.biodiversidade .product,
+.mamifero {
   min-width: 320px;
   height: 80%;
-  /*background: whitesmoke;*/
+ 
   margin: 0 20px 0 0;
   border-radius: 30px;
   position: relative;
@@ -784,14 +768,9 @@ small {
   right: 10px;
 }
 
-
-
-
-
-
 /* //////////// NEWSLETTER ///////// */
 
-.andorinha{
+.andorinha {
   position: relative;
   background-image: url("https://github.com/filipa-bastos/milVoz/blob/main/recursos/images/andorinhas.jpg?raw=true");
   background-size: cover;
@@ -800,29 +779,25 @@ small {
   background-repeat: no-repeat;
 }
 
-.andorinha:before{
-  content:'';
+.andorinha:before {
+  content: "";
   position: absolute;
-  bottom:0;
+  bottom: 0;
   right: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #0E0600, transparent);
+  background: linear-gradient(to top, #0e0600, transparent);
   z-index: 10;
 }
 
-.andorinha:after{
-  content:'';
+.andorinha:after {
+  content: "";
   position: absolute;
-  left:0;
-  right:0;
-  background-color: #0E0600;
+  left: 0;
+  right: 0;
+  background-color: #0e0600;
   opacity: 0.5;
   width: 100%;
   height: 600px;
   z-index: 10;
 }
-
-
-
-
