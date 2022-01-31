@@ -331,7 +331,7 @@
                         </div>   
                     </div>
 
-                    <!--quinta linha de animais-->
+                    <!--quinta linha de animais -->
                     <div class="row d-flex flex-row">
                         <div class="p-4 col-6 col-md-3">
                             <img class="animal img-fluid" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/galeriaApadrinhar/chapimMascarilha.png?raw=true" alt="Chapim Mascarilha">
