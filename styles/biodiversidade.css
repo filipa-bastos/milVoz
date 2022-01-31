@@ -81,6 +81,7 @@ main header {
   justify-content: space-between;
   /*border-bottom: 2px solid #ddd;*/
 }
+
 header p span {
   font-size: 40px;
   margin: 0 5px;
@@ -106,13 +107,28 @@ section {
   align-items: center;
   overflow-x: auto;
 }
+
 section::-webkit-scrollbar {
   display: none;
 }
-section .product,
-.anfibio,
-.mamifero {
+
+
+
+/*section e product*/
+.anfibio {
   min-width: 320px;
+  height: 80%;
+  /*background: whitesmoke;*/
+  margin: 0 20px 0 0;
+  border-radius: 30px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+}
+
+
+.mamifero {
+ min-width: 320px;
   height: 80%;
   /*background: whitesmoke;*/
   margin: 0 20px 0 0;
@@ -133,7 +149,7 @@ section .product,
     font-size: 25px;
   }
   header p span {
-    font-size: 30px;
+    font-size: 35px;
   }
   /*section .product {
     min-width: 85%;
