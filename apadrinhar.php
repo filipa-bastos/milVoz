@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./styles/geral.css">
         <link rel="stylesheet" href="./styles/apadrinhar.css">
         
+        
         <!--STYLE BOOTSTRAP-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         
@@ -254,7 +255,7 @@
                     <div id="wrapAnimal" class=" row d-flex flex-row">
                         <div class="p-4 col-6 col-md-3">
                             <img class="animal img-fluid" src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/galeriaApadrinhar/gineta.png?raw=true" alt="gineta">
-                            <p class="text-center">Gineta</p>
+                            <p class=" text-center">Gineta</p>
                         </div>
                         <div class=" p-4 col-6 col-md-3">
                             <img class="animal img-fluid"  src="https://github.com/filipa-bastos/milVoz/blob/main/recursos/galeriaApadrinhar/javali.png?raw=true" alt="javali">
