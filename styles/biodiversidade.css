@@ -112,11 +112,21 @@ section::-webkit-scrollbar {
   display: none;
 }
 
-
+#sectionMamiferos {
+  width: 98%;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+#sectionMamiferos::-webkit-scrollbar {
+  display: none;
+}
 
 /*section e product*/
 .anfibio {
-  min-width: 320px;
+  min-width: 420px;
   height: 80%;
   /*background: whitesmoke;*/
   margin: 0 20px 0 0;
@@ -126,9 +136,8 @@ section::-webkit-scrollbar {
   transition: 0.5s;
 }
 
-
 .mamifero {
- min-width: 320px;
+  min-width: 420px;
   height: 80%;
   /*background: whitesmoke;*/
   margin: 0 20px 0 0;
