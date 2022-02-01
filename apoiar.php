@@ -216,7 +216,7 @@
                         <h1 style="text-shadow: 1px 1px 3px #000000;">SÊ MAIS UMA VO<span style='border-bottom:9px #f6ecd1 solid; margin-top: -50rem;box-shadow: 0px 2px rgba(0, 0, 0, 0.1)'>Z &nbsp</span></h1>
                         <p class="mt-4 amareloEscuro">Estamos profundamente agradecidos a toda comunidade que quer fazer parte deste projeto e com a qual trabalhamos para que cada semente caia em terreno fértil.
                         <p>
-                        <p>SAIBA COMO FAZER PARTE <span style="font-size:30px">&#x21b4;</span></p>
+                        <p>CONHEÇA AS TRÊS FORMAS PARA APOIAR <span style="font-size:30px">&#x21b4;</span></p>
                     </div>
                     <div class="col-md-6">
                     </div> 
@@ -499,88 +499,88 @@
 
     <!--Footer-->
     <footer class="castanho-background dNoneTel ">
-    <div class="margemLateral ">
-        <div class="row d-flex justify-content-center py-5">
-            <div class="col-12 col-lg-3 mb-lg-0 footerLeft">
-                <img class="mDir logotipoFooter"
-                src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
-                alt="Milvoz Logotipo">
-                <p class="mt-xl-3 mDir py-3" style="font-size:16px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
-                <hr  class="d-lg-none d-block">
-            </div>
-            <div class="col-12 col-lg-9 pEsq">
-                <div class="row d-flex align-content-center">
+      <div class="margemLateral ">
+          <div class="row d-flex justify-content-center py-5">
+              <div class="col-12 col-lg-3 mb-lg-0 footerLeft">
+                  <img class="mDir logotipoFooter"
+                  src="https://raw.githubusercontent.com/filipa-bastos/milVoz/9f0693cc584aae18b998e19f9d0571ab2cd99506/recursos/icons/milVoz-logoFonte.svg"
+                  alt="Milvoz Logotipo">
+                  <p class="mt-xl-3 mDir py-3" style="font-size:16px"> MILVOZ, desde 2009 a dar voz às faunas e floras de áreas com elevado valor ecológico. Pretendemos valorizar a floresta nativa bem como toda a biodiversidade dela dependente, para isso dinamizamos atividades nas quais convidamos a comunidade local a participar. </p>
+                  <hr  class="d-lg-none d-block">
+              </div>
+              <div class="col-12 col-lg-9 pEsq">
+                  <div class="row d-flex align-content-center">
 
-                    <div class="col-6 col-md-4 d-flex flex-column ">
-                        <dl>
-                            <a href="sobre.html">
-                            <dt>ONGA</dt>
-                            <dd  style="font-size: 16px;">&#8226 Quem somos?</dd>
-                            <dd  style="font-size: 16px;">&#8226 Ser sócio</dd>
-                            </a>
-                        </dl>
+                      <div class="col-6 col-md-4 d-flex flex-column ">
+                          <dl>
+                              <a href="sobre.html">
+                              <dt>ONGA</dt>
+                              <dd  style="font-size: 16px;">&#8226 Quem somos?</dd>
+                              <dd  style="font-size: 16px;">&#8226 Ser sócio</dd>
+                              </a>
+                          </dl>
 
-                        <dl>
-                            <a href="actuacao.html">
-                            <dt>ACTIVIDADES</dt>
-                            <dd style="font-size: 16px;">&#8226 Gestão Ecológica</dd>
-                            <dd  style="font-size: 16px;">&#8226 Educação Ambiental</dd>
-                            <dd  style="font-size: 16px;">&#8226 Aconselhamentos</dd>
-                            </a>
-                        </dl>
+                          <dl>
+                              <a href="actuacao.html">
+                              <dt>ACTIVIDADES</dt>
+                              <dd style="font-size: 16px;">&#8226 Gestão Ecológica</dd>
+                              <dd  style="font-size: 16px;">&#8226 Educação Ambiental</dd>
+                              <dd  style="font-size: 16px;">&#8226 Aconselhamentos</dd>
+                              </a>
+                          </dl>
 
-                    </div>
+                      </div>
 
-                    <div class="col-6 col-md-4 ">
-                        <dl>
-                            <a href="bioreservas.html">
-                            <dt>BIO-RESERVAS</dt>
-                            <dd style="font-size: 16px;">&#8226 Nossa Senhora da Alegria</dd>
-                            <dd  style="font-size: 16px;">&#8226 Serra da Pescaria</dd>
-                            </a>
-                        </dl>
+                      <div class="col-6 col-md-4 ">
+                          <dl>
+                              <a href="bioreservas.html">
+                              <dt>BIO-RESERVAS</dt>
+                              <dd style="font-size: 16px;">&#8226 Nossa Senhora da Alegria</dd>
+                              <dd  style="font-size: 16px;">&#8226 Serra da Pescaria</dd>
+                              </a>
+                          </dl>
 
-                        <dl>
-                            <a href="contactos.php">
-                            <dt>CONTACTOS</dt>
-                                <dd style="font-size: 16px;">&#8226 geral@milvoz.pt</dd>
-                                <dd  style="font-size: 16px;">&#8226 913 123 132</dd>
-                                <dd  style="font-size: 16px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
-                            </a>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-4 d-flex flex-column">
-                        <div class="row">
-                                <div class="col-6 col-md-12">
-                                    <a href="contactos.php">
-                                    <dt>MORADA</dt>
-                                    <dd style="font-size: 16px;">&#8226 Rua da Calçada Antiga nº1 <br>
-                                        Assafarge / Coimbra<br>
-                                        3040-657</dd>
-                                    </a>
-                                </div>
+                          <dl>
+                              <a href="contactos.php">
+                              <dt>CONTACTOS</dt>
+                                  <dd style="font-size: 16px;">&#8226 geral@milvoz.pt</dd>
+                                  <dd  style="font-size: 16px;">&#8226 913 123 132</dd>
+                                  <dd  style="font-size: 16px;">&#8226 40°07'20.8"N  8°23'20.5"W</dd>
+                              </a>
+                          </dl>
+                      </div>
+                      <div class="col-12 col-md-4 d-flex flex-column">
+                          <div class="row">
+                                  <div class="col-6 col-md-12">
+                                      <a href="contactos.php">
+                                      <dt>MORADA</dt>
+                                      <dd style="font-size: 16px;">&#8226 Rua da Calçada Antiga nº1 <br>
+                                          Assafarge / Coimbra<br>
+                                          3040-657</dd>
+                                      </a>
+                                  </div>
 
-                                <div class="col-6 col-md-12">
-                                    <p class="mt-3" style="font-weight: 800;"> SÊ MAIS UMA VOZ</p>  
-                                    <div class="d-flex justify-content-start " >
-                                        <a class="p-2 facebook" href="https://www.facebook.com/MilVozNatureza" target="_blank">
-                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
-                                        </a>
+                                  <div class="col-6 col-md-12">
+                                      <p class="mt-3" style="font-weight: 800;"> SÊ MAIS UMA VOZ</p>  
+                                      <div class="d-flex justify-content-start " >
+                                          <a class="p-2 facebook" href="https://www.facebook.com/MilVozNatureza" target="_blank">
+                                              <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/facebook-logo.svg" alt="facebook logo">
+                                          </a>
 
-                                        <a  class="p-2 instagram"href="https://www.instagram.com/milvoznatureza/" target="_blank">
-                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
-                                        </a>
-                                        <a class="p-2 youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
-                                            <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
-                                        </a>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                          <a  class="p-2 instagram"href="https://www.instagram.com/milvoznatureza/" target="_blank">
+                                              <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/insta-logo.svg" alt="instagram logo">
+                                          </a>
+                                          <a class="p-2 youtube" href="https://www.youtube.com/channel/UC5Esvsda5kJlR0U10wdHVTw" target="_blank">
+                                              <img src="https://raw.githubusercontent.com/filipa-bastos/milVoz/146134f8c25d7939475c1dd5df9dfc6b0fdb2872/recursos/icons/youtube-logo.svg" alt="youtube logo">
+                                          </a>
+                                      </div>
+                                  </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
     </footer>
 
      <!-- SCRIPT DA BOOTSTRAP-->
