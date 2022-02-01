@@ -210,7 +210,7 @@ section img {
 /*SECÇÃO DAS ATIVIDADES - ANIMAÇÃO */
 
 .rodar a:hover {
-  transform: rotate(-60deg);
+  transform: rotate(-30deg);
   transition: all 0.2s ease-in-out 0s;
 }
 
@@ -637,7 +637,7 @@ header p span:hover {
 .cartoesHomepage .product,
 .anfibio,
 .mamifero {
-  min-width: 320px;
+  width: 420px;
   height: 80%;
   /*background: whitesmoke;*/
   margin: 0 20px 0 0;
@@ -661,7 +661,7 @@ header p span:hover {
   display: none;
 }
 
-
+/*
 .biodiversidade .product,
 .mamifero {
   min-width: 320px;
@@ -672,7 +672,7 @@ header p span:hover {
   position: relative;
   left: 0;
   transition: 0.5s;
-}
+}*/
 
 @media (max-width: 768px) {
   .text h1 {
